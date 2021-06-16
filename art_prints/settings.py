@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account', # allows login, logout, user reg., password reset
     'allauth.socialaccount', # handles login via social media providers
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -60,7 +61,10 @@ ROOT_URLCONF = 'art_prints.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [   
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
