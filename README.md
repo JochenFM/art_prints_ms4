@@ -9,3 +9,10 @@ The product range can be expanded later on with related paper- and artwork, such
                   <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">All Products</a></li>
                   <li class="nav-item"><a class="nav-link" href="{% url 'mono_cards' %}">Mono Cards</a></li>
                   <li class="nav-item"><a class="nav-link" href="{% url 'posters' %}">Artistic Posters</a></li>
+
+
+
+
+
+original in den titel?
+nach art deco, Jugendstil suchen fuer images
