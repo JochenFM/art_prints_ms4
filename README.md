@@ -4,3 +4,8 @@ This project allows trade of and information exchange on niche paper collectible
 I find these cards aesthetically appealing – the beauty of the images, the quality of the colours and of the lithographic printing are amazing. My site emulates examples such as https://www.galerie123.com/en/ and brings together two logics commonly kept apart: an educational/informational logic, following examples such as https://www.monokartenmatthys.com/ which allows users to display their cards and occasionally blog about them pointing out their historical and artistic value. And a business logic to facilitate trade in these cards and possible profit-making, hitherto often undertaken on Pinterest (https://www.pinterest.ch/michaelv0271/mono-karten-swiss-trade-cards/) or ebay.
 The product range can be expanded later on with related paper- and artwork, such as other types of vintage advertising cards or poster art.
 
+<li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'new_arrivals' %}">New Arrivals</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">All Products</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'mono_cards' %}">Mono Cards</a></li>
+                  <li class="nav-item"><a class="nav-link" href="{% url 'posters' %}">Artistic Posters</a></li>
