@@ -39,12 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # used by social account app to create the callback URLs 
+    # used by social account app to create the callback URLs
     # when connecting via social media accounts:
     'django.contrib.sites',
     'allauth',
-    'allauth.account', # allows login, logout, user reg., password reset
-    'allauth.socialaccount', # handles login via social media providers
+    'allauth.account',  # allows login, logout, user reg., password reset
+    'allauth.socialaccount',  # handles login via social media providers
     'home',
 ]
 
@@ -154,8 +154,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATCFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+
+MED_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
