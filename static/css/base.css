@@ -1,4 +1,7 @@
+body {
 
+    font-family: 'Old Standard TT', serif;
+}
 
 section {
     padding: 156px 0;
@@ -14,3 +17,6 @@ section {
     -o-background-size: cover;
     background-size: cover;
   }
+
+
+  
