@@ -7,6 +7,9 @@ The product range can be expanded later on with related paper- and artwork, such
 My site emulates examples such as https://www.galerie123.com/en/, https://www.kingandmcgaw.com/prints/vintage or https://retrographik.com/
 
 
+
+
+
 <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
                   <li class="nav-item"><a class="nav-link" href="{% url 'new_arrivals' %}">New Arrivals</a></li>
                   <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">All Products</a></li>
