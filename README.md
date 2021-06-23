@@ -4,7 +4,7 @@ This project allows trade of and information exchange on niche paper collectible
 I find these cards aesthetically appealing – the beauty of the images, the quality of the colours and of the lithographic printing are amazing. What I intend to achieve in this project is to bring together two logics commonly kept apart: for one, an educational/informational logic, following examples such as https://www.monokartenmatthys.com/ which allows users to display their cards pointing out their historical and artistic value. For another, a business logic to facilitate trade in these cards and possible profit-making, hitherto often undertaken on Pinterest (https://www.pinterest.ch/michaelv0271/mono-karten-swiss-trade-cards/) or ebay.
 The product range can be expanded later on with related paper- and artwork, such as other types of vintage advertising cards or poster art.
 
-My site emulates examples such as https://www.galerie123.com/en/ or https://www.kingandmcgaw.com/prints/vintage
+My site emulates examples such as https://www.galerie123.com/en/, https://www.kingandmcgaw.com/prints/vintage or https://retrographik.com/
 
 
 <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
@@ -31,3 +31,8 @@ Old Standard reproduces a specific type of Modern (classicist) style of serif ty
 it can be considered a good choice for typesetting scientific papers, especially on social and humanitarian sciences, as its specific features are closely associated in people's eyes with old books they learned on;
 the most beautiful examples of Greek and Cyrillic lettertypes were all based on the classicist style, so for those scripts, "Modern" fonts are much more appropriate than any contemporary (e. g. Times-based) designs.
 The name "Old Standard" was selected as opposed to the "Obyknovennaya Novaya" ("New Standard") typeface, widely used in Soviet typography, which represents another, slightly different type of the same Modern style. Of course this name doesn't look very original, but it seems to be a good choice for a revival of the most common lettertype of the early 20th century.
+
+
+
+In order to help me create the ERD (=Entity Relationship Diagram):
+https://launchschool.com/books/sql/read/table_relationships
