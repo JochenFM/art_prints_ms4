@@ -44,3 +44,15 @@ https://launchschool.com/books/sql/read/table_relationships
 slider image from unsplash https://unsplash.com/photos/6NSVToSYwV0
 
 https://imagecolorpicker.com/en
+
+
+#413e3b
+#64a4dd
+#568bbd
+#413e3b
+#c95939
+#dfdcd3
+
+https://www.jquery-az.com/4-demos-to-create-product-galleries-with-zoom-feature-by-jquery/
+
+https://codepen.io/nikki-peel/pen/RwavQer

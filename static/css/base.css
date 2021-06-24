@@ -17,21 +17,6 @@ body {
 
 }
 
-.carousel-caption {
-
-    position: absolute;
-    top: 15%;
-    transform: translateY(-5%);
-    left: -8%;
-
-}
-.carousel-caption h1 {
-
-    color: #c95939;
-    font-size: 50px;
-    font-weight: 400;
-
-}
 .navbar-brand {
 
     color: #dfdcd3;
@@ -39,5 +24,38 @@ body {
     font-weight: 600;
 }
 
+.carousel-caption {
 
+    position: absolute;
+    top: 15%;
+    transform: translateY(+40%);
+    transform: translateX(+42%);
+    
+
+}
+.carousel-caption h1 {
+
+    color: #c95939;
+    font-size: 70px;
+    font-weight: 600;
+
+}
+
+.btn0{
+
+    background-color: #c95939;
+    height: 45px;
+    width: 150px;
+    color: #413e3b;
+    outline: none;
+    border: none;
+    border-radius: 60%;
+
+}
+
+.btn0:hover{
   
+    background-color: #64a4dd;
+    color: #dfdcd3;
+    transition: 0.6;
+}

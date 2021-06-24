@@ -7,7 +7,7 @@
 <!-- Carousel -->
 
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -19,10 +19,11 @@
         <img src="{% static 'img/home/slider_0.jpg' %}" class="d-block w-100" alt="slider_1">
         <div class="carousel-caption d-none d-md-block">
          <div class="container">
-           <div class="row">
+           <div class="row justify-content-start text-right">
              <div class="col-lg-8 mx-auto">
                <p></p>
                <h1>Trade, blog, and learn about rare and beautiful early 20th-century paper collectibles</h1>
+               <button class="btn0 mt-3 ml-2">View Products</button>
              </div>
            </div>
          </div>
@@ -33,7 +34,7 @@
         <img src="{% static 'img/home/slider_0.jpg' %}" class="d-block w-100" alt="slider_2">
         <div class="carousel-caption d-none d-md-block">
           <div class="container">
-            <div class="row">
+            <div class="row justify-content-start text-right">
               <div class="col-lg-8 mx-auto">
                 <p></p>
                 <h1>Trade, blog, and learn about rare and beautiful early 20th-century paper collectibles</h1>
@@ -47,7 +48,7 @@
         <img src="{% static 'img/home/slider_0.jpg' %}" class="d-block w-100" alt="slider_3">
         <div class="carousel-caption d-none d-md-block">
           <div class="container">
-          <div class="row justify-content-start text-left">
+          <div class="row justify-content-start text-right">
               <div class="col-lg-8 mx-auto">
                 <p></p>
                 <h1>Trade, blog, and learn about rare and beautiful early 20th-century paper collectibles</h1>
@@ -75,18 +76,20 @@
                 <h2>About this shop</h2>
                 <p class="lead">This site offers a fine selection of original art prints, especially paper collectibles such as
                   "Mono cards" or "Monos", advertising cards sized 4x6 inches developed from around 1905 by Swiss editor and entrepreneur
-                  Karl Wilhelm Bührer (1861-1917). 
-          </p>
+                  Karl Wilhelm Bührer (1861-1917).</p>
             </div>
         </div>
     </div>
 </section>
 <!-- New Arrivals-->
-<section class="bg-light" id="new_arrivals">
-    <div class="container px-4">
+<section class="bg-light " id="new_arrivals">
+    <div class="container">
         <div class="row gx-4 justify-content-center">
-            <div class="col-lg-8">
-                <h2>New Arrivals</h2>
+                <h1 class= "text-center ">New Arrivals</h1>
+                <div class="row py-5">
+                  
+
+                </div>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
             </div>
         </div>
