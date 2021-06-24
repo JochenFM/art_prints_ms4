@@ -39,3 +39,6 @@ The name "Old Standard" was selected as opposed to the "Obyknovennaya Novaya" ("
 
 In order to help me create the ERD (=Entity Relationship Diagram):
 https://launchschool.com/books/sql/read/table_relationships
+
+
+slider image from unsplash https://unsplash.com/photos/6NSVToSYwV0
