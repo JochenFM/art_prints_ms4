@@ -42,3 +42,5 @@ https://launchschool.com/books/sql/read/table_relationships
 
 
 slider image from unsplash https://unsplash.com/photos/6NSVToSYwV0
+
+https://imagecolorpicker.com/en

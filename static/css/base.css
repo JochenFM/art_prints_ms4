@@ -1,21 +1,43 @@
 body {
     color: black;
-    font-family: 'Old Standard TT', serif;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Old Standard TT', serif;
+
 }    
 
 .nav-link {
 
-    color: black;
+    color: #dfdcd3;
     font-weight: 600;
 
 }
 
+.carousel-caption {
+
+    position: absolute;
+    top: 15%;
+    transform: translateY(-5%);
+    left: -8%;
+
+}
+.carousel-caption h1 {
+
+    color: #c95939;
+    font-size: 50px;
+    font-weight: 400;
+
+}
+.navbar-brand {
+
+    color: #dfdcd3;
+    font-size: 30px;
+    font-weight: 600;
+}
 
 
   
