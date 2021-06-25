@@ -21,7 +21,7 @@ My site emulates examples such as https://www.galerie123.com/en/, https://www.ki
 These are good product grids with bootstrap 4:
 https://bbbootstrap.com/snippets/bootstrap-ecommerce-product-grid-view-card-19577966
 
-https://bbbootstrap.com/snippets/bootstrap-product-list-pricing-and-hover-details-35908551
+
 
 original in den titel?
 nach art deco, Jugendstil suchen fuer images
