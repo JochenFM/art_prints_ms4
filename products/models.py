@@ -4,6 +4,9 @@ from django.db import models
 class Category(models.Model):
     # this name should be readable in other code, can be mono_cards
 
+    class Meta:
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254, null=True, blank=True)
     # friendly name is for front end, can be Mono Cards
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
@@ -35,4 +38,4 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-    
+   
