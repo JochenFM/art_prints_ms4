@@ -52,6 +52,7 @@ https://imagecolorpicker.com/en
 #413e3b
 #c95939
 #dfdcd3
+bootstrap bg dark #343a40
 
 https://www.jquery-az.com/4-demos-to-create-product-galleries-with-zoom-feature-by-jquery/
 
