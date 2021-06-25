@@ -59,3 +59,10 @@ body {
     color: #dfdcd3;
     transition: 0.6;
 }
+
+/**---- Online Shop ----**/
+
+.header-container {
+
+    padding-top: 164px;
+}
