@@ -1,150 +1,153 @@
-{% load static %} 
+  {% load static %} 
 
-<!doctype html>
-<html lang="en">
-  <head>
-    
+  <!doctype html>
+  <html lang="en">
+    <head>
+      
 
-    {% block meta %}
-    <!-- Required meta tags -->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="This is a vintage art prints gallery and shop specializing in paper collectibles"/>
-    <meta name="author" content="Jochen F. Mayer" />
-    {% endblock %}
+      {% block meta %}
+      <!-- Required meta tags -->
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="This is a vintage art prints gallery and shop specializing in paper collectibles"/>
+      <meta name="author" content="Jochen F. Mayer" />
+      {% endblock %}
 
-    <!--Favicons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
-  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">  
-  <link rel="manifest" href="/site.webmanifest">
+      <!--Favicons-->
+      <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-touch-icon.png' %}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">  
+    <link rel="manifest" href="/site.webmanifest">
 
-    {% block extra_meta %}
-    {% endblock %}
+      {% block extra_meta %}
+      {% endblock %}
 
 
-    {% block corecss %}
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <script src="https://kit.fontawesome.com/4897da3e45.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    {% endblock %}
+      {% block corecss %}
+      <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      <script src="https://kit.fontawesome.com/4897da3e45.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+      
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+      {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+      {% block extra_css %}
+      {% endblock %}
 
-    {% block corejs %}
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    {% endblock %}
-    
-    {% block extra_js %}
-    {% endblock %}
+      {% block corejs %}
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+      {% endblock %}
+      
+      {% block extra_js %}
+      {% endblock %}
 
-    
-    <title>Vintage Art Prints</title>
-  </head>
-  <body>
+      
+      <title>Vintage Art Prints</title>
+    </head>
+    <body>
 
-     <!-- Navbar -->
-     
-     <nav class="navbar fixed-top navbar-expand-lg bg-dark"> 
-        <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'home' %}">Vintage Art Prints</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!--a href="{% url 'home' %}">
-            <img id="brand-logo" src="{% static 'img/home/brandlogo_vap.png' %}" alt="logo" />
-        </a-->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link pr-2" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pr-2" href="#">New Arrivals</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pr-2" href="{% url 'onlineshop' %}">Online Shop</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link pr-2" href="#">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-            <form class="d-flex form-search col-md-3 .ms-md-auto" action="" method="GET">
-                <input type="text" name="q" class="search-input-field" placeholder="Search products" />
-                    <button class="btn btn-colour-1" type="submit" aria-label="Product Search Button"><i class="fas fa-search"></i></button>
-            </form>
- <!--from boutique ado project-->
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item">Product Management</a>
-                                {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                {% endif %}
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-cart fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        £0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+      <!-- Navbar -->
+      
+      <nav class="navbar fixed-top navbar-expand-lg bg-dark"> 
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">Vintage Art Prints</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--a href="{% url 'home' %}">
+              <img id="brand-logo" src="{% static 'img/home/brandlogo_vap.png' %}" alt="logo" />
+          </a-->
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link pr-2" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pr-2" href="#">New Arrivals</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pr-2" href="{% url 'onlineshop' %}">Online Shop</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pr-2" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link pr-2" href="#">Contact</a>
+                </li>
+              </ul>
             </div>
-  </nav>
+          </div>
+              <form class="d-flex form-search col-md-3 .ms-md-auto" action="" method="GET">
+                  <input type="text" name="q" class="search-input-field" placeholder="Search products" />
+                      <button class="btn btn-colour-1" type="submit" aria-label="Product Search Button"><i class="fas fa-search"></i></button>
+              </form>
+  <!--from boutique ado project-->
+          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                  <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                      <li class="list-inline-item dropdown">
+                          <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <div class="text-center">
+                                  <div><i class="fas fa-user fa-lg"></i></div>
+                                  <p class="my-0">My Account</p>
+                              </div>
+                          </a>
+                          <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                              {% if request.user.is_authenticated %}
+                                  {% if request.user.is_superuser %}
+                                      <a href="" class="dropdown-item">Product Management</a>
+                                  {% endif %}
+                                  <a href="" class="dropdown-item">My Profile</a>
+                                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                  {% else %}
+                                      <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                      <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                  {% endif %}
+                          </div>
+                      </li>
+                      <li class="list-inline-item">
+                          <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                              <div class="text-center">
+                                  <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                                  <p class="my-0">
+                                      {% if grand_total %}
+                                          ${{ grand_total|floatformat:2 }}
+                                      {% else %}
+                                          £0.00
+                                      {% endif %}
+                                  </p>
+                              </div>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+    </nav>
 
-  
+    
 
 
-    {% if messages %}
-    <div  class = "message-container"></div>
-    {% endif %}
+      {% if messages %}
+      <div  class = "message-container"></div>
+      {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
+      {% block page_header %}
+      {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+      {% block content %}
+      {% endblock %}
 
 
-     <!--Footer -->
-     
-    <footer>
+      <!--Footer -->
+      
+      <footer>
 
-    </footer>
+      </footer>
 
-    {% block postloadjs %}
-    {%endblock %}
-  </body>
-</html>
+      {% block postloadjs %}
+      {%endblock %}
+    </body>
+  </html>
