@@ -31,12 +31,19 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container">
-                    <h3 class="product-title">{{ product.name }}</h3>
+                    <a href="" target="_blank">{{ product.category }}</a>
+                    <h3 class="product-title font-weight-bold">{{ product.name }}</h3>
+                    <div class="row">
+                            {% if product.year %}
+                            <p class="mb-0">{{product.year}}</p>
+                            {% else %}
+                            <p class="mb-0 text-left">Date: N/A</p>
+                            {% endif %}
+                    </div>
                     <h4 class="mb-3"> {{ product.author }}</h4>
-                    <h4 class="mb-3">£ {{ product.price }}</h4>
+                    <h4 class="mb-3">£{{ product.price }}</h4>
                     <h5 class="mb-3">Description:</h5> <p class="product-description mb-3"> {{ product.description }}</p>
                     <h5 class="mb-3">Condition:</h5><p class="product-condition"> {{ product.condition }}</p>
-                    <hr>
                 </div>
             </div>
         </div>

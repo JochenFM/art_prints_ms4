@@ -43,6 +43,13 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
+                                        {% if product.year %}
+                                    </div>
+                                    <div class="col">
+                                        <p class="mb-0 text-left">{{product.year}}</p>
+                                        {% else %}
+                                        <p class="mb-0 text-left">Date: N/A</p>
+                                        {% endif %}
                                         <p class="lead mb-0 text-right font-weight-bold">£{{ product.price }}</p>
                                     </div>
                                 </div>
