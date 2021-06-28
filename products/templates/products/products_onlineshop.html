@@ -31,7 +31,7 @@
                         <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-4">
                             <div class="card shadow-lg">
                                 <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top rounded-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    <img class="card-img-top rounded-top img-fluid img-thumbnail" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 <div class="card-body pb-0">
                                     <p class="mb-0 lead font-weight-bold">{{ product.name }}</p>
@@ -46,17 +46,17 @@
                                         {% if product.year %}
                                     </div>
                                     <div class="col">
-                                        <p class="mb-0 text-left">{{product.year}}</p>
+                                        <p class="mb-0 text-left font-italic">{{product.year}}</p>
                                         {% else %}
-                                        <p class="mb-0 text-left">Date: N/A</p>
+                                        <p class="mb-0 text-left">Date:<span class ="font-italic"> N/A<span></p>
                                         {% endif %}
                                         <p class="lead mb-0 text-right font-weight-bold">£{{ product.price }}</p>
                                     </div>
                                 </div>
                             </div>
-                                <div class="card-footer pt-0 ">
+                                <div class="card-footer pt-0 d-flex justify-content-end">
                                     <a href="{% url 'product_detail' product.id %}" class="btn mr-2 "><i class="fas fa-eye"></i> View Details</a>
-                                <a href="#" class="btn mr-2"> <i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                                <a href="#" class="btn mr-2"> <i class="fas fa-shopping-cart justify-content-end"></i> Add to Cart</a>
                                 </div>
                             </div>
                         </div>

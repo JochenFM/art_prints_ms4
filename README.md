@@ -46,13 +46,13 @@ slider image from unsplash https://unsplash.com/photos/6NSVToSYwV0
 https://imagecolorpicker.com/en
 
 
-#413e3b
-#64a4dd
-#568bbd
-#413e3b
+
+#618BB2 of Pantone colour
 #c95939
 #dfdcd3
-bootstrap bg dark #343a40
+bootstrap bg dark #343a40 Gyunmet
+
+Zoom mouseover for single products: https://www.jquery-az.com/jquery/demo.php?ex=168.0_1
 
 https://www.jquery-az.com/4-demos-to-create-product-galleries-with-zoom-feature-by-jquery/
 

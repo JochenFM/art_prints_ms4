@@ -25,25 +25,27 @@
             <div class="col-12 col-md-6 col-lg-4 offset-md-2">
                 <div class="image-container">
                     <a href="{{ product.image.url }}" target="_blank">
-                        <img class="card-img-top rounded-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        <img class="card-img-top rounded-top img-fluid img-thumbnail" src="{{ product.image.url }}" alt="{{ product.name }}">
                     </a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container">
-                    <a href="" target="_blank">{{ product.category }}</a>
+                    <a href="" class="text-decoration-none" target="_blank">{{ product.category }}</a>
                     <h3 class="product-title font-weight-bold">{{ product.name }}</h3>
                     <div class="row">
                             {% if product.year %}
-                            <p class="mb-0">{{product.year}}</p>
+                            <p class="mb-0 text-center font-italic">{{product.year}}</p>
                             {% else %}
-                            <p class="mb-0 text-left">Date: N/A</p>
+                            <p class="mb-0 text-left">Date: <span class ="font-italic"> N/A</span></p>
                             {% endif %}
                     </div>
-                    <h4 class="mb-3"> {{ product.author }}</h4>
                     <h4 class="mb-3">£{{ product.price }}</h4>
-                    <h5 class="mb-3">Description:</h5> <p class="product-description mb-3"> {{ product.description }}</p>
-                    <h5 class="mb-3">Condition:</h5><p class="product-condition"> {{ product.condition }}</p>
+                    <h4 class="mb-3"> {{ product.author }}</h4>
+                    <h6 class="mb-3">Description:</h6> <p class="product-description mb-3"> {{ product.description }}</p>
+                    <h6 class="mb-3">Condition:</h6><p class="product-condition"> {{ product.condition }}</p>
+                    <h6 class="mb-3">Dimension:</h6><p class="product-dimension"> {{ product.dimension }}</p>
+
                 </div>
             </div>
         </div>

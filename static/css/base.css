@@ -10,6 +10,12 @@ body {
 
 }    
 
+.logo-font {
+
+    text-transform: uppercase;
+    padding-bottom: 40px;
+}
+
 .nav-link {
 
     color: #dfdcd3;
@@ -55,7 +61,7 @@ body {
 
 .btn0:hover{
   
-    background-color: #64a4dd;
+    background-color: #618BB2;
     color: #dfdcd3;
     transition: 0.6;
 }
