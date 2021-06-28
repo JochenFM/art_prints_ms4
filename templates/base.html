@@ -54,7 +54,6 @@
       <!-- Navbar -->
       
       <nav class="navbar fixed-top navbar-expand-lg bg-dark"> 
-          <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">Vintage Art Prints</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -63,7 +62,7 @@
               <img id="brand-logo" src="{% static 'img/home/brandlogo_vap.png' %}" alt="logo" />
           </a-->
             <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
+              <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                   <a class="nav-link pr-2" href="#">About</a>
                 </li>
@@ -80,9 +79,7 @@
                   <a class="nav-link pr-2" href="#">Contact</a>
                 </li>
               </ul>
-            </div>
-          </div>
-              <form class="d-flex form-search col-md-3 .ms-md-auto" action="" method="GET">
+              <form class="d-flex form-search col-md-3 .ms-md-auto" action="{% url 'onlineshop' %}" method="GET">
                   <input type="text" name="q" class="search-input-field" placeholder="Search products" />
                       <button class="btn btn-colour-1" type="submit" aria-label="Product Search Button"><i class="fas fa-search"></i></button>
               </form>
@@ -124,7 +121,8 @@
                           </a>
                       </li>
                   </ul>
-              </div>
+                  </div>
+          </div>
     </nav>
 
     

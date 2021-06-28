@@ -47,19 +47,19 @@ body {
 
 }
 
-.btn0{
+.view-shop-button{
 
     background-color: #c95939;
     height: 45px;
-    width: 150px;
+    width: 175px;
     color: #413e3b;
     outline: none;
     border: none;
-    border-radius: 60%;
+    border-radius: 20%;
 
 }
 
-.btn0:hover{
+.view-shop-button:hover{
   
     background-color: #618BB2;
     color: #dfdcd3;

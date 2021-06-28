@@ -5,8 +5,6 @@
 {% block content %} 
 
 <!-- Carousel -->
-
-
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -21,9 +19,9 @@
          <div class="container">
            <div class="row justify-content-start text-right">
              <div class="col-lg-8 mx-auto">
-               <p></p>
                <h1>Trade, blog, and learn about rare and beautiful early 20th-century paper collectibles</h1>
-               <button class="btn0 mt-3 ml-2">View Products</button>
+               <a class = "view-shop-button btn btn-lg" href ="{% url 'onlineshop' %}">View Products</a>
+             </div>
              </div>
            </div>
          </div>
@@ -38,7 +36,7 @@
               <div class="col-lg-8 mx-auto">
                 <p></p>
                 <h1>Contribute to our blog and help our community of traders and affictionados grow</h1>
-                <button class="btn0 mt-3 ml-2">Go to blog</button>
+                <a class = "view-blog-button btn btn-lg" href ="">Go to Blog</a>
               </div>
             </div>
           </div>
@@ -53,7 +51,7 @@
               <div class="col-lg-8 mx-auto">
                 <p></p>
                 <h1>Trade, blog, and learn about rare and beautiful early 20th-century paper collectibles</h1>
-                <button class="btn0 mt-3 ml-2">Go to blog</button>
+                <a class = "view-blog-button btn btn-lg" href ="">Go to Blog</a>
               </div>
             </div>
           </div>
