@@ -1,6 +1,4 @@
-body {
-    color: #413e3b;
-}
+
 
 * {
     padding: 0;
@@ -9,6 +7,10 @@ body {
     font-family: 'Old Standard TT', serif;
 
 }    
+
+body {
+    color: #413e3b;
+}
 
 .logo-font {
 

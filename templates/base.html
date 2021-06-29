@@ -51,78 +51,82 @@
     </head>
     <body>
 
-      <!-- Navbar -->
-      <nav class="navbar fixed-top navbar-expand-lg bg-dark"> 
-            <a class="navbar-brand" href="{% url 'home' %}">Vintage Art Prints</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <!--a href="{% url 'home' %}">
-              <img id="brand-logo" src="{% static 'img/home/brandlogo_vap.png' %}" alt="logo" />
-          </a-->
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link pr-2" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pr-2" href="#">New Arrivals</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pr-2" href="{% url 'onlineshop' %}">Online Shop</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pr-2" href="#">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link pr-2" href="#">Contact</a>
-                </li>
-              </ul>
-              <form class="d-flex form-search col-md-3 .ms-md-auto" action="{% url 'onlineshop' %}" method="GET">
-                  <input type="text" name="q" class="search-input-field" placeholder="Search products" />
-                      <button class="btn btn-colour-1" type="submit" aria-label="Product Search Button"><i class="fas fa-search"></i></button>
-              </form>
-  <!--from boutique ado project-->
-          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                  <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                      <li class="list-inline-item dropdown">
-                          <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <div class="text-center">
-                                  <div><i class="fas fa-user fa-lg"></i></div>
-                                  <p class="my-0">My Account</p>
-                              </div>
-                          </a>
-                          <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                              {% if request.user.is_authenticated %}
-                                  {% if request.user.is_superuser %}
-                                      <a href="" class="dropdown-item">Product Management</a>
-                                  {% endif %}
-                                  <a href="" class="dropdown-item">My Profile</a>
-                                  <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                  {% else %}
-                                      <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                      <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                  {% endif %}
-                          </div>
-                      </li>
-                      <li class="list-inline-item">
-                          <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-                              <div class="text-center">
-                                  <div><i class="fas fa-shopping-cart fa-lg"></i></div>
-                                  <p class="my-0">
-                                      {% if grand_total %}
-                                          ${{ grand_total|floatformat:2 }}
-                                      {% else %}
-                                          £0.00
-                                      {% endif %}
-                                  </p>
-                              </div>
-                          </a>
-                      </li>
-                  </ul>
-                  </div>
-          </div>
-    </nav>
+        <!-- Navbar -->
+      <!--header class="container-fluid fixed-top"--> 
+        <nav class="navbar fixed-top navbar-expand-lg bg-dark"> 
+          <div class="container-fluid">
+              <a class="navbar-brand" href="{% url 'home' %}">Vintage Art Prints</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button> 
+              <!--a href="{% url 'home' %}">
+                <img id="brand-logo" src="{% static 'img/home/brandlogo_vap.png' %}" alt="logo" />
+            </a-->
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link pr-2" href="#">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pr-2" href="#">New Arrivals</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pr-2" href="{% url 'onlineshop' %}">Online Shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pr-2" href="#">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link pr-2" href="#">Contact</a>
+                  </li>
+                </ul>
+                <form class="d-flex form-search col-md-3 ms-md-auto" action="{% url 'onlineshop' %}" method="GET">
+                    <input type="text" name="q" class="search-input-field" placeholder="Search products" />
+                        <button class="btn btn-colour-1" type="submit" aria-label="Product Search Button"><i class="fas fa-search"></i></button>
+                </form>
+              
+    <!--from boutique ado project-->
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                        <a href="" class="dropdown-item">Product Management</a>
+                                    {% endif %}
+                                    <a href="" class="dropdown-item">My Profile</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                    {% else %}
+                                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                    {% endif %}
+                            </div>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                                <div class="text-center">
+                                    <div><i class="fas fa-shopping-cart fa-lg"></i></div>
+                                    <p class="my-0">
+                                        {% if grand_total %}
+                                            ${{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                            £0.00
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+            </div>
+      </nav>
+    
 
     
 
