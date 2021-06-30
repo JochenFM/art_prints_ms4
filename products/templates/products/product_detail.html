@@ -31,7 +31,13 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container">
-                    <a href="" class="text-decoration-none" target="_blank">{{ product.category }}</a>
+                    {% if product.category %}
+                    <p class= "mb-0 text-left">
+                        <a class="text-muted" href="{% url 'onlineshop' %}?category={{ product.category.name }}">
+                            <i class = "fas fa-tag mr-1"></i> {{ product.category.friendly_name}}
+                        </a>
+                    </p>
+                    {% endif %}
                     <h3 class="product-title font-weight-bold">{{ product.name }}</h3>
                     <div class="row">
                             {% if product.year %}

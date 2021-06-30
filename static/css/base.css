@@ -76,3 +76,8 @@ body {
     padding-bottom: 20px;
 }
 
+#dropdownMenuLink {
+
+    background-color: #343a40;
+    color: #DFDCD3;
+}
