@@ -57,3 +57,7 @@ Zoom mouseover for single products: https://www.jquery-az.com/jquery/demo.php?ex
 https://www.jquery-az.com/4-demos-to-create-product-galleries-with-zoom-feature-by-jquery/
 
 https://codepen.io/nikki-peel/pen/RwavQer
+
+
+Do I need to insert new_arrivals into project level urls?
+and also into home urls.py?
