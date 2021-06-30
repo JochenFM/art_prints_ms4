@@ -9,7 +9,7 @@
 }    
 
 body {
-    color: #413e3b;
+    background-color: #413e3b;
 }
 
 .logo-font {
@@ -100,4 +100,20 @@ body {
 .btt-link {
 
     cursor: pointer;
+}
+
+
+/**---- Cart ----**/
+
+.box-element {
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    background-color: #dfdcd3;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.btn-dark {
+
+    float: right;
+    margin: 5px;
 }
