@@ -53,7 +53,7 @@
                     </div>
                                     <div class="row">
                                         <div class="col-12">
-                                        <h3> Narrow your Search</h3>
+                                        <h4> Narrow your Search</h4>
                                         <div class="dropdown">
                                             <a class="btn btn-secondary btn-lg dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Categories
@@ -110,6 +110,7 @@
                                                     </div>
                                                 </div>
                                                 
+                                               
                                                 {% endfor %}
                                             </div>
                                         </div>
@@ -118,4 +119,17 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="btt-button shadow-sm rounded-0 border border-black">
+                                <a class="btt-link d-flex h-100">
+                                     <i class="fas fa-long-arrow-alt-up mx-auto my-auto"></i>
+                                </a>	
+                            </div>
                             {% endblock %}
+                        {% block postloadjs %}
+
+    <script type="text/javascript">
+		$('.btt-link').click(function(e) {
+			window.scrollTo(0,0)
+		})
+	</script>
+     {% endblock %}

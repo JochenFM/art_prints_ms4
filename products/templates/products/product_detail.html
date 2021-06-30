@@ -41,16 +41,16 @@
                     <h3 class="product-title font-weight-bold">{{ product.name }}</h3>
                     <div class="row">
                             {% if product.year %}
-                            <p class="mb-0 text-center font-italic">{{product.year}}</p>
+                            <p class="mb-1 text-center font-italic">{{product.year}}</p>
                             {% else %}
                             <p class="mb-0 text-left">Date: <span class ="font-italic"> N/A</span></p>
                             {% endif %}
                     </div>
-                    <h4 class="mb-3">£{{ product.price }}</h4>
+                    <h4 class="mb-4">£{{ product.price }}</h4>
                     <h4 class="mb-3"> {{ product.author }}</h4>
-                    <h6 class="mb-3">Description:</h6> <p class="product-description mb-3"> {{ product.description }}</p>
-                    <h6 class="mb-3">Condition:</h6><p class="product-condition"> {{ product.condition }}</p>
-                    <h6 class="mb-3">Dimension:</h6><p class="product-dimension"> {{ product.dimension }}</p>
+                    <h6 class="mb-1"><u>Description:</u></h6> <p class="product-description mb-3"> {{ product.description }}</p>
+                    <h6 class="mb-1"><u>Condition:</u></h6><p class="product-condition"> {{ product.condition }}</p>
+                    <h6 class="mb-1"><u>Dimension:</u></h6><p class="product-dimension"> {{ product.dimension }}</p>
 
                 </div>
             </div>
