@@ -55,7 +55,21 @@
                         <p class="product-condition"> {{ product.condition }}</p>
                         <h6 class="mb-1"><u>Dimension:</u></h6>
                         <p class="product-dimension"> {{ product.dimension }}</p>
-
+                <form class="form" action="" method="POST">
+                    {% csrf_token %}
+                        <div class="form-row">
+                            <div class="col-12">
+                                <input type="submit" class="btn-dark btn-lg rounded-0" value="Add to Bag">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            <a href="{% url 'onlineshop' %}" class="btn btn-outline-dark rounded-0 mt-5">
+                                <span class="icon">
+                                    <i class="fas fa-long-arrow-alt-left"></i>
+                                </span>
+                                <span class="">Continue Shopping</span>
+                            </a>
+                        </div>
+                    </form>
                     </div>
                 </div>
             </div>
