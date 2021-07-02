@@ -11,11 +11,11 @@ def view_cart(request):
 def  add_to_cart(request, item_id):
     """add the specified product to the shopping cart"""
     
-    checked = request.POST.get('checked')
+    quantity = request.POST.get('quantity')
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
-    cart[item_id] = checked
+    cart[item_id] = quantity
 
     request.session['cart'] = cart
     return redirect(redirect_url)
