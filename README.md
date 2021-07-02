@@ -62,4 +62,4 @@ https://codepen.io/nikki-peel/pen/RwavQer
 Do I need to insert new_arrivals into project level urls?
 and also into home urls.py?
 
-
+https://stackoverflow.com/questions/48735726/how-to-get-checkbox-values-in-django-application for get checkbox value in HTML form in django 
