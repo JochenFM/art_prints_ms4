@@ -108,3 +108,13 @@ def cart_contents(request):
     }
 
     return context """
+
+from the now deleted cart_tool.py template tag ({% load cart_tools %} needs to be added at top of cart.html):
+"""from django import template
+
+
+register = template.Library()
+
+@register.filter(name='calc_subtotal')
+def calc_subtotal(price, quantity):
+    return price * quantity

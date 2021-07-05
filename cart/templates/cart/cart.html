@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block page_header %}
 
 <div class="container header-container">
@@ -36,11 +37,13 @@
                             </th>
                             <th scope="col">
                                 <h5><strong> Cart Total: £ {{total|floatformat:2 }}</strong></h5>
-                            </th>
-                            <th scope="col">
                             <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-                            <h4 class ="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                            </th>
+                            {% if  free_delivery_delta > 0 %}
+                                <p class ="mb-1 text-danger">You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!</p>
+                                    {% endif %}
+                                    <h4 class ="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+                    
+                                </th>
                             <th><a href="" class="btn-dark btn-lg text-decoration-none">Secure Checkout
                                 <span class ="icon">
                                     <i class ="fas fa-lock"></i>
@@ -109,7 +112,7 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}`;
+        var url = `/bag/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken};
         
         $.post(url, data)
