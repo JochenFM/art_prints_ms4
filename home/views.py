@@ -17,6 +17,7 @@ def new_arrivals(request):
 
     context = {
         'products': products,
+        'new_arrivals': new_arrivals,
     }
     return render(request, 'new_arrivals/index.html', context)
 

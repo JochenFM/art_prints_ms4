@@ -33,7 +33,7 @@
                     <thead class="">
                         <tr>
                             <th scope="col">
-                                <h5>Items: <strong></strong></h5>
+                                <h5>Items: {{ product_count }} <strong></strong></h5>
                             </th>
                             <th scope="col">
                                 <h5><strong> Cart Total: £ {{total|floatformat:2 }}</strong></h5>
@@ -44,7 +44,7 @@
                                     <h4 class ="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                     
                                 </th>
-                            <th><a href="" class="btn-dark btn-lg text-decoration-none">Secure Checkout
+                            <th><a href="{% url 'checkout' %}" class="btn-dark btn-lg text-decoration-none">Secure Checkout
                                 <span class ="icon">
                                     <i class ="fas fa-lock"></i>
                                 </span>
