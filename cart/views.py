@@ -11,7 +11,7 @@ def view_cart(request):
 def add_to_cart(request, item_id):
     """add the specified product to the shopping cart"""
     
-    quantity = request.POST.get('quantity')
+    quantity = int(request.POST.get('quantity'))   
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
@@ -24,7 +24,6 @@ def add_to_cart(request, item_id):
 def remove_from_cart(request, item_id):
     """Remove the item from the shopping cart"""
     try:
-       
         cart = request.session.get('cart', {})
         cart.pop(item_id)
 

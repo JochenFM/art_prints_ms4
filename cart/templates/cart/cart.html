@@ -32,7 +32,13 @@
                 <table class="table">
                     <thead class="">
                         <tr>
+
+                            <a class="btn btn-outline-dark" href="{% url 'onlineshop' %}">Continue Shopping
+                                <i class="fas fa-long-arrow-alt-left"></i>
+                            </a>
                             <th scope="col">
+                                <form class="form update-form" method="POST" action="">
+                                    {% csrf_token %}
                                 <h5>Items: {{ product_count }} <strong></strong></h5>
                             </th>
                             <th scope="col">
@@ -42,12 +48,14 @@
                                 <p class ="mb-1 text-danger text-right">You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!</p>
                                     {% endif %}
                                     <h4 class ="mt-4 text-right"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                    
+                            </form>
                                 </th>
-                            <th><a href="{% url 'checkout' %}" class="btn-dark btn-lg text-decoration-none">Secure Checkout
-                                <span class ="icon">
+                            <th>
+                                
+                                <a href="{% url 'checkout' %}" class="btn-dark btn-lg text-decoration-none">Secure Checkout
+                             
                                     <i class ="fas fa-lock"></i>
-                                </span>
+                        
                             </a>
                             </th>
                         </tr>
@@ -112,7 +120,7 @@
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/bag/remove/${itemId}/`;
+        var url = `/cart/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken};
         
         $.post(url, data)
