@@ -102,6 +102,28 @@ body {
     cursor: pointer;
 }
 
+.message-container {
+    position:fixed;
+    top: 72px;
+    right:15px;
+    z-index: 9999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+
+}
+
+.toast-header,
+.toast-body {
+
+    background-color: #dfdcd3;
+}
+
 
 /**---- Cart ----**/
 
@@ -112,10 +134,12 @@ body {
     padding: 10px;
 }
 
-.btn-dark {
+.btn-lg {
 
     float: right;
     margin: 5px;
+    color: #343a40;
+    
 }
 
 .img-fluid {
