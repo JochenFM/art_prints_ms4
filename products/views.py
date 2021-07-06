@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import Product, Category
 
 # Create your views here.
@@ -40,10 +41,9 @@ def onlineshop(request):
             query = request.GET['q']
             if not query:
                 messages.error(request, "You did not enter any search criteria!")
-                return redirect(reverse('products'))
+                return redirect(reverse('onlineshop'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=
-                        query) | Q(author__icontains=query)
+            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(author__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
