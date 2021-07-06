@@ -130,6 +130,15 @@ body {
     overflow-y: auto;
 }
 
+/** cart preview as message**/
+
+.free-delivery {
+
+    background-color: #c95939;
+    color: white;
+}
+
+
 /**---- Cart ----**/
 
 .box-element {
