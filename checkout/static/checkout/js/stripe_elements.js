@@ -12,7 +12,7 @@ var elements = stripe.elements();
 
 var style = {
     base: {
-        color: '#000',
+        color: '#343a40',
         fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
         fontSmoothing: 'antialiased',
         fontSize: '16px',
