@@ -14,7 +14,6 @@ def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
-
     cart = request.session.get('cart', {})
     if not cart:
         messages.error(request, "There is nothing in your cart at the moment")
