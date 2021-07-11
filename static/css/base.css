@@ -42,6 +42,10 @@ body {
     border-radius: 4px;
 }
 
+input[name='q']::placeholder {
+    color: #413e3b;
+}
+
 .text-info {
 
     color: #618BB2;
@@ -240,3 +244,17 @@ body {
     margin: 0;
     height: 100%;
 }
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #343a40;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #413e3b;
+}
+
