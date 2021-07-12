@@ -245,6 +245,8 @@ input[name='q']::placeholder {
     height: 100%;
 }
 
+/* all allauth templates */
+
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
     color: #343a40;
@@ -258,3 +260,8 @@ input[name='q']::placeholder {
     color: #413e3b;
 }
 
+/*profile template*/
+
+#profile-update-form input::placeholder {
+    color: #413e3b;
+}

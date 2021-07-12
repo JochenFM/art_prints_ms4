@@ -15,9 +15,10 @@ def new_arrivals(request):
 
     products = Product.objects.all()
 
+    template = 'index.html/new_arrivals'
     context = {
         'products': products,
         'new_arrivals': new_arrivals,
     }
-    return render(request, 'new_arrivals/index.html', context)
+    return render(request, template, context)
 
