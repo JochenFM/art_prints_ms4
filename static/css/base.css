@@ -265,3 +265,10 @@ input[name='q']::placeholder {
 #profile-update-form input::placeholder {
     color: #413e3b;
 }
+
+/* order history template*/
+
+.order-history {
+    max-height: 416px; /*=height of profile forma & button, above => scrollbar
+    overflow-y: auto;
+}
