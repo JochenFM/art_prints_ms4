@@ -100,9 +100,13 @@
                                                 <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-4">
                                                     <div class="card shadow-lg">
                                                         <a href="{% url 'product_detail' product.id %}">
+                                                            {% if item.product.image %}            
                                                             <img class="card-img-top rounded-top img-fluid img-thumbnail"
                                                                 src="{{ product.image.url }}" alt="{{ product.name }}">
                                                         </a>
+                                                            {% else %}
+                                                            <img class="w-100" src="{{ MEDIA_URL }}no_image.png" alt = "{{ item.product.name }}">
+                                                            {% endif %}
                                                         <div class="card-body pb-0">
                                                             <p class="mb-0 lead font-weight-bold">{{ product.name }}</p>
 
