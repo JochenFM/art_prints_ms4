@@ -1,0 +1,2178 @@
+[
+    {
+      "model": "admin.logentry",
+      "pk": 1,
+      "fields": {
+        "action_time": "2021-06-23T09:36:40.447Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "1",
+        "object_repr": "mono",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 2,
+      "fields": {
+        "action_time": "2021-06-23T10:18:46.697Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "2",
+        "object_repr": "new_arrivals",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 3,
+      "fields": {
+        "action_time": "2021-06-23T10:19:22.883Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "3",
+        "object_repr": "art_posters",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 4,
+      "fields": {
+        "action_time": "2021-06-23T11:05:26.997Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "Bierhalle zum Rheinfels, Winterthur",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 5,
+      "fields": {
+        "action_time": "2021-06-23T11:06:03.822Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "Bierhalle zum Rheinfels, Winterthur",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 6,
+      "fields": {
+        "action_time": "2021-06-23T15:12:58.185Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "2",
+        "object_repr": "Hausmanns Sana-Pastillen",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 7,
+      "fields": {
+        "action_time": "2021-06-23T15:14:52.061Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "3",
+        "object_repr": "Brauerei Haldengut, Winterthur",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 8,
+      "fields": {
+        "action_time": "2021-06-23T15:21:31.517Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "4",
+        "object_repr": "Jakob Jaeggli, Oberwinterthur",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 9,
+      "fields": {
+        "action_time": "2021-06-23T15:30:13.200Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "5",
+        "object_repr": "Grand Brasserie & Beauregard S.-A.",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 10,
+      "fields": {
+        "action_time": "2021-06-23T15:30:41.014Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "3",
+        "object_repr": "Brauerei Haldengut, Winterthur",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Author\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 11,
+      "fields": {
+        "action_time": "2021-06-23T15:31:03.534Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "5",
+        "object_repr": "Grand Brasserie & Beauregard S.-A.",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Author\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 12,
+      "fields": {
+        "action_time": "2021-06-23T15:31:15.570Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "4",
+        "object_repr": "Jakob Jaeggli, Oberwinterthur",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Author\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 13,
+      "fields": {
+        "action_time": "2021-06-23T15:31:23.982Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "3",
+        "object_repr": "Brauerei Haldengut, Winterthur",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 14,
+      "fields": {
+        "action_time": "2021-06-23T15:31:30.968Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "3",
+        "object_repr": "Brauerei Haldengut, Winterthur",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 15,
+      "fields": {
+        "action_time": "2021-06-23T15:32:14.892Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "2",
+        "object_repr": "Hausmanns Sana-Pastillen",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Author\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 16,
+      "fields": {
+        "action_time": "2021-06-23T15:32:36.361Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "5",
+        "object_repr": "Grand Brasserie & Beauregard S.-A.",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Author\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 17,
+      "fields": {
+        "action_time": "2021-06-23T15:43:15.673Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "Bierhalle zum Rheinfels, Winterthur",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Author\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 18,
+      "fields": {
+        "action_time": "2021-06-23T15:45:34.788Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "6",
+        "object_repr": "Glasmalerei Gerster & Wildberger, Basel",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 19,
+      "fields": {
+        "action_time": "2021-06-23T15:50:07.724Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "7",
+        "object_repr": "Adolf Grieder & Cie., Zürich",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 20,
+      "fields": {
+        "action_time": "2021-06-23T17:14:04.184Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "8",
+        "object_repr": "Grieder & Co., Zürich",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 21,
+      "fields": {
+        "action_time": "2021-06-23T17:16:04.510Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "9",
+        "object_repr": "Glühstoff-Gesellschaft \"Delta\", Basel",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 22,
+      "fields": {
+        "action_time": "2021-06-23T17:17:45.931Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "10",
+        "object_repr": "\"Swan\" Füll-Federhalter, Mabie todd & Cie., Fabricants, New York",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 23,
+      "fields": {
+        "action_time": "2021-06-23T17:19:48.975Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "11",
+        "object_repr": "Fasnacht-Abend Liedertafel",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 24,
+      "fields": {
+        "action_time": "2021-06-23T17:21:14.295Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "12",
+        "object_repr": "Surber, Zürich",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 25,
+      "fields": {
+        "action_time": "2021-06-23T17:22:19.317Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "13",
+        "object_repr": "J. Böhny",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 26,
+      "fields": {
+        "action_time": "2021-06-23T17:36:30.341Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "14",
+        "object_repr": "Kunstanstalt Künzli",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 27,
+      "fields": {
+        "action_time": "2021-06-23T17:37:35.298Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "15",
+        "object_repr": "Bierbrauerei am Uetliberg",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 28,
+      "fields": {
+        "action_time": "2021-06-23T17:39:34.626Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "16",
+        "object_repr": "Teppichhaus Meyer-Müller, Zürich",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 29,
+      "fields": {
+        "action_time": "2021-06-23T17:40:53.390Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "17",
+        "object_repr": "Theodor Witzig Bahnhof-Restaurant Winterthur",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 30,
+      "fields": {
+        "action_time": "2021-06-23T17:42:38.862Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "18",
+        "object_repr": "Samuel Fischer, Basel",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 31,
+      "fields": {
+        "action_time": "2021-06-23T17:45:15.153Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "19",
+        "object_repr": "Sauter's Laboratorien A.-G., Genf \"Lecithin-Lebertran\"",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 32,
+      "fields": {
+        "action_time": "2021-06-23T17:48:27.605Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "20",
+        "object_repr": "Löwen-Apotheke, St. Gallen",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 33,
+      "fields": {
+        "action_time": "2021-06-23T17:52:55.570Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "21",
+        "object_repr": "Richard Staiger, chemisch-technische Fabrik, Kreuzlingen",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 34,
+      "fields": {
+        "action_time": "2021-06-23T17:53:16.665Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "22",
+        "object_repr": "Richard Staiger, chemisch-technische Fabrik, Kreuzlingen",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 35,
+      "fields": {
+        "action_time": "2021-06-23T17:53:39.639Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "23",
+        "object_repr": "Richard Staiger, chemisch-technische Fabrik, Kreuzlingen",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 36,
+      "fields": {
+        "action_time": "2021-06-23T17:53:45.022Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "24",
+        "object_repr": "Richard Staiger, chemisch-technische Fabrik, Kreuzlingen",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 37,
+      "fields": {
+        "action_time": "2021-06-23T17:54:01.641Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "25",
+        "object_repr": "Richard Staiger, chemisch-technische Fabrik, Kreuzlingen",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 38,
+      "fields": {
+        "action_time": "2021-06-23T17:57:25.999Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "26",
+        "object_repr": "Loewen-Apotheke Winterthur",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 39,
+      "fields": {
+        "action_time": "2021-06-24T08:35:25.994Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "25",
+        "object_repr": "Richard Staiger, chemisch-technische Fabrik, Kreuzlingen",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 40,
+      "fields": {
+        "action_time": "2021-06-24T08:38:15.587Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "27",
+        "object_repr": "G. Weyermann & Co. Herrenwäsche, Zürich",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 41,
+      "fields": {
+        "action_time": "2021-06-24T08:39:39.672Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "28",
+        "object_repr": "Helvetia",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 42,
+      "fields": {
+        "action_time": "2021-06-24T08:51:15.056Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "29",
+        "object_repr": "Klaus, S.A.",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 43,
+      "fields": {
+        "action_time": "2021-06-24T08:56:36.021Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "29",
+        "object_repr": "Stinglin-Zürcher Schuhgeschäft",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 44,
+      "fields": {
+        "action_time": "2021-06-24T09:01:08.632Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "30",
+        "object_repr": "Kling-Jenny Photographie",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 45,
+      "fields": {
+        "action_time": "2021-06-24T09:02:20.226Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "31",
+        "object_repr": "Central-Bad, Bern",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 46,
+      "fields": {
+        "action_time": "2021-06-24T09:10:22.152Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "32",
+        "object_repr": "Uhrenfabrik",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 47,
+      "fields": {
+        "action_time": "2021-06-24T09:11:48.159Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "33",
+        "object_repr": "M. F. Schaerer, Bern, Messeschmiedwaren",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 48,
+      "fields": {
+        "action_time": "2021-06-24T09:12:44.064Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "34",
+        "object_repr": "Schweizerische Mobiliar-Versicherungs-Gesellschaft",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 49,
+      "fields": {
+        "action_time": "2021-06-24T09:13:29.546Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "35",
+        "object_repr": "Bierbrauerei \"Schützengarten\", St. Gallen",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 50,
+      "fields": {
+        "action_time": "2021-06-24T09:15:55.725Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "36",
+        "object_repr": "Amsler/Motosacoche",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 51,
+      "fields": {
+        "action_time": "2021-06-24T09:16:28.933Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "24",
+        "object_repr": "Richard Staiger, chemisch-technische Fabrik, Kreuzlingen",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 52,
+      "fields": {
+        "action_time": "2021-06-24T09:16:28.959Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "23",
+        "object_repr": "Richard Staiger, chemisch-technische Fabrik, Kreuzlingen",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 53,
+      "fields": {
+        "action_time": "2021-06-24T09:16:28.980Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "22",
+        "object_repr": "Richard Staiger, chemisch-technische Fabrik, Kreuzlingen",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 54,
+      "fields": {
+        "action_time": "2021-06-24T09:16:29.001Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "21",
+        "object_repr": "Richard Staiger, chemisch-technische Fabrik, Kreuzlingen",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 55,
+      "fields": {
+        "action_time": "2021-06-25T10:53:16.711Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "36",
+        "object_repr": "Amsler/Motosacoche",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 56,
+      "fields": {
+        "action_time": "2021-06-25T10:59:39.608Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "4",
+        "object_repr": "stamps",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 57,
+      "fields": {
+        "action_time": "2021-06-25T10:59:49.937Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "3",
+        "object_repr": "art_posters",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 58,
+      "fields": {
+        "action_time": "2021-06-25T10:59:57.165Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "4",
+        "object_repr": "stamps",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Friendly name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 59,
+      "fields": {
+        "action_time": "2021-06-26T09:00:06.326Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "35",
+        "object_repr": "Bierbrauerei \"Schützengarten\", St. Gallen",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 60,
+      "fields": {
+        "action_time": "2021-06-26T13:19:16.488Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "37",
+        "object_repr": "Waschanstalt Zürich",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 61,
+      "fields": {
+        "action_time": "2021-06-26T14:04:26.232Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "4",
+        "object_repr": "stamps",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Friendly name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 62,
+      "fields": {
+        "action_time": "2021-06-26T14:04:29.146Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "4",
+        "object_repr": "stamps",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 63,
+      "fields": {
+        "action_time": "2021-06-26T14:04:43.013Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "3",
+        "object_repr": "art_posters",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Friendly name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 64,
+      "fields": {
+        "action_time": "2021-06-26T14:04:51.313Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "2",
+        "object_repr": "new_arrivals",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 65,
+      "fields": {
+        "action_time": "2021-06-26T14:04:55.508Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "1",
+        "object_repr": "mono",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Friendly name\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 66,
+      "fields": {
+        "action_time": "2021-06-26T15:01:52.340Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "2",
+        "object_repr": "Hausmanns Sana-Pastillen",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 67,
+      "fields": {
+        "action_time": "2021-06-26T15:02:11.131Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "4",
+        "object_repr": "Jakob Jaeggli, Oberwinterthur",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 68,
+      "fields": {
+        "action_time": "2021-06-26T15:02:37.611Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "3",
+        "object_repr": "Brauerei Haldengut, Winterthur",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 69,
+      "fields": {
+        "action_time": "2021-06-26T15:39:00.161Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "4",
+        "object_repr": "Jakob Jaeggli, Oberwinterthur",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 70,
+      "fields": {
+        "action_time": "2021-06-26T15:39:24.180Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "2",
+        "object_repr": "Hausmanns Sana-Pastillen",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 71,
+      "fields": {
+        "action_time": "2021-06-26T15:39:32.661Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "4",
+        "object_repr": "Jakob Jaeggli, Oberwinterthur",
+        "action_flag": 2,
+        "change_message": "[]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 72,
+      "fields": {
+        "action_time": "2021-06-26T15:39:44.134Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "3",
+        "object_repr": "Brauerei Haldengut, Winterthur",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 73,
+      "fields": {
+        "action_time": "2021-06-26T15:40:05.555Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "5",
+        "object_repr": "Grand Brasserie & Beauregard S.-A.",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 74,
+      "fields": {
+        "action_time": "2021-06-26T15:40:25.128Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "6",
+        "object_repr": "Glasmalerei Gerster & Wildberger, Basel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 75,
+      "fields": {
+        "action_time": "2021-06-26T15:40:48.566Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "7",
+        "object_repr": "Adolf Grieder & Cie., Zürich",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 76,
+      "fields": {
+        "action_time": "2021-06-26T15:41:08.045Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "11",
+        "object_repr": "Fasnacht-Abend Liedertafel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 77,
+      "fields": {
+        "action_time": "2021-06-26T15:45:36.641Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "2",
+        "object_repr": "Hausmanns Sana-Pastillen",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 78,
+      "fields": {
+        "action_time": "2021-06-26T15:45:57.196Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "4",
+        "object_repr": "Jakob Jaeggli, Oberwinterthur",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 79,
+      "fields": {
+        "action_time": "2021-06-28T08:14:55.036Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "3",
+        "object_repr": "Brauerei Haldengut, Winterthur",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 80,
+      "fields": {
+        "action_time": "2021-06-28T08:15:19.640Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "5",
+        "object_repr": "Grand Brasserie & Beauregard S.-A.",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 81,
+      "fields": {
+        "action_time": "2021-06-28T08:15:35.015Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "6",
+        "object_repr": "Glasmalerei Gerster & Wildberger, Basel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 82,
+      "fields": {
+        "action_time": "2021-06-28T08:15:51.273Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "7",
+        "object_repr": "Adolf Grieder & Cie., Zürich",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 83,
+      "fields": {
+        "action_time": "2021-06-28T08:16:07.211Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "11",
+        "object_repr": "Fasnacht-Abend Liedertafel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 84,
+      "fields": {
+        "action_time": "2021-06-28T08:16:24.687Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "10",
+        "object_repr": "\"Swan\" Füll-Federhalter, Mabie todd & Cie., Fabricants, New York",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 85,
+      "fields": {
+        "action_time": "2021-06-28T08:16:40.182Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "9",
+        "object_repr": "Glühstoff-Gesellschaft \"Delta\", Basel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 86,
+      "fields": {
+        "action_time": "2021-06-28T08:16:58.767Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "8",
+        "object_repr": "Grieder & Co., Zürich",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 87,
+      "fields": {
+        "action_time": "2021-06-28T08:18:00.205Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "37",
+        "object_repr": "Waschanstalt Zürich",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 88,
+      "fields": {
+        "action_time": "2021-06-28T08:18:20.606Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "17",
+        "object_repr": "Theodor Witzig Bahnhof-Restaurant Winterthur",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 89,
+      "fields": {
+        "action_time": "2021-06-28T08:18:40.178Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "16",
+        "object_repr": "Teppichhaus Meyer-Müller, Zürich",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 90,
+      "fields": {
+        "action_time": "2021-06-28T08:18:59.480Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "15",
+        "object_repr": "Bierbrauerei am Uetliberg",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 91,
+      "fields": {
+        "action_time": "2021-06-28T08:19:19.079Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "14",
+        "object_repr": "Kunstanstalt Künzli",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 92,
+      "fields": {
+        "action_time": "2021-06-28T08:19:36.677Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "13",
+        "object_repr": "J. Böhny",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 93,
+      "fields": {
+        "action_time": "2021-06-28T08:19:56.202Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "12",
+        "object_repr": "Surber, Zürich",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 94,
+      "fields": {
+        "action_time": "2021-06-28T08:20:16.705Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "20",
+        "object_repr": "Löwen-Apotheke, St. Gallen",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 95,
+      "fields": {
+        "action_time": "2021-06-28T08:20:35.543Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "19",
+        "object_repr": "Sauter's Laboratorien A.-G., Genf \"Lecithin-Lebertran\"",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 96,
+      "fields": {
+        "action_time": "2021-06-28T08:20:53.608Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "18",
+        "object_repr": "Samuel Fischer, Basel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 97,
+      "fields": {
+        "action_time": "2021-06-28T08:21:12.372Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "25",
+        "object_repr": "Richard Staiger, chemisch-technische Fabrik, Kreuzlingen",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 98,
+      "fields": {
+        "action_time": "2021-06-28T08:21:40.144Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "27",
+        "object_repr": "G. Weyermann & Co. Herrenwäsche, Zürich",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 99,
+      "fields": {
+        "action_time": "2021-06-28T08:21:58.907Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "26",
+        "object_repr": "Loewen-Apotheke Winterthur",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 100,
+      "fields": {
+        "action_time": "2021-06-28T08:22:25.261Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "29",
+        "object_repr": "Stinglin-Zürcher Schuhgeschäft",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 101,
+      "fields": {
+        "action_time": "2021-06-28T08:22:41.878Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "28",
+        "object_repr": "Helvetia",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 102,
+      "fields": {
+        "action_time": "2021-06-28T08:23:07.434Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "30",
+        "object_repr": "Kling-Jenny Photographie",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 103,
+      "fields": {
+        "action_time": "2021-06-28T08:23:24.388Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "31",
+        "object_repr": "Central-Bad, Bern",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 104,
+      "fields": {
+        "action_time": "2021-06-28T08:27:52.206Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "32",
+        "object_repr": "Uhrenfabrik",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 105,
+      "fields": {
+        "action_time": "2021-06-28T08:28:09.607Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "35",
+        "object_repr": "Bierbrauerei \"Schützengarten\", St. Gallen",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 106,
+      "fields": {
+        "action_time": "2021-06-28T08:28:25.728Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "34",
+        "object_repr": "Schweizerische Mobiliar-Versicherungs-Gesellschaft",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 107,
+      "fields": {
+        "action_time": "2021-06-28T08:28:41.335Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "33",
+        "object_repr": "M. F. Schaerer, Bern, Messeschmiedwaren",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 108,
+      "fields": {
+        "action_time": "2021-06-28T08:28:55.332Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "36",
+        "object_repr": "Amsler/Motosacoche",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 109,
+      "fields": {
+        "action_time": "2021-06-28T08:29:11.271Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "Bierhalle zum Rheinfels, Winterthur",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Dimension\", \"Year\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 110,
+      "fields": {
+        "action_time": "2021-06-28T08:30:47.872Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "19",
+        "object_repr": "Sauter's Laboratorien A.-G., Genf \"Lecithin-Lebertran\"",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 111,
+      "fields": {
+        "action_time": "2021-06-30T12:56:59.634Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "2",
+        "object_repr": "Hausmanns Sana-Pastillen",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 112,
+      "fields": {
+        "action_time": "2021-06-30T12:57:09.684Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "7",
+        "object_repr": "Adolf Grieder & Cie., Zürich",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 113,
+      "fields": {
+        "action_time": "2021-06-30T12:57:18.684Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "9",
+        "object_repr": "Glühstoff-Gesellschaft \"Delta\", Basel",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 114,
+      "fields": {
+        "action_time": "2021-07-09T08:52:05.308Z",
+        "user": 1,
+        "content_type": 17,
+        "object_id": "3",
+        "object_repr": "1F492405D9A34FBCA63C9A3056D7E702",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"name\": \"order line item\", \"object\": \"OrderLineItem object (4)\", \"fields\": [\"Quantity\"]}}]"
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 115,
+      "fields": {
+        "action_time": "2021-07-13T14:07:12.303Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "41",
+        "object_repr": "test",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 116,
+      "fields": {
+        "action_time": "2021-07-13T14:10:32.227Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "40",
+        "object_repr": "etst",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 117,
+      "fields": {
+        "action_time": "2021-07-13T14:10:39.640Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "39",
+        "object_repr": "test",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 118,
+      "fields": {
+        "action_time": "2021-07-13T14:10:47.071Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "38",
+        "object_repr": "test",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "admin.logentry",
+      "pk": 119,
+      "fields": {
+        "action_time": "2021-07-13T14:17:21.865Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "42",
+        "object_repr": "test",
+        "action_flag": 3,
+        "change_message": ""
+      }
+    },
+    {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+        "password": "pbkdf2_sha256$260000$qCFiu4MUQRCn3OKGRKXNBo$AtOXZnQVMfo9vCpLtZvjpT4bnJSXNh1ZwetAp5+lf5U=",
+        "last_login": "2021-07-13T14:17:54.992Z",
+        "is_superuser": true,
+        "username": "JochenFM",
+        "first_name": "",
+        "last_name": "",
+        "email": "jochen_mayer@gmx.de",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-06-22T11:38:01.909Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "sessions.session",
+      "pk": "gp218bkysa79w49zvw0quqkroy9onv0g",
+      "fields": {
+        "session_data": "eyJfc2Vzc2lvbl9leHBpcnkiOjB9:1m2YXW:WMAFfxne9SDRZ7g0ETLhaYP4hqc3AdQo9xQdsDz4tqU",
+        "expire_date": "2021-07-25T12:26:30.045Z"
+      }
+    },
+    {
+      "model": "sessions.session",
+      "pk": "pn15fsc9pfkw15l45zb34bqbktqca12z",
+      "fields": {
+        "session_data": ".eJxVjMEOgjAQRP-lZ9MItEvL0bvf0Ox2t4KaNqHgxfjvQsJBJ5nLvMl7q4DrMoa1yhwmVoNq1Ol3I4wPyTvgO-Zb0bHkZZ5I7xd90KqvheV5Ob5_ghHruGsdMmxxXW9Mx5H6FCkRmbOAdeBtzy2BBfDisE3ckAcfjYHW2q1-k1Z8SZhyKmpY5lU-X7jQPWA:1m1TUK:_YJqwZjSDucMpZvDNgwuitdfElGtQZ7IcAdFEHQfJD8",
+        "expire_date": "2021-07-22T12:50:44.340Z"
+      }
+    },
+    {
+      "model": "sessions.session",
+      "pk": "t503uppokm8nqtl73ydmhr79qb13ibsc",
+      "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyGWwgIevfsNZJcFqRqalPZk_HdL0oNOMpd5L_MWAbe1hK2lJUwsLmIQp9-NMD5T7YAfWO-zjHNdl4lkV-RBm7zNnF7Xw_07KNhKv3XIsMeNVuuRI9kcKRPpcwLjwBvLisAA-ORQZR7Ig49agzJmrxefL9tHNzw:1lyZqh:cdniVnU06rZLh_uwOaBeVcubAkxf8BouWoU11QQIgi4",
+        "expire_date": "2021-07-14T13:01:51.834Z"
+      }
+    },
+    {
+      "model": "sessions.session",
+      "pk": "ybxcakf3rc6gexhg1agmd8m2oznar08v",
+      "fields": {
+        "session_data": ".eJxVjMsKwyAURP_lroPkoUZddt9vEK-axrZo0QRaQv69EbJoB2YzZzgbaLMus16Lzzo4UNBB87uhsQ8fK3B3E2-J2BSXHJDUCzlpIdfk_PNyfv8Esylz1Qrj-BExjJQOzuI4WZwQaes5E1yy0fXIGefSC9NPrkPJpaWU94wdlVVafCkhRe3fr5A_oNoGrMkLqA0GUN2-fwE-K0Kn:1m3KT1:6FhCM3weeSIveK5-aUoaTjKs83Th2KvFcmlggA3r46E",
+        "expire_date": "2021-07-27T15:37:03.523Z"
+      }
+    },
+    {
+      "model": "sites.site",
+      "pk": 1,
+      "fields": {
+        "domain": "example.com",
+        "name": "example.com"
+      }
+    },
+    {
+      "model": "account.emailaddress",
+      "pk": 1,
+      "fields": {
+        "user": 1,
+        "email": "jochen_mayer@gmx.de",
+        "verified": true,
+        "primary": true
+      }
+    },
+    {
+      "model": "products.category",
+      "pk": 1,
+      "fields": {
+        "name": "mono",
+        "friendly_name": "Mono Card"
+      }
+    },
+    {
+      "model": "products.category",
+      "pk": 2,
+      "fields": {
+        "name": "new_arrivals",
+        "friendly_name": "New Arrivals"
+      }
+    },
+    {
+      "model": "products.category",
+      "pk": 3,
+      "fields": {
+        "name": "art_posters",
+        "friendly_name": "Artistic Poster"
+      }
+    },
+    {
+      "model": "products.category",
+      "pk": 4,
+      "fields": {
+        "name": "stamps",
+        "friendly_name": "Stamp"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 1,
+      "fields": {
+        "category": 1,
+        "name": "Bierhalle zum Rheinfels, Winterthur",
+        "author": "Wuhrmann, A.",
+        "description": "test",
+        "price": "22.00",
+        "condition": "0",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1905",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/wuhrmann_1905.jpg",
+        "image": "wuhrmann_1905_rbn4nkm.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 2,
+      "fields": {
+        "category": 2,
+        "name": "Hausmanns Sana-Pastillen",
+        "author": "Boecky, Carl",
+        "description": "test",
+        "price": "13.00",
+        "condition": "2",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": null,
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/boecky_190.jpg",
+        "image": "boecky_190_3r3w9jl.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 3,
+      "fields": {
+        "category": 1,
+        "name": "Brauerei Haldengut, Winterthur",
+        "author": "Calame, Louis Severin (1863-1931)",
+        "description": "test",
+        "price": "12.00",
+        "condition": "3",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1905",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/calame_1905.jpg",
+        "image": "calame_1905_7IURk1Z.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 4,
+      "fields": {
+        "category": 1,
+        "name": "Jakob Jaeggli, Oberwinterthur",
+        "author": "Calame, Louis Severin (1863-1931)",
+        "description": "test",
+        "price": "13.00",
+        "condition": "2",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1905",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/calame_1905_2.jpg",
+        "image": "calame_1905_2_WzntMLb.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 5,
+      "fields": {
+        "category": 1,
+        "name": "Grand Brasserie & Beauregard S.-A.",
+        "author": "Cardinaux, Emil (1877-1936)",
+        "description": "test",
+        "price": "24.00",
+        "condition": "4",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1906",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/cardinaux_1906.jpg",
+        "image": "cardinaux_1906_UqZtZsT.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 6,
+      "fields": {
+        "category": 1,
+        "name": "Glasmalerei Gerster & Wildberger, Basel",
+        "author": "Gerster, E.",
+        "description": "test",
+        "price": "14.00",
+        "condition": "2",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1908",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/gerster_1908.jpg",
+        "image": "gerster_1908_NfF6vJe.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 7,
+      "fields": {
+        "category": 2,
+        "name": "Adolf Grieder & Cie., Zürich",
+        "author": "Gilsi, Fritz (1878-1961)",
+        "description": "test",
+        "price": "88.00",
+        "condition": "1",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1904",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/gilsi_1904.jpg",
+        "image": "gilsi_1904_gEck8c5.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 8,
+      "fields": {
+        "category": 1,
+        "name": "Grieder & Co., Zürich",
+        "author": "Glatz, Hans Maria (1878-1930)",
+        "description": "test",
+        "price": "88.00",
+        "condition": "3",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1906",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/glatz_1906.jpg",
+        "image": "glatz_1906_ajbG0ih.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 9,
+      "fields": {
+        "category": 2,
+        "name": "Glühstoff-Gesellschaft \"Delta\", Basel",
+        "author": "Glatz, Hans Maria (1878-1930)",
+        "description": "TEst",
+        "price": "76.00",
+        "condition": "2",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1907",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/glatz_1907.jpg",
+        "image": "glatz_1907_DNyaJG1.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 10,
+      "fields": {
+        "category": 1,
+        "name": "\"Swan\" Füll-Federhalter, Mabie todd & Cie., Fabricants, New York",
+        "author": "Glatz, Hans Maria (1878-1930)",
+        "description": "test",
+        "price": "76.00",
+        "condition": "5",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1908",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/glatz_1908.jpg",
+        "image": "glatz_1908_jolzPPW.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 11,
+      "fields": {
+        "category": 1,
+        "name": "Fasnacht-Abend Liedertafel",
+        "author": "Glatz, Hans Maria (1878-1930)",
+        "description": "test",
+        "price": "56.00",
+        "condition": "2",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1908",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/glatz_1908_2.jpg",
+        "image": "glatz_1908_2_6yhmDDO.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 12,
+      "fields": {
+        "category": 1,
+        "name": "Surber, Zürich",
+        "author": "Hardmeyer, Robert (1876-1919)",
+        "description": "test",
+        "price": "44.00",
+        "condition": "1",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1902",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/hardmeyer_1902.jpg",
+        "image": "hardmeyer_1902_tjuIviW.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 13,
+      "fields": {
+        "category": 1,
+        "name": "J. Böhny",
+        "author": "Hardmeyer, Robert (1876-1919)",
+        "description": "test",
+        "price": "55.00",
+        "condition": "1",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1903",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/hardmeyer_1903.jpg",
+        "image": "hardmeyer_1903_JR3kAQd.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 14,
+      "fields": {
+        "category": 1,
+        "name": "Kunstanstalt Künzli",
+        "author": "Hardmeyer, Robert (1876-1919)",
+        "description": "test",
+        "price": "67.00",
+        "condition": "2",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1903",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/hardmeyer_1903_2.jpg",
+        "image": "hardmeyer_1903_2.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 15,
+      "fields": {
+        "category": 1,
+        "name": "Bierbrauerei am Uetliberg",
+        "author": "Hardmeyer, Robert (1876-1919)",
+        "description": "test",
+        "price": "89.00",
+        "condition": "2",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1905",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/hardmeyer_1905.jpg",
+        "image": "hardmeyer_1905_jKVkTza.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 16,
+      "fields": {
+        "category": 1,
+        "name": "Teppichhaus Meyer-Müller, Zürich",
+        "author": "Hardmeyer, Robert (1876-1919)",
+        "description": "test",
+        "price": "89.00",
+        "condition": "2",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1905",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/hardmeyer_1905_2.jpg",
+        "image": "hardmeyer_1905_2_hpL2vgY.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 17,
+      "fields": {
+        "category": 1,
+        "name": "Theodor Witzig Bahnhof-Restaurant Winterthur",
+        "author": "Hardmeyer, Robert (1876-1919)",
+        "description": "test",
+        "price": "90.00",
+        "condition": "1",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1907",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/hardmeyer_1907.jpg",
+        "image": "hardmeyer_1907_5UyxwV1.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 18,
+      "fields": {
+        "category": 1,
+        "name": "Samuel Fischer, Basel",
+        "author": "Hohlwein, Ludwig (1874-1949)",
+        "description": "test",
+        "price": "78.00",
+        "condition": "2",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": null,
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/hohlwein_190.jpg",
+        "image": "hohlwein_190_LUeF1m3.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 19,
+      "fields": {
+        "category": 1,
+        "name": "Sauter's Laboratorien A.-G., Genf \"Lecithin-Lebertran\"",
+        "author": "Hohlwein, Ludwig (1874-1949)",
+        "description": "Mono Card N°17, published by the International Mono Society in Winterthur.",
+        "price": "86.00",
+        "condition": "1",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1906",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/hohlwein_1906.jpg",
+        "image": "hohlwein_1906_zeX1dYd.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 20,
+      "fields": {
+        "category": 1,
+        "name": "Löwen-Apotheke, St. Gallen",
+        "author": "Hohlwein, Ludwig (1874-1949)",
+        "description": "test",
+        "price": "78.00",
+        "condition": "3",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1909",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/hohlwein_1909.jpg",
+        "image": "hohlwein_1909_w9RIOLr.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 25,
+      "fields": {
+        "category": 1,
+        "name": "Richard Staiger, chemisch-technische Fabrik, Kreuzlingen",
+        "author": "Maier, Johann Baptist (1881-1957)",
+        "description": "test",
+        "price": "67.00",
+        "condition": "3",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1908",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/maier_1908.jpg",
+        "image": "maier_1908_dna2EIH.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 26,
+      "fields": {
+        "category": 1,
+        "name": "Loewen-Apotheke Winterthur",
+        "author": "Mangold, Burkhard (1873-1950)",
+        "description": "test",
+        "price": "90.00",
+        "condition": "1",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1905",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/mangold_1905.jpg",
+        "image": "mangold_1905_jK04Hva.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 27,
+      "fields": {
+        "category": 1,
+        "name": "G. Weyermann & Co. Herrenwäsche, Zürich",
+        "author": "Mangold, Burkhard (1873-1950)",
+        "description": "test",
+        "price": "90.00",
+        "condition": "1",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1907",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/mangold_1907.jpg",
+        "image": "mangold_1907_TUjQ6o8.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 28,
+      "fields": {
+        "category": 1,
+        "name": "Helvetia",
+        "author": "Moos, Carl (1878-1959)",
+        "description": "test",
+        "price": "55.00",
+        "condition": "3",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1905",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/moos_1905.jpg",
+        "image": "moos_1905_cE2QvWR.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 29,
+      "fields": {
+        "category": 1,
+        "name": "Stinglin-Zürcher Schuhgeschäft",
+        "author": "Moos, Carl (1878-1959)",
+        "description": "test",
+        "price": "58.00",
+        "condition": "3",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1907",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/moos_1907.jpg",
+        "image": "moos_1907_BQnb0lH.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 30,
+      "fields": {
+        "category": 1,
+        "name": "Kling-Jenny Photographie",
+        "author": "Osswald, Fritz (1878-1966)",
+        "description": "test",
+        "price": "78.00",
+        "condition": "2",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1908",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/osswald_1908.jpg",
+        "image": "osswald_1908_wVxtZAS.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 31,
+      "fields": {
+        "category": 1,
+        "name": "Central-Bad, Bern",
+        "author": "Pfendsack, Hugo (1871-1940)",
+        "description": "test",
+        "price": "90.00",
+        "condition": "1",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1906",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/pfendsack_1906.jpg",
+        "image": "pfendsack_1906_UBlArAK.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 32,
+      "fields": {
+        "category": 1,
+        "name": "Uhrenfabrik",
+        "author": "Rikli, H.",
+        "description": "test",
+        "price": "85.00",
+        "condition": "1",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1909",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/rikli_1909.jpg",
+        "image": "rikli_1909_VN38Lug.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 33,
+      "fields": {
+        "category": 1,
+        "name": "M. F. Schaerer, Bern, Messeschmiedwaren",
+        "author": "Schaupp, Richard (1871-1954)",
+        "description": "test",
+        "price": "85.00",
+        "condition": "1",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1906",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/schaupp_1906.jpg",
+        "image": "schaupp_1906_E1r3MLZ.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 34,
+      "fields": {
+        "category": 1,
+        "name": "Schweizerische Mobiliar-Versicherungs-Gesellschaft",
+        "author": "Schaupp, Richard (1871-1954)",
+        "description": "test",
+        "price": "75.00",
+        "condition": "2",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1906",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/schaupp_1906_2.jpg",
+        "image": "schaupp_1906_2_vgJlGav.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 35,
+      "fields": {
+        "category": 1,
+        "name": "Bierbrauerei \"Schützengarten\", St. Gallen",
+        "author": "Schaupp, Richard (1871-1954)",
+        "description": "test",
+        "price": "85.00",
+        "condition": "1",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1907",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/schaupp_1907.jpg",
+        "image": "schaupp_1907_UmNVUF5.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 36,
+      "fields": {
+        "category": 1,
+        "name": "Amsler/Motosacoche",
+        "author": "Wieland, Hans Beat (1867-1945)",
+        "description": "test",
+        "price": "80.00",
+        "condition": "2",
+        "dimension": "12 x 17 cm | 4 x 6 inch",
+        "year": "1906",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/wieland_1906.jpg",
+        "image": "wieland_1906_YQ1iyME.jpg"
+      }
+    },
+    {
+      "model": "products.product",
+      "pk": 37,
+      "fields": {
+        "category": 3,
+        "name": "Waschanstalt Zürich",
+        "author": "Hardmeyer, Robert (1876-1919)",
+        "description": "An advertising poster created by Robert Hardmeyer in 1905 for a laundry company.\r\nPrinter\r\nGraphische Anstalt J.E. Wolfensberger AG, Zürich",
+        "price": "200.00",
+        "condition": "1",
+        "dimension": "45 1/4 x 65\" (115 x 165 cm)",
+        "year": "1904",
+        "image_url": "https://github.com/JochenFM/art_prints_ms4/media/hardmeyer_1905_poster.jpg",
+        "image": "hardmeyer_1905_poster_se7jXWy.jpg"
+      }
+    }
+   
+  ]
