@@ -1,1 +1,1 @@
-web: gunicorn jochenfm-art-prints.wsgi:application
+web: gunicorn art_prints_ms4.wsgi:application

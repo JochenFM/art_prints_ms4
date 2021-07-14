@@ -47,7 +47,7 @@ card.addEventListener('change', function (event) {
 });
 
 // Handle form submit and put the
-//form data into the payment intent object so it can be retrieved once we webhook
+//form data into the payment intent object so it can be retrieved once webhook
 // is received by code.
 
 

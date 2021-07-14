@@ -32,7 +32,7 @@ class StripeWH_Handler:
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
-        )        
+        )      
 
     def handle_event(self, event):
         """
@@ -46,7 +46,6 @@ class StripeWH_Handler:
         """
         Handle the payment_intent.succeeded webhook from Stripe
         """
-
         intent = event.data.object
         pid = intent.id
         cart = intent.metadata.cart
@@ -54,7 +53,7 @@ class StripeWH_Handler:
 
         billing_details = intent.charges.data[0].billing_details
         shipping_details = intent.shipping
-        grand_total = round(intent.charges.data[0].amount/100, 2)
+        grand_total = round(intent.charges.data[0].amount / 100, 2)
 
         # replace empty strings in shipping details with None rather than blank
 
@@ -136,7 +135,7 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
     # if anything goes wrong, order is deleted if it was created by returning
-    # 500 to stripe         
+    # 500 to stripe
             except Exception as e:
                 if order:
                     order.delete()
