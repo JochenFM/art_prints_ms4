@@ -62,52 +62,6 @@ https://codepen.io/nikki-peel/pen/RwavQer
 Do I need to insert new_arrivals into project level urls?
 and also into home urls.py?
 
-https://stackoverflow.com/questions/48735726/how-to-get-checkbox-values-in-django-application for get checkbox value in HTML form in django 
-
-From context.py:
-
-"""from decimal import Decimal
-from django.conf import settings
-from django.shortcuts import get_object_or_404
-from products.models import Product
-
-
-def cart_contents(request):
-
-    cart_items = []
-    total = 0
-    product_count = 0
-    cart = request.session.get('cart', {})
-
-    for item_id, checked in cart.items():
-        product = get_object_or_404(Product, pk=item_id)
-        product_count += int(checked)
-        cart_items.append({
-            'item_id': item_id,
-            'checked': checked,
-            'product': product,
-        })
-
-    if total < settings.FREE_DELIVERY_THRESHOLD:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
-        free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
-    else:
-        delivery = 0
-        free_delivery_delta = 0
-
-    grand_total = delivery + total
-    
-    context = {
-        'cart_items': cart_items,
-        'total': total,
-        'product_count': product_count,
-        'delivery': delivery,
-        'free_delivery_delta': free_delivery_delta,
-        'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
-        'grand_total': grand_total,
-    }
-
-    return context """
 
 from the now deleted cart_tool.py template tag ({% load cart_tools %} needs to be added at top of cart.html):
 """from django import template
@@ -121,3 +75,10 @@ def calc_subtotal(price, quantity):
 
 
     http://hex2rgba.devoth.com/ to get rgba from hex code
+
+
+From CI Video, "Deploying to Heroku", min 5:41
+While I'm here I'll also set debug to be true only if there's a variable called development in the environment.
+And now I'll commit these changes and push them to github.
+
+DEBUG = True must change to  DEBUG = 'DEVELOPMENT' in os.environ
