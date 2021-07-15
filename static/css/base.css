@@ -12,11 +12,7 @@ body {
     background-color: #413e3b;
 }
 
-.logo-font {
 
-    text-transform: uppercase;
-    padding-bottom: 40px;
-}
 
 .nav-link {
 
@@ -30,6 +26,12 @@ body {
     color: #dfdcd3;
     font-size: 30px;
     font-weight: 600;
+}
+
+.navbar-toggler {
+
+    color: #dfdcd3;
+
 }
 
 .fa-search {
@@ -269,6 +271,37 @@ input[name='q']::placeholder {
 /* order history template*/
 
 .order-history {
-    max-height: 416px; /*=height of profile forma & button, above => scrollbar
+    max-height: 416px; /*=height of profile forma & button, above => scrollbar*/
     overflow-y: auto;
+}
+
+
+@media (max-width: 991px) {
+
+
+.nav-link {
+    padding: 0.15rem;
+}
+
+.nav-link i.fa-lg {
+    font-size: 1rem;
+}
+
+.navbar-toggler {
+    padding: .6rem .6rem;
+    font-size: 1rem;
+}
+/*
+.btn.btn-secondary
+.btn.btn-dark.rounded-1
+.btn-dark.btn-lg {
+        padding: .375rem .375rem;
+    }
+
+.btn.btn-secondary
+.btn.btn-dark.rounded-1
+.btn-dark.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }*/
 }
