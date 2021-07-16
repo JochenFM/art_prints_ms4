@@ -1,181 +1,181 @@
-                            {% extends "base.html" %}
-                            {% load static %}
+{% extends "base.html" %}
+{% load static %}
 
-                            {% block page_header %}
+{% block page_header %}
 
-                            <div class="container header-container">
-                                <div class="row">
-                                    <div class="col">
+<div class="container header-container">
+<div class="row">
+<div class="col">
 
-                                    </div>
-                                </div>
+</div>
+</div>
 
-                            </div>
+</div>
 
-                            {% endblock %}
-
-
-                            {% block content %}
-
-                            <div class="container-fluid">
-                                <div class="row justify-content-between">
-                                    <div class="col text-center mt-2 mb-3">
-                                        <h2 class="">Products</h2>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="product-container col-10 offset-1">
-                                        <div class="row">
-                                            <div
-                                                class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
-                                                <div class="dropdown">
-                                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                                                        id="dropdownMenuLink" data-toggle="dropdown"
-                                                        aria-haspopup="true" aria-expanded="false">
-                                                        Sort by
-                                                    </a>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                        <a class="dropdown-item"
-                                                            href="{% url 'onlineshop' %}?sort=price&direction=asc">Prize
-                                                            (low to high)</a>
-                                                        <a class="dropdown-item"
-                                                            href="{% url 'onlineshop' %}?sort=price&direction=desc">Prize
-                                                            (high to low)</a>
-                                                        <a class="dropdown-item"
-                                                            href="{% url 'onlineshop' %}?sort=name&direction=asc">Name
-                                                            A-Z</a>
-                                                        <a class="dropdown-item"
-                                                            href="{% url 'onlineshop' %}?sort=name&direction=desc">Name
-                                                            Z-A</a>
-                                                        <a class="dropdown-item"
-                                                            href="{% url 'onlineshop' %}?sort=category&direction=asc">Category
-                                                            A-Z</a>
-                                                        <a class="dropdown-item"
-                                                            href="{% url 'onlineshop' %}?sort=category&direction=desc">Category
-                                                            Z-A</a>
-                                                        <a class="dropdown-item" href="{% url 'onlineshop' %}">All
-                                                            Products</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-6 order-md-first">
-                                                <p class="text-muted mt-3 text-center text-md-left">
-                                                    {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                                    <span class="small"><a href="{% url 'onlineshop' %}">Online Shop</a>
-                                                        | </span>
-                                                    {% endif %}
-                                                    {{ products|length }} Products{% if search_term %} found for
-                                                    <strong>"{{ search_term }}"</strong>{% endif %}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <h4> Narrow your Search</h4>
-                                                <div class="dropdown">
-                                                    <a class="btn btn-secondary mb-3 dropdown-toggle" href="#"
-                                                        role="button" id="dropdownMenuLink" data-toggle="dropdown"
-                                                        aria-haspopup="true" aria-expanded="false">
-                                                        Categories
-                                                    </a>
-                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                        <a class="dropdown-item"
-                                                            href="{% url 'onlineshop' %}?category=mono">Mono Cards</a>
-                                                        <a class="dropdown-item"
-                                                            href="{% url 'onlineshop' %}?category=art_posters">Artistic
-                                                            Posters</a>
-                                                        <a class="dropdown-item"
-                                                            href="{% url 'onlineshop' %}?category=stamps">Stamps</a>
-                                                        <a class="dropdown-item"
-                                                            href="{% url 'onlineshop' %}?category=new_arrivals">New
-                                                            Arrivals</a>
-                                                        <a class="dropdown-item" href="{% url 'onlineshop' %}">All
-                                                            Categories</a>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                {% for product in products %}
-                                                <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-4">
-                                                    <div class="card shadow-lg">
-                                                        <a href="{% url 'product_detail' product.id %}">
-                                                            {% if product.image %}            
-                                                            <img class="card-img-top rounded-top img-fluid img-thumbnail"
-                                                                src="{{ product.image.url }}" alt="{{ product.name }}">
-                                                        </a>
-                                                            {% else %}
-                                                            <img class="w-100" src="{{ MEDIA_URL }}no_image.png" alt = "{{ item.product.name }}">
-                                                            {% endif %}
-                                                        <div class="card-body pb-0">
-                                                            <p class="mb-0 lead font-weight-bold">{{ product.name }}</p>
-                                                            {% if request.user.is_superuser %}
-                                                            <small class="ml-3">
-                                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                                            </small>
-                                                        {% endif %}
-                                                            <div class="row">
-                                                                <div class="col">
-                                                                    <p class="mb-0 text-left">{{ product.author }}</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col">
-                                                                    {% if product.year %}
-                                                                </div>
-                                                                <div class="col">
-                                                                    <p class="mb-0 font-italic">{{product.year}}</p>
-                                                                    {% else %}
-                                                                    <p class="mb-0">Date:<span class="font-italic">
-                                                                            N/A<span></p>
-                                                                    {% endif %}
-                                                                    {% if product.category %}
-                                                                    <p class="mb-0">
-                                                                        <a class="text-muted"
-                                                                            href="{% url 'onlineshop' %}?category={{ product.category.name }}">
-                                                                            <i class="fas fa-tag mr-1"></i>
-                                                                            {{ product.category.friendly_name}}
-                                                                        </a>
-                                                                    </p>
-                                                                    {% endif %}
-                                                                    <p class="lead mb-0 text-right font-weight-bold">
-                                                                        £{{ product.price }}</p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="card-footer pt-0 d-flex justify-content-end">
-                                                            <a href="{% url 'product_detail' product.id %}"
-                                                                class="btn mr-2 "><i class="fas fa-eye"></i> View
-                                                                Details</a>
-                                                               
-                                                            <!--a href="#" class="btn mr-2"></a>
-                                                                <i class="fas fa-shopping-cart justify-content-end"></i>
-                                                                Add to Cart</a-->
-                                                        </div>
-                                                    </div>
-                                                </div>
+{% endblock %}
 
 
-                                                {% endfor %}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                            </div>
-                            <div class="btt-button shadow-sm rounded-0 border border-black">
-                                <a class="btt-link d-flex h-100">
-                                    <i class="fas fa-long-arrow-alt-up mx-auto my-auto"></i>
-                                </a>
-                            </div>
-                            {% endblock %}
-                            {% block postloadjs %}
+{% block content %}
 
-                            <script type="text/javascript">
-                                $('.btt-link').click(function (e) {
-                                    window.scrollTo(0, 0)
-                                })
-                            </script>
-                            {% endblock %}
+<div class="container-fluid">
+<div class="row justify-content-between">
+<div class="col text-center mt-2 mb-3">
+<h2 class="">Products</h2>
+</div>
+</div>
+<div class="row">
+<div class="product-container col-10 offset-1">
+<div class="row">
+<div
+class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+<div class="dropdown">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+        id="dropdownMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Sort by
+    </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item"
+            href="{% url 'onlineshop' %}?sort=price&direction=asc">Prize
+            (low to high)</a>
+        <a class="dropdown-item"
+            href="{% url 'onlineshop' %}?sort=price&direction=desc">Prize
+            (high to low)</a>
+        <a class="dropdown-item"
+            href="{% url 'onlineshop' %}?sort=name&direction=asc">Name
+            A-Z</a>
+        <a class="dropdown-item"
+            href="{% url 'onlineshop' %}?sort=name&direction=desc">Name
+            Z-A</a>
+        <a class="dropdown-item"
+            href="{% url 'onlineshop' %}?sort=category&direction=asc">Category
+            A-Z</a>
+        <a class="dropdown-item"
+            href="{% url 'onlineshop' %}?sort=category&direction=desc">Category
+            Z-A</a>
+        <a class="dropdown-item" href="{% url 'onlineshop' %}">All
+            Products</a>
+    </div>
+</div>
+</div>
+<div class="col-12 col-md-6 order-md-first">
+<p class="text-muted mt-3 text-center text-md-left">
+    {% if search_term or current_categories or current_sorting != 'None_None' %}
+    <span class="small"><a href="{% url 'onlineshop' %}">Online Shop</a>
+        | </span>
+    {% endif %}
+    {{ products|length }} Products{% if search_term %} found for
+    <strong>"{{ search_term }}"</strong>{% endif %}
+</p>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<h4> Narrow your Search</h4>
+<div class="dropdown">
+    <a class="btn btn-secondary mb-3 dropdown-toggle" href="#"
+        role="button" id="dropdownMenuLink" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Categories
+    </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item"
+            href="{% url 'onlineshop' %}?category=mono">Mono Cards</a>
+        <a class="dropdown-item"
+            href="{% url 'onlineshop' %}?category=art_posters">Artistic
+            Posters</a>
+        <a class="dropdown-item"
+            href="{% url 'onlineshop' %}?category=stamps">Stamps</a>
+        <a class="dropdown-item"
+            href="{% url 'onlineshop' %}?category=new_arrivals">New
+            Arrivals</a>
+        <a class="dropdown-item" href="{% url 'onlineshop' %}">All
+            Categories</a>
+
+    </div>
+</div>
+</div>
+<div class="row">
+{% for product in products %}
+<div class=" col-sm-6 col-md-6 col-lg-6 col-xl-4">
+    <div class="card shadow-lg">
+        <a href="{% url 'product_detail' product.id %}">
+            {% if product.image %}            
+            <img class="card-img-top rounded-top img-fluid img-thumbnail"
+                src="{{ product.image.url }}" alt="{{ product.name }}">
+        </a>
+            {% else %}
+            <img class="w-100" src="{{ MEDIA_URL }}no_image.png" alt = "{{ item.product.name }}">
+            {% endif %}
+        <div class="card-body pb-0">
+            <p class="mb-0 lead font-weight-bold">{{ product.name }}</p>
+            {% if request.user.is_superuser %}
+            <small class="ml-3">
+                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+            </small>
+        {% endif %}
+            <div class="row">
+                <div class="col">
+                    <p class="mb-0 text-left">{{ product.author }}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    {% if product.year %}
+                </div>
+                <div class="col">
+                    <p class="mb-0 font-italic">{{product.year}}</p>
+                    {% else %}
+                    <p class="mb-0">Date:<span class="font-italic">
+                            N/A<span></p>
+                    {% endif %}
+                    {% if product.category %}
+                    <p class="mb-0">
+                        <a class="text-muted"
+                            href="{% url 'onlineshop' %}?category={{ product.category.name }}">
+                            <i class="fas fa-tag mr-1"></i>
+                            {{ product.category.friendly_name}}
+                        </a>
+                    </p>
+                    {% endif %}
+                    <p class="lead mb-0 text-right font-weight-bold">
+                        £{{ product.price }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer pt-0 d-flex justify-content-end">
+            <a href="{% url 'product_detail' product.id %}"
+                class="btn mr-2 "><i class="fas fa-eye"></i> View
+                Details</a>
+                
+            <!--a href="#" class="btn mr-2"></a>
+                <i class="fas fa-shopping-cart justify-content-end"></i>
+                Add to Cart</a-->
+        </div>
+    </div>
+</div>
+
+
+{% endfor %}
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="btt-button shadow-sm rounded-0 border border-black">
+<a class="btt-link d-flex h-100">
+<i class="fas fa-long-arrow-alt-up mx-auto my-auto"></i>
+</a>
+</div>
+{% endblock %}
+{% block postloadjs %}
+
+<script type="text/javascript">
+$('.btt-link').click(function (e) {
+window.scrollTo(0, 0)
+})
+</script>
+{% endblock %}
