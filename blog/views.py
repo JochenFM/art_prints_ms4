@@ -10,3 +10,4 @@ def blog(request):
         'posts': Post.objects.all()
     }
     return render(request, 'blog/blog.html', context)
+

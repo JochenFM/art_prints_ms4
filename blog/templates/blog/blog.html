@@ -18,22 +18,28 @@
 
 <div class="container-fluid">
 <div class="row justify-content-between">
-    <div class="col text-center mt-2 mb-3">
+    <div class="col text-center mt-2 mb-5">
         <h2 class="">Blog</h2>
     </div>
 </div>
-{% extends "blog/base.html" %}
-{% block content %}
+<main role="main" class="container">
+      <div class="row">
+        <div class="col-md-9">
+
     {% for post in posts %}
-        <article class="media content-section">
+        <article class="box-element blog">
           <div class="media-body">
             <div class="article-metadata">
               <a class="mr-2" href="#">{{ post.author }}</a>
               <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
             </div>
-            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+            <h3><a class="article-title" href="#">{{ post.title }}</a></h3>
             <p class="article-content">{{ post.content }}</p>
           </div>
         </article>
-    {% endfor %}
+        {% endfor %}
+        </div>
+      </div>
+      </main>
+    
 {% endblock content %}

@@ -276,6 +276,50 @@ input[name='q']::placeholder {
 }
 
 
+/* blog */
+
+
+.box-element.blog {
+    box-shadow: hsl(0, 0%, 80%) 0 0 16px;
+    background-color: #dfdcd3;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+
+}
+
+  
+  .article-title {
+    color: #413e3b;
+  }
+  
+  a.article-title:hover {
+    color: #618BB2;
+    text-decoration: none;
+  }
+  
+  .article-content {
+    white-space: pre-line;
+  }
+  
+  .article-img {
+    height: 65px;
+    width: 65px;
+    margin-right: 16px;
+  }
+  
+  .article-metadata {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    /*border-bottom: 1px solid #413e3b;*/
+  }
+  
+  .article-metadata a:hover {
+    color: #413e3b;
+    text-decoration: none;
+  }
+  
+
 @media (max-width: 991px) {
 
 
