@@ -147,10 +147,7 @@
           </div>
       </nav>
       </header>
-    
-
-    
-
+  
 
       {% if messages %}
         <div  class = "message-container">
@@ -185,7 +182,26 @@
 
       <!--Footer -->
       
-      <footer>
+      <footer class="container-fluid text-center">
+        <div class ="row">
+          <div class="col-sm-4">
+            <h3>Contact Us</h3>
+            <br>
+            <h5>Built for educational purposes only</h5>
+          </div>
+          <div class="col-sm-4">
+            <h3>Connect</h3>
+            <a href="https://twitter.com/jochenfm" class="fa fa-twitter"></a>
+            <a href="https://pinterest.com" class="fa fa-pinterest"></a>
+            <a href="https://instagram.com" class="fa fa-instagram"></a>
+       
+          </div>
+          <div class="col-sm-4">
+            <img src ="{% static 'img/home/brand_logo.png' %}" class="brandlogo" href="{% url 'home' %}">
+
+            
+          </div>
+        </div>
 
       </footer>
 

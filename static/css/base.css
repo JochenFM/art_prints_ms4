@@ -28,11 +28,28 @@ body {
     font-weight: 600;
 }
 
+
+
 .navbar-toggler {
 
     color: #dfdcd3;
 
 }
+
+.navbar-nav li a:hover {
+
+    color: #618BB2;
+}
+
+.navbar-brand:hover {
+
+    color: #618BB2;
+}
+
+/**.fa-user:hover {
+
+    color: #618BB2;
+} **/
 
 .fa-search {
 
