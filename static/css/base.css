@@ -90,7 +90,6 @@ input[name='q']::placeholder {
     height: 100vh;
     background-position: center;
     background-size: cover;
-    padding-top: 70px;
     border-radius: 0px!important;
 }
 
@@ -100,44 +99,37 @@ input[name='q']::placeholder {
     color: #c95939;
     font-size: 45px;
     font-weight: 600;
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
 
 }
 
 .intro {
     padding-top: 160px;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
 
-
-/**.carousel-caption {
-
-    position: absolute;
-    top: 15%;
-    transform: translateY(+40%);
-    transform: translateX(+42%);
-    
 
 }
-.carousel-caption h1 {
-
-
-}**/
 
 .view-shop-button{
 
-    background-color: #c95939;
+    background-color: #618BB2;
     height: 45px;
     width: 175px;
-    color: #413e3b;
     outline: none;
     border: none;
-    border-radius: 20%;
+    border-radius: 25%;
+    float: right;
 
 }
 
 .view-shop-button:hover{
   
-    background-color: #618BB2;
-    color: #dfdcd3;
+    background-color: #c95939;
     transition: 0.6;
 }
 
@@ -398,7 +390,7 @@ footer {
 
 @media (max-width: 991px) {
 
-
+}
 .nav-link {
     padding: 0.15rem;
 }
