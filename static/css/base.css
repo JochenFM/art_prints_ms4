@@ -133,6 +133,13 @@ input[name='q']::placeholder {
     transition: 0.6;
 }
 
+/**all dark buttons **/
+
+.btn-dark {
+
+    margin-bottom: 20px;
+}
+
 /**---- Footer ----**/
 
 footer {
@@ -141,14 +148,14 @@ footer {
     background-color: #343a40;
     padding: 5% 5% 10% 5%;
     color: #dfdcd3;
-    max-height: 200px;
+    height: 200px;
 
 }
 
 .fa {
 
     padding: 15px;
-    font-size: 25px;
+    font-size: 20px;
     color:#dfdcd3;
 }
 
@@ -161,7 +168,7 @@ footer {
 
 .brandlogo {
 
-    max-width: 100px;
+    max-width: 50px;
 }
 /**---- Online Shop ----**/
 
@@ -314,6 +321,8 @@ footer {
     margin: 0;
     height: 100%;
 }
+
+
 
 /* all allauth templates */
 
