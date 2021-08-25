@@ -87,7 +87,7 @@ input[name='q']::placeholder {
 
 .jumbotron {
     background-image: url('/static/img/home/hero_image.jpg');
-    height: 100vh;
+    height: 140vh;
     background-position: center;
     background-size: cover;
     border-radius: 0px!important;

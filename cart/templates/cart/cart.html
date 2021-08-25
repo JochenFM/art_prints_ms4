@@ -13,125 +13,135 @@
     </div>
 
 </div>
-    {% endblock %}
-    {% block content %}
+{% endblock %}
+{% block content %}
 <div class="container mb-2">
-<div class="row">
-    <div class="col">
-        <hr>
-        <h2 class ="">
-            Shopping Cart
-        </h2>
-        <hr>
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="">
+                Shopping Cart
+            </h2>
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            {% if cart_items %}
+            <div class="box-element">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="">
+                    <tr>
+
+                        <a class="btn btn-dark" href="{% url 'onlineshop' %}">Continue Shopping
+                            <i class="fas fa-long-arrow-alt-left"></i>
+                        </a>
+                        <th scope="col">
+                            <form class="form update-form" method="POST" action="">
+                                {% csrf_token %}
+                                <h5>Items: {{ product_count }} <strong></strong></h5>
+                        </th>
+                        <th scope="col">
+                            <h5 class="text-right"><strong> Cart Total: £
+                                    {{total|floatformat:2 }}</strong></h5>
+                            <h6 class="text-right">Delivery: £{{ delivery|floatformat:2 }}</h6>
+                            {% if  free_delivery_delta > 0 %}
+                            <p class="mb-1 text-danger text-right">You could get free delivery by
+                                spending just <strong>£{{ free_delivery_delta }}</strong> more!</p>
+                            {% endif %}
+                            <h4 class="mt-4 text-right"><strong>Grand Total:
+                                    £{{ grand_total|floatformat:2 }}</strong></h4>
+                            </form>
+                        </th>
+                <th>
+
+                    <a href="{% url 'checkout' %}"
+                        class="btn-dark btn-lg text-decoration-none">Secure Checkout
+
+                        <i class="fas fa-lock"></i>
+
+                    </a>
+                </th>
+            </tr>
+                </thead>
+            </table>
+        </div>
+
+    </div>
+
+    <br>
+<div class="box-element">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Your Selection(s)</th>
+                    <th scope="col"></th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Subtotal</th>
+                </tr>
+            </thead>
+
+            {% for item in cart_items %}
+
+            <tr>
+                <td class="p-3">
+                    {% if item.product.image %}
+                    <img class="img-fluid rounded img-thumbnail"
+                        src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                    {% else %}
+                    <img class="img-fluid rounded img-thumbnail"
+                        src="{{ MEDIA_URL }}no_image.png" alt="{{ item.product.name }}">
+                    {% endif %}
+                </td>
+                <td class="py-3">
+                    <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                    <a class="remove-item text-danger float-left text-decoration-none"
+                        id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                </td>
+
+                <td class="py-3">
+                    <p class="my-0">£{{ item.product.price }}</p>
+                </td>
+                <td class="py-3">
+                    <p class="my-0">{{ item.quantity }}</p>
+                </td>
+                <td class="py-3">
+                    <p class="my-0">£{{ item.product.price }}</p>
+                </td>
+            </tr>
+            {% endfor %}
     </div>
 </div>
-<div class="row">
-    <div class="col-lg-12">
-        {% if cart_items %}
-        <div class="box-element">
-            <div class="table-responsive">
-                <table class="table">
-                    <thead class="">
-                        <tr>
-
-                            <a class="btn btn-dark" href="{% url 'onlineshop' %}">Continue Shopping
-                                <i class="fas fa-long-arrow-alt-left"></i>
-                            </a>
-                            <th scope="col">
-                                <form class="form update-form" method="POST" action="">
-                                    {% csrf_token %}
-                                <h5>Items: {{ product_count }} <strong></strong></h5>
-                            </th>
-                            <th scope="col">
-                                <h5 class= "text-right"><strong> Cart Total: £ {{total|floatformat:2 }}</strong></h5>
-                            <h6 class= "text-right">Delivery: £{{ delivery|floatformat:2 }}</h6>
-                            {% if  free_delivery_delta > 0 %}
-                                <p class ="mb-1 text-danger text-right">You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!</p>
-                                    {% endif %}
-                                    <h4 class ="mt-4 text-right"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                            </form>
-                                </th>
-                            <th>
-                                
-                                <a href="{% url 'checkout' %}" class="btn-dark btn-lg text-decoration-none">Secure Checkout
-                             
-                                    <i class ="fas fa-lock"></i>
-                        
-                            </a>
-                            </th>
-                        </tr>
-                    </thead>
-                </table>
+    {% else %}
+    <p class="lead mb-5">Your Cart is empty</p>
+    <a class="btn btn-dark" href="{% url 'onlineshop' %}">Continue Shopping
+        <i class="fas fa-long-arrow-alt-left"></i>
+    </a>
+    {% endif %}
             </div>
-
         </div>
+    </div>
 
-        <br>
-        <div class="box-element">
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Your Selection(s)</th>
-                            <th scope="col"></th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Qty</th>
-                            <th scope="col">Subtotal</th>
-                        </tr>
-                    </thead>
-
-                    {% for item in cart_items %}
-
-                    <tr>
-                        <td class ="p-3">
-                            {% if item.product.image %}
-                            <img class="img-fluid rounded img-thumbnail" src="{{ item.product.image.url }}" alt = "{{ item.product.name }}">
-                            {% else %}
-                            <img class="img-fluid rounded img-thumbnail" src="{{ MEDIA_URL }}no_image.png" alt = "{{ item.product.name }}">
-                            {% endif %}
-                        </td>
-                        <td class ="py-3">
-                            <p class ="my-0"><strong>{{ item.product.name }}</strong></p> 
-                            <a class= "remove-item text-danger float-left text-decoration-none" id="remove_{{ item.item_id }}"><small>Remove</small></a>  
-                        </td>
-                        
-                        <td class ="py-3">
-                            <p class ="my-0">£{{ item.product.price }}</p>   
-                        </td>
-                        <td class ="py-3">
-                            <p class ="my-0">{{ item.quantity }}</p>   
-                        </td>
-                        <td class ="py-3">
-                            <p class ="my-0">£{{ item.product.price }}</p>   
-                        </td>
-                    </tr>
-                  {% endfor %}  
-            </div>
-            {% else %}
-            <p class ="lead mb-5">Your Cart is empty</p>
-            <a class="btn btn-dark" href="{% url 'onlineshop' %}">Continue Shopping
-                <i class="fas fa-long-arrow-alt-left"></i>
-            </a>
-            {% endif %}
-        </div>
-        
-</div>
-</div>
 
 {% endblock %}
 {% block postloadjs %}
-<script  type = "text/javascript">
+<script type="text/javascript">
     // remove item and reload on click //
-    $('.remove-item').click(function(e) {
+    $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var url = `/cart/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken};
-        
+        var data = {
+            'csrfmiddlewaretoken': csrfToken
+        };
+
         $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
+            .done(function () {
+                location.reload();
+            });
     })
 </script>
 {% endblock %}
