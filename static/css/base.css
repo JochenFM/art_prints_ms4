@@ -23,9 +23,9 @@
     font-weight: 600;
 }
 
-.navbar-toggler {
+.navbar-toggler .navbar-toggler-icon {
 
-    color: #dfdcd3!important;
+    color: #dfdcd3;
     outline: none!important;
     border: none!important;
 
@@ -163,7 +163,7 @@ footer {
 
 .brandlogo {
 
-    max-width: 70px;
+    max-width: 100px;
 }
 /**---- Online Shop ----**/
 
@@ -409,6 +409,18 @@ footer {
     font-size: 1rem;
    
 }
+
+@media (max-width: 768px) {
+
+    .fa {
+        font-size: 20px;
+        padding: 10px;
+    }
+    .brandlogo {
+        max-width: 70px;
+    }
+}
+
 /*
 .btn.btn-secondary
 .btn.btn-dark.rounded-1

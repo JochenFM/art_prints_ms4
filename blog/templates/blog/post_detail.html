@@ -20,6 +20,7 @@
 <div class="row justify-content-between">
     <div class="col text-center mt-2 mb-5">
         <h2 class="">Blog Post</h2>
+        <hr>
     </div>
 </div>
 <main role="main" class="container">
@@ -28,7 +29,7 @@
         <article class="box-element blog">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="mr-2" href="#">{{ object.author }}</a>
+              <a class="mr-2" href=" {% url 'user-posts' object.author.username %}">{{ object.author }}</a>
               <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
               {% if object.author == user %}
               <small class="ml-3">
