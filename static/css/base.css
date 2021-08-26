@@ -118,11 +118,6 @@ input[name='q']::placeholder {
 .view-shop-button{
 
     background-color: #618BB2;
-    height: 45px;
-    width: 175px;
-    outline: none;
-    border: none;
-    border-radius: 25%;
     float: right;
 
 }
@@ -396,6 +391,7 @@ footer {
     text-decoration: none;
   }
   
+
 
 @media (max-width: 991px) {
 
