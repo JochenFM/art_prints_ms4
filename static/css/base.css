@@ -137,13 +137,14 @@ input[name='q']::placeholder {
 
 /**---- Footer ----**/
 
-footer {
+
+
+.footer {
 
     width: 100%;
     background-color: #343a40;
     padding: 5% 5% 10% 5%;
     color: #dfdcd3;
-    height: 200px;
 
 }
 
@@ -165,6 +166,7 @@ footer {
 
     max-width: 100px;
 }
+
 /**---- Online Shop ----**/
 
 
