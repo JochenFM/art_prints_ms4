@@ -86,7 +86,7 @@ input[name='q']::placeholder {
 /** landing page**/
 
 .jumbotron {
-    background-image: url('/static/img/home/hero_image.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/img/home/hero_image.jpg');
     height: 140vh;
     background-position: relative;
     background-size: cover;
@@ -96,7 +96,7 @@ input[name='q']::placeholder {
 .jumbotron h1 {
 
     margin: 30px 0;
-    color: #c95939;
+    color: #dfdcd3;
     font-size: 45px;
     font-weight: 600;
     display: table-cell;
@@ -117,14 +117,14 @@ input[name='q']::placeholder {
 
 .view-shop-button{
 
-    background-color: #618BB2;
+    background-color: #c95939 ;
     float: right;
 
 }
 
 .view-shop-button:hover{
   
-    background-color: #c95939;
+    background-color: #618BB2;
     transition: 0.6;
 }
 
@@ -161,6 +161,8 @@ input[name='q']::placeholder {
     text-decoration: none;
 
 }
+
+
 
 .brandlogo {
 

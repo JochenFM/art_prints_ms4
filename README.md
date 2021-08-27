@@ -8,7 +8,7 @@ My site emulates examples such as https://www.galerie123.com/en/, https://www.ki
 
 
 
-
+Footer is inspired by examples from https://www.ordinarycoders.com/blog/article/bootstrap-footers
 
 <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
                   <li class="nav-item"><a class="nav-link" href="{% url 'new_arrivals' %}">New Arrivals</a></li>

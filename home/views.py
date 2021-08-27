@@ -15,7 +15,7 @@ def new_arrivals(request):
 
     products = Product.objects.all()
 
-    template = 'home/new_arrivals.html'
+    """template = 'home/new_arrivals.html'"""
     context = {
         'products': products,
         'new_arrivals': new_arrivals,
