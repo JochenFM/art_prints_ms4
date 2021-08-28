@@ -80,6 +80,8 @@ Email contact form adjusted from http://reusableforms.com/d/e1/bootstrap-contact
 
 Footer with three-column layout adjusted from https://www.ordinarycoders.com/blog/article/bootstrap-footers 
 
+to check if all tags are closed: https://www.aliciaramirez.com/closing-tags-checker/
+
 
 From CI Video, "Deploying to Heroku", min 5:41
 While I'm here I'll also set debug to be true only if there's a variable called development in the environment.
