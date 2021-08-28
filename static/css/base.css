@@ -419,19 +419,11 @@ input[name='q']::placeholder {
     .brandlogo {
         max-width: 70px;
     }
-}
 
-/*
-.btn.btn-secondary
-.btn.btn-dark.rounded-1
-.btn-dark.btn-lg {
-        padding: .375rem .375rem;
-    }
-
-.btn.btn-secondary
-.btn.btn-dark.rounded-1
+.btn.btn-secondary,
+.btn.btn-dark,
 .btn-dark.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
-    }*/
+    }
 }
