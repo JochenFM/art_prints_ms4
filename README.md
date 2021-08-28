@@ -76,6 +76,10 @@ def calc_subtotal(price, quantity):
 
     http://hex2rgba.devoth.com/ to get rgba from hex code
 
+Email contact form adjusted from http://reusableforms.com/d/e1/bootstrap-contact-form-send-email
+
+Footer with three-column layout adjusted from https://www.ordinarycoders.com/blog/article/bootstrap-footers 
+
 
 From CI Video, "Deploying to Heroku", min 5:41
 While I'm here I'll also set debug to be true only if there's a variable called development in the environment.
