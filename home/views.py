@@ -1,24 +1,16 @@
 from django.shortcuts import render
-from .models import Product
-
-
-# Create your views here.
+from .models import Product, Category
 
 
 def index(request):
-    """ a view to return the index page """
-    return render(request, 'home/index.html')
-
-
-def new_arrivals(request):
-    """ a view to show new arrivals among products  """
-
+    """ a view to return the index page and display products of
+    new_arrivals category """
+    categories = Category.objects.all()
     products = Product.objects.all()
 
-    """template = 'home/new_arrivals.html'"""
     context = {
+        'categories': categories,
         'products': products,
-        'new_arrivals': new_arrivals,
     }
-    return render(request, template, context)
 
+    return render(request, 'home/index.html', context)

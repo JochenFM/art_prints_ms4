@@ -82,3 +82,18 @@ While I'm here I'll also set debug to be true only if there's a variable called 
 And now I'll commit these changes and push them to github.
 
 DEBUG = True must change to  DEBUG = 'DEVELOPMENT' in os.environ
+
+def new_arrivals(request):
+    """ a view to show new arrivals among products  """
+
+    products = Product.objects.all()
+
+    """template = 'home/new_arrivals.html'"""
+    context = {
+        'products': products,
+        'new_arrivals': new_arrivals,
+    }
+    return render(request, template, context)
+
+
+urls.py:     """path('', views.new_arrivals, name='new_arrivals')"""

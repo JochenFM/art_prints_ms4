@@ -38,8 +38,8 @@
     <div class="row gx-4 justify-content-center">
 <h1 class= "text-center mb-5">New Arrivals</h1>
 <div class="row py-5">
-{% for product in products %}
-{% if product.category == 'new_arrivals' %}
+    {% for product in products %}
+    {% if product.category == 'new_arrivals' %}
 <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-4">
     <div class="card shadow-lg">
         <a href="{% url 'product_detail' product.id %}">

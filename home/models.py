@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 
 class Category(models.Model):
     # this name should be readable in other code, can be mono_cards
@@ -28,7 +26,6 @@ class Category(models.Model):
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True,
                                  on_delete=models.SET_NULL)
-
     name = models.CharField(max_length=254)
     author = models.CharField(max_length=254, null=True, blank=True)
     description = models.TextField()
