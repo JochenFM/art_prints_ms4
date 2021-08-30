@@ -240,6 +240,9 @@ The illustration is by Georg Barbier (1882-1932), one of France's great illustra
 
 ## Technologies Used
 
+The main frontend development was created using HTML, CSS, JavaScript and their libraries. The main backend development was powered by Python and Django.
+
+
 ### Languages
 
 
@@ -248,18 +251,17 @@ The illustration is by Georg Barbier (1882-1932), one of France's great illustra
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) to create and manipulate the site's client-side dynamic elements.
 - [Python](https://www.python.org/) for the backend server and running queries to the database.
 
+### Libraries and Packages
+
+- [Django](https://www.djangoproject.com/)
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+- [Bootstrap (v4.4.1)](https://www.bootstrapcdn.com/)
+- [JQuery](https://jquery.com/)
+- [Stripe](https://stripe.com/ie)
 
 
-### Frameworks
 
-- [Flask](https://palletsprojects.com/p/flask/) to simplify webserver tasks
-- [Materialize](https://materializecss.com/) to aid in responsive design and conforming to the google material design language.
-
-### Extensions and kits
-
-- [Flask Paginate](https://pythonhosted.org/Flask-paginate/) to help implement simple pagination on library.html
-- [Werkzeug](https://palletsprojects.com/p/werkzeug/) to manage the Web Server Gateway Interface.
-- [Cloudinary](https://cloudinary.com/) to store and serve videos and handle video uploading.
 
 ### Project management
 
@@ -267,20 +269,25 @@ The illustration is by Georg Barbier (1882-1932), one of France's great illustra
 - [GitHub](https://github.com/) to store the project repository and deploy the site
 - [GitPod](https://gitpod.io/) for version control.
 - [Heroku](https://www.heroku.com/about) is the deployment platform.
-- [MongoDB](https://www.mongodb.com/) as backend database.
-- [dbdiagram](https://dbdiagram.io/home)  to create Entity Relationship diagram of the database. 
+- [dbdiagram](https://dbdiagram.io/home) to create Entity Relationship diagram of the database.
+- [AWS S3 bucket](https://aws.amazon.com/) to store all static files and images. 
 
 ### Tools
 
 - [Am I Responsive?](http://ami.responsivedesign.is/) to generate images across different devices' screen sizes.
 - [Autoprefixer](https://autoprefixer.github.io/) to ensure CSS compatibility across different browsers.
-- [Coolers.co](https://coolors.co/ff8a65-f2c078-faedca-c1dbb3-7ebc89) to help create the color palette used across the site.
-- [Favicon.io](https://favicon.io//) to create the video recorder icon in the browser tab.
+- Alicia Ramirez' [Closing Tags Checker](https://www.aliciaramirez.com/closing-tags-checker/) to check if all tags are closed properly. 
+- [Coolers.co](https://coolors.co/) to help create the color palette used across the site.
+- [Favicon.io](https://favicon.io//) to create the brand logo icon in the browser tab.
+- [Canva](https://www.canva.com/en_gb/) to create the brand logo PNG 
 - [Font Awesome](https://fontawesome.com/) for all (button) icons.
 - [Google Fonts](https://fonts.google.com/) for the font of this site.
 
 
 <div align="right"><a style="text-align:right" href="#top">Go to index: :arrow_double_up:</a></div>
+
+
+
 
 
 
@@ -325,13 +332,13 @@ Full details of testing can be found [here](TESTING.md).
 
 - Code Institute's [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) Project
 
-- Corey Shafer's [Python Django Tutorial: Full-Featured Web App](https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) especially parts 2, 3, 10, and 11 which helped me set up the blog and the pagination.
+- Corey Shafer's [Python Django Tutorial: Full-Featured Web App](https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) especially parts 2, 3, 10, and 11 which helped me set up the blog and implement pagination.
 
 - Email contact form on index.html adjusted from [this example](http://reusableforms.com/d/e1/bootstrap-contact-form-send-email) at Reusable Forms
 
 - Footer with three-column layout adjusted from [Ordinary Coders](https://www.ordinarycoders.com/blog/article/bootstrap-footers) 
 
-to check if all tags are closed Alicia Ramirez' [Closing Tags Checker](https://www.aliciaramirez.com/closing-tags-checker/)
+
 
 
 ### Acknowledgments
@@ -343,13 +350,13 @@ A number of Code Institute's tutors were of great help. Many thanks to:
 - John Traas
 - Kevin Loughry
 
-without whom this site would not be. 
+without whom this site would not be what it is now.
 
 Special thanks also to my fellow students on Slack.
 
 Some MS4s were a great inspiration for this project, especially Asuna Masuada's [Flowery Days](https://flowerydays.herokuapp.com/).
 
-Thanks also to my mentor [Adegbenga Adeye](https://github.com/deye9) for his encouragement and for generously sparing an extra hour to try and help me display the new arrivals amongst my products on index.html
+Thanks also to my mentor [Adegbenga Adeye](https://github.com/deye9) for his encouragement and for generously sparing an extra hour to try and help me display the products of the 'new arrivals' category on index.html
 
 
 ### Image Credits
