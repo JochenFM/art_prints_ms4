@@ -188,41 +188,51 @@ Values: 1. Creativity and Business can go together as shown both by this project
 
 ### Colours
 
-I took the color composition on the hero image as a guide for the site's color scheme. [Image Color Picker](https://imagecolorpicker.com/en) helped to find the matching colors and [Coolers](https://coolors.co/) helped produce the palette:
+I took the color composition on the hero image as a guide for the site's color scheme, and made sure the dark grey matches the hex code of Bootstrap's dark color (#343a40). [Image Color Picker](https://imagecolorpicker.com/en) helped to find the matching colors and [Coolers](https://coolors.co/) helped produce the palette:
 
   ![palette](readme_materials/palette_ms4.png)
 
 
-The 
+This palette reflects the Art Deco and Art Nouveau ambiances germane to the period from which most of the products on display originate. The shades of the four colours do  complement each other as well, and form a nice contrast useful to assist in site navigation.
 
-bootstrap bg dark #343a40 Gyunmet
+### Typography
 
-original in den titel?
-nach art deco, Jugendstil suchen fuer images
-
-From https://fonts.google.com/specimen/Old+Standard+TT?query=old+sta:
-
-About Old Standard TT
-Old Standard reproduces a specific type of Modern (classicist) style of serif typefaces, very commonly used in various editions of the late 19th and early 20th century, but almost completely abandoned later. However, this lettertype still has at least two advantages:
-
-it can be considered a good choice for typesetting scientific papers, especially on social and humanitarian sciences, as its specific features are closely associated in people's eyes with old books they learned on;
-the most beautiful examples of Greek and Cyrillic lettertypes were all based on the classicist style, so for those scripts, "Modern" fonts are much more appropriate than any contemporary (e. g. Times-based) designs.
-The name "Old Standard" was selected as opposed to the "Obyknovennaya Novaya" ("New Standard") typeface, widely used in Soviet typography, which represents another, slightly different type of the same Modern style. Of course this name doesn't look very original, but it seems to be a good choice for a revival of the most common lettertype of the early 20th century.
+To reflect VAT's brand identity and the art styles predominant in the era this shop focuses on, I chose Google font's [Old Standard TT](https://fonts.google.com/specimen/Old+Standard+TT#about). As mentioned in the font description, "Old Standard reproduces a specific type of Modern (classicist) style of serif typefaces, very commonly used in various editions of the late 19th and early 20th century..." which fits well the historical era of the monocards on display.
+The description also mentions that the font represents a "revival of the most common lettertype of the early 20th century" which, again, is this shop sets out to achieve as well in the field of paper art and prints.
 
 
+### Brand Logo
+Logo design is the cornerstone of a brand identity and presents a company's name, product and brand. I used [Canva](https://www.canva.com/en_gb/) to create the brand logo PNG which is now the favicon and in the footer of the site.
+
+ ![palette](readme_materials/brand_logo.png)
+
+
+
+
+<div align="right"><a style="text-align:right" href="#top">Go to index: :arrow_double_up:</a></div>
+
+<span id="database-model"></span>
+
+### Database model
 
 In order to help me create the ERD (=Entity Relationship Diagram):
 https://launchschool.com/books/sql/read/table_relationships
 
 
-slider image from unsplash https://unsplash.com/photos/6NSVToSYwV0
+
+## Features
+
+<span id="features-current"></span>
+
+### Existing Features
 
 
 
+hero image from Unsplash https://unsplash.com/photos/6NSVToSYwV0 and is free to use under the Unsplash license. It appeared in digital form originally in an exhibition by the McGill University Library's [Digital Exhibitions & Collections](https://www.mcgill.ca/library/find/digitization) entitled ["Art Deco and the Decorative Arts in the 1920s and 1930s"](https://digital.library.mcgill.ca/artdeco/) paying homage to Art Deco on the occasion of the 10th World Congress that was held in Montreal, 2009.  
+The illustration is by Georg Barbier (1882-1932), one of France's great illustrators of the early 20th century, and is entitled "Fumée, Robe du soir de Beer". It first appeared in 1921 in Gazette du bon ton : art, modes & frivolités
 
-#618BB2 of Pantone colour
-#c95939
-#dfdcd3
+
+
 
 
 Zoom mouseover for single products: https://www.jquery-az.com/jquery/demo.php?ex=168.0_1
@@ -248,11 +258,11 @@ def calc_subtotal(price, quantity):
 
     http://hex2rgba.devoth.com/ to get rgba from hex code
 
-Email contact form adjusted from http://reusableforms.com/d/e1/bootstrap-contact-form-send-email
+Email contact form on index.html adjusted from [this example](http://reusableforms.com/d/e1/bootstrap-contact-form-send-email) at Reusable Forms
 
-Footer with three-column layout adjusted from https://www.ordinarycoders.com/blog/article/bootstrap-footers 
+Footer with three-column layout adjusted from [Ordinary Coders](https://www.ordinarycoders.com/blog/article/bootstrap-footers) 
 
-to check if all tags are closed: https://www.aliciaramirez.com/closing-tags-checker/
+to check if all tags are closed Alicia Ramirez' [Closing Tags Checker](https://www.aliciaramirez.com/closing-tags-checker/)
 
 
 From CI Video, "Deploying to Heroku", min 5:41
@@ -277,4 +287,3 @@ def new_arrivals(request):
 urls.py:     """path('', views.new_arrivals, name='new_arrivals')"""
 
 
-Footer is inspired by examples from https://www.ordinarycoders.com/blog/article/bootstrap-footers
