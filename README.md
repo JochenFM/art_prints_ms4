@@ -67,6 +67,104 @@ All design decisions have been made with the following goals in mind:
 - Visual appeal
 
 
+<span id="ux-stories"></span>
+
+### User stories
+
+#### Overarching user expectations
+
+- Consistent
+- Easy to navigate
+- Intuitive
+- Responsive
+- Secure
+- Visually appealing
+
+
+
+#### Viewing and Navigation
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Site User/ Shopper | access the website with any device | Use the website anytime and anywhere |
+| Shopper | Easily see what services are offered | Find the service I want to use |  
+| Shopper | All the important services are accesible from nav bar| Don't need to scroll to find important information |
+| Shopper | Quickly identify new arrivals | Be alerted of products I might like to purchase || Shopper | View a list of all products | select some to purchase |
+| Shopper | View a specific category of products| Quickly find products I am interested in without having to search through all products |
+| Shopper | View individual product details| Identify the price, description, product image, condition which it is in |
+| Shopper | Easily view the total of my purchase at any time| Avoid overspending |
+
+
+
+<br/>
+
+#### Registration, User Accounts and User Community
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Site User | Easily register for an account | Have a personal account personal account and be able to view my profile |  
+| Site User | Easily login or logout | Access my personal account information |
+| Site User | Easily recover my password in case I forget it | Recover access to my account |
+| Site User | Receive an email confirmation after registering | Verify that my account registration was successful |
+| Site User | Post a blog about the paper products or related collectibles | Provide shoppers or interested users with interesting information about the paper collectibles |
+| Site User | contact the owner of the website in case I have any issues or questions | Resolve them with the appropriate help |
+
+<br/>
+
+#### Online shopping
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Shopper | Search a product with keywords | Find the most appropriate products |
+| Shopper | View individual product pages that have prices, descriptions, sizes, etc | Get detailed information about the product before purchasing |
+| Shopper | Filter by a specific category | Easily find products in a specific category |
+| Shopper/Site Owner | Leave/View product reviews with scores | Understand which products are popular with other customers |
+| Site Owner | Easily add a new product | Make sure the online site has the latest catalogue |
+
+<br/>
+
+#### Cart, Purchasing and Checkout
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Shopper | Sort the list of available products | Easily identify the best priced and categorically sorted products |
+| Shopper | Search for a product by name or description | Easily find a product that I would like to purchase |
+| Shopper | Easily see what I have searched for and the number of results | Quickly decide whether the product I want is available |
+| Shopper/site user | Filter blog posts by specific categories | See at a glance whether information is available about a topic I am interested in |
+
+<br/>
+
+#### Cart, Purchasing and Checkout
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Shopper | Easily select a product and know about the condition it is in | Ensure I purchase the correct product and am not surprised at its condition | 
+| Shopper | Easily add a product to my cart and see what is in my cart | Select the right product and double-check whether this is true | 
+| Shopper | Easily remove a product from my cart | Delete a wrongly selected product and proceed only with what I intend to buy | 
+| Shopper | store my shipping details |Check out easier next time I visit that page |
+
+
+<br/>
+
+#### Managing Products/Site
+
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Site owner | Easily add, update, or delete (new) products |Make sure the products on the site are up-to-date |
+| Site owner | Easily add, update, or delete blog posts  | Make sure that the blog posts are up-to-date and remove potentially harmful content |
+| Site owner | have a marketplace offering more than just products  | Make sure the customers will have more reasons to come back to the site |
+| Site owner | Eoffer a shopping journey that is informative and easy to navigate through |Make sure customers have a pleasant shopping experience and develop trust towards that marketplace |
+
+
+
+<span id="ux-wireframes"></span>
+
+### Wireframes
+
+Wireframes created at the start of the project for **desktop** can be accessed [here](wireframes/), as well as the **data schema**.
+
+
+
 
 
 These are good product grids with bootstrap 4:
