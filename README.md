@@ -1,20 +1,71 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-This project allows trade of and information exchange on niche paper collectibles: so-called “Mono-Karten” or “Monos”, advertising cards developed from around 1905 by Swiss editor and entrepreneur Karl Wilhelm Bührer (1861-1917) under the aegis of International Mono Society, equally founded by Bührer in Winterthur, Switzerland. The cards were designed by then young painters such as Emil Cardinaux, Burkhard Mangold or Ludwig Hohlwein and were collected just as present-day soccer or baseball picture cards. Sized 4x6 inches, the picture side usually contained print art, whereas on the reverse was a brief statement explaining the content of the picture, with carefully crafted advertising slogans of the companies involved in the idea.
-I find these cards aesthetically appealing – the beauty of the images, the quality of the colours and of the lithographic printing are amazing. What I intend to achieve in this project is to bring together two logics commonly kept apart: for one, an educational/informational logic, following examples such as https://www.monokartenmatthys.com/ which allows users to display their cards pointing out their historical and artistic value. For another, a business logic to facilitate trade in these cards and possible profit-making, hitherto often undertaken on Pinterest (https://www.pinterest.ch/michaelv0271/mono-karten-swiss-trade-cards/) or ebay.
-The product range can be expanded later on with related paper- and artwork, such as other types of vintage advertising cards, poster art, and even stamps.
+# VAP - Vintage Art Prints
 
-My site emulates examples such as https://www.galerie123.com/en/, https://www.kingandmcgaw.com/prints/vintage or https://retrographik.com/
+Am I responsive
+
+**[Live demo](https://jochenfm-art-prints.herokuapp.com/)**
+
+<span id="top"></span>
+
+## Table of Contents
+
+- <a href="#context">Context</a>
+- <a href="#ux">UX</a>
+  - <a href="#ux-overview">Overview</a>
+  - <a href="#ux-stories">User stories</a>
+  - <a href="#ux-wireframes">Wireframes</a>
+  - <a href="#ux-design">Design</a>
+- <a href="#database-model">Database model</a>
+- <a href="#features">Features</a>
+  - <a href="#features-current">Existing Features</a>
+  - <a href="#features-future">Future Features</a>
+- <a href="#technologies">Technologies Used</a>
+- <a href="#testing">Testing</a>
+- <a href="#deployment">Deployment</a>
+- <a href="#credits">Credits</a>
+---
 
 
+<span id="context"></span>
 
-Footer is inspired by examples from https://www.ordinarycoders.com/blog/article/bootstrap-footers
+## Context
 
-<li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'new_arrivals' %}">New Arrivals</a></li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'products' %}">All Products</a></li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'mono_cards' %}">Mono Cards</a></li>
-                  <li class="nav-item"><a class="nav-link" href="{% url 'posters' %}">Artistic Posters</a></li>
+VAP - Vintage Art Prints allows trade of and information exchange on a fine selection of original art prints from around the globe. 
+The project also publishes blog posts for users to exchange information on the paper art advertised and help an online community of paper art traders and affictionados grow. The current focus is on paper collectibles, so-called “Mono-Karten” or “Monos”, advertising cards developed from around 1905 by Swiss editor and entrepreneur Karl Wilhelm Bührer (1861-1917) under the aegis of International Mono Society, equally founded by Bührer in Winterthur, Switzerland. 
+But the product range can be expanded later on with related paper- and artwork, such as other types of vintage advertising cards, poster art, and even stamps.
+The Mono cards were designed by then young painters such as Emil Cardinaux, Burkhard Mangold or Ludwig Hohlwein and were collected just as present-day soccer or baseball picture cards. Sized 4x6 inches, the picture side usually contained print art, whereas on the reverse was a brief statement explaining the content of the picture, with carefully crafted advertising slogans of the companies involved in the idea.
+I find these cards aesthetically appealing – the beauty of the images, the quality of the colours and of the lithographic printing are amazing. 
+What I intend to achieve in this project is to bring together two logics commonly kept apart: for one, an educational/informational logic, following examples such as [Monokartenmatthys](https://www.monokartenmatthys.com/) which allows users to display their cards pointing out their historical and artistic value. For another, a business logic to facilitate trade in these cards and possible profit-making, hitherto often undertaken on [Pinterest](https://www.pinterest.ch/michaelv0271/mono-karten-swiss-trade-cards/) or [Ebay](https://www.ebay.de/itm/384356476574?hash=item597d6e669e:g:3aoAAOSwQ3RhKhtp).
+
+
+Inspirational for my site were [Galerie 123](https://www.galerie123.com/en/), [King & McGaw](https://www.kingandmcgaw.com/prints/vintage) and [Retrographik](https://retrographik.com/)
+
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
+
+
+<span id="ux"></span>
+
+## UX
+
+<span id="ux-overview"></span>
+
+### Overview
+
+*VAP* addresses everyone who is interested in paper art and its collection and trade for the purpose of profit-making, information exchange and learning, or just for fun and aesthetics. Users are looking for items to purchase securely and trustworthily, while being able to compare market information such as price and product condition. Some would also like to see content to learn from and educate themselves, while potentially also sharing and discussing some of their knowledge on vintage paper collectibles.    
+Moreover, the site owner has some specific business goals which include:
+
+* Provide customers with a secure and smooth e-commerce experience
+* Make profit from selling products / services
+* Establish the shop's brand identity
+* Expand the business effectively
+
+All design decisions have been made with the following goals in mind:
+- Accessibility
+- Ease of use
+- Responsiveness
+- Visual appeal
+
 
 
 
@@ -59,8 +110,7 @@ https://www.jquery-az.com/4-demos-to-create-product-galleries-with-zoom-feature-
 https://codepen.io/nikki-peel/pen/RwavQer
 
 
-Do I need to insert new_arrivals into project level urls?
-and also into home urls.py?
+
 
 
 from the now deleted cart_tool.py template tag ({% load cart_tools %} needs to be added at top of cart.html):
@@ -103,3 +153,6 @@ def new_arrivals(request):
 
 
 urls.py:     """path('', views.new_arrivals, name='new_arrivals')"""
+
+
+Footer is inspired by examples from https://www.ordinarycoders.com/blog/article/bootstrap-footers
