@@ -156,21 +156,46 @@ All design decisions have been made with the following goals in mind:
 | Site owner | Eoffer a shopping journey that is informative and easy to navigate through |Make sure customers have a pleasant shopping experience and develop trust towards that marketplace |
 
 
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
 
 <span id="ux-wireframes"></span>
 
 ### Wireframes
 
-Wireframes created at the start of the project for **desktop** can be accessed [here](wireframes/), as well as the **data schema**.
+Wireframes created at the start of the project for **desktop** view can be accessed [here](https://github.com/JochenFM/art_prints_ms4/tree/master/readme_materials/wireframes).
+
+Some of the noteworthy deviations from the plan include:
+
+1. The slider was turned into a singale hero image instead as I wanted to match the overal color scheme with this one image. 
+2. The original idea to create a single page website for most of the funcationality was scrapped because hard to implement with Django.
+2. Pagination was scrapped on onlineshop displaying all products but a navigation arrow included instead allowing users to move from the bottom to the top of the page. 
+3. Pagination was included for the blog, however, for more convenient navigation and better visual overview.
+4. A view for individual blog posts not planned on wireframes is now included to allow users to read a single contribution on a separate page. 
+4. CRUD functionality for blog posts not planned on wireframes is now fully implemented for registered users to enable update, delete and addition of posts.
+5. That includes display of all a list of all posts by one particular author in case a user would like to read more from the same author.  
 
 
+<span id="ux-design"></span>
+
+## Design
+
+### Brand Identity
+
+Vision: Highlight the artistic and aesthetic values of art, especially paper art in a allegedly paper-less age, to users.
+Mission: Provide a fine selection of original vintage art prints from around the globe which can be purchased securely online. Venturing to become an online authority in trade and information gathering around paper collectibles and their production from around 1900.
+Values: 1. Creativity and Business can go together as shown both by this project and the products on sale. 2. Aesthetics is an important part of human sensual experience and must be remembered from across the ages and different parts of the world. 3. Share and bring together knowledge - it is a virtue to share what you know about a particular historical item or situation and this site aims to gather such knowledge  
 
 
+### Colours
 
-These are good product grids with bootstrap 4:
-https://bbbootstrap.com/snippets/bootstrap-ecommerce-product-grid-view-card-19577966
+I took the color composition on the hero image as a guide for the site's color scheme. [Image Color Picker](https://imagecolorpicker.com/en) helped to find the matching colors and [Coolers](https://coolors.co/) helped produce the palette:
+
+  ![palette](readme_materials/palette_ms4.png)
 
 
+The 
+
+bootstrap bg dark #343a40 Gyunmet
 
 original in den titel?
 nach art deco, Jugendstil suchen fuer images
@@ -192,14 +217,13 @@ https://launchschool.com/books/sql/read/table_relationships
 
 slider image from unsplash https://unsplash.com/photos/6NSVToSYwV0
 
-https://imagecolorpicker.com/en
 
 
 
 #618BB2 of Pantone colour
 #c95939
 #dfdcd3
-bootstrap bg dark #343a40 Gyunmet
+
 
 Zoom mouseover for single products: https://www.jquery-az.com/jquery/demo.php?ex=168.0_1
 
