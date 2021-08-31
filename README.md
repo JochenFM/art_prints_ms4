@@ -168,11 +168,11 @@ Some of the noteworthy deviations from the plan include:
 
 1. The slider was turned into a singale hero image instead as I wanted to match the overal color scheme with this one image. 
 2. The original idea to create a single page website for most of the funcationality was scrapped because hard to implement with Django.
-2. Pagination was scrapped on onlineshop displaying all products but a navigation arrow included instead allowing users to move from the bottom to the top of the page. 
-3. Pagination was included for the blog, however, for more convenient navigation and better visual overview.
-4. A view for individual blog posts not planned on wireframes is now included to allow users to read a single contribution on a separate page. 
-4. CRUD functionality for blog posts not planned on wireframes is now fully implemented for registered users to enable update, delete and addition of posts.
-5. That includes display of all a list of all posts by one particular author in case a user would like to read more from the same author.  
+3. Pagination was scrapped on onlineshop displaying all products but a navigation arrow included instead allowing users to move from the bottom to the top of the page. 
+4. Pagination was included for the blog, however, for more convenient navigation and better visual overview.
+5. A view for individual blog posts not planned on wireframes is now included to allow users to read a single contribution on a separate page. 
+6. CRUD functionality for blog posts not planned on wireframes is now fully implemented for registered users to enable update, delete and addition of posts.
+7. That includes display of a list of all posts by one particular author in case a user would like to read more from the same author.  
 
 
 <span id="ux-design"></span>
@@ -183,7 +183,7 @@ Some of the noteworthy deviations from the plan include:
 
 Vision: Highlight the artistic and aesthetic values of art, especially paper art in a allegedly paper-less age, to users.
 Mission: Provide a fine selection of original vintage art prints from around the globe which can be purchased securely online. Venturing to become an online authority in trade and information gathering around paper collectibles and their production from around 1900.
-Values: 1. Creativity and Business can go together as shown both by this project and the products on sale. 2. Aesthetics is an important part of human sensual experience and must be remembered from across the ages and different parts of the world. 3. Share and bring together knowledge - it is a virtue to share what you know about a particular historical item or situation and this site aims to gather such knowledge  
+Values: 1. Creativity and Business can go together as shown both by this project and the products on sale. 2. Aesthetics is an important part of human sensual experience and the richness of human (visual) aesthetic expressions should be remembered from across the ages and different parts of the world. 3. Share and bring together knowledge - it is a virtue to share what you know about a particular historical item or situation, and this site aims to gather and dissimenate knowledge to that end as well.  
 
 
 ### Colours
@@ -213,12 +213,31 @@ Logo design is the cornerstone of a brand identity and presents a company's name
 
 <span id="database-model"></span>
 
-### Database model
-
-In order to help me create the ERD (=Entity Relationship Diagram):
-https://launchschool.com/books/sql/read/table_relationships
 
 
+
+## Database model
+
+
+### Database choice
+- Development phase
+**SQLight** database was used for the development which is installed with Django. 
+
+- Deployment phase
+**PostgreSQL** was used on deployment stage, which is provided as add-on by Heroku application.
+
+- User model is provided as a default by [Django's authentication system](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/).
+
+### Data Modeling
+
+In order to help me create the ERD (Entity Relationship Diagram), I referred to Launch School [article](https://launchschool.com/books/sql/read/table_relationships) on table relationships. The following schema was created with [dbdiagram.io](https://dbdiagram.io/home):
+
+![Data Scheme](readme_materials/data_schema.png)
+
+
+
+
+<div align="right"><a style="text-align:right" href="#top">Go to index: :arrow_double_up:</a></div>
 
 ## Features
 
@@ -226,10 +245,71 @@ https://launchschool.com/books/sql/read/table_relationships
 
 ### Existing Features
 
+This website is composed of 6 applications: `home`, `blog`, `cart`, `checkout`, `products`, `profiles`.
 
 
-Hero image from Unsplash https://unsplash.com/photos/6NSVToSYwV0 and is free to use under the Unsplash license. It appeared in digital form originally in an exhibition by the McGill University Library's [Digital Exhibitions & Collections](https://www.mcgill.ca/library/find/digitization) entitled ["Art Deco and the Decorative Arts in the 1920s and 1930s"](https://digital.library.mcgill.ca/artdeco/) paying homage to Art Deco on the occasion of the 10th World Congress that was held in Montreal, 2009.  
-The illustration is by Georg Barbier (1882-1932), one of France's great illustrators of the early 20th century, and is entitled "Fumée, Robe du soir de Beer". It first appeared in 1921 in Gazette du bon ton : art, modes & frivolités
+#### Landing Page
+This  was originally designed as a single page website to provide site visitors with enough information at one glance to understand what this business is about. The single-page application was then scrapped as difficult to implement with Django on the backend. But still, the landing page in its present provides a minimal amount of information and allows the site visitors to take next actions. 
+As the user scrolls down the page, s/he will find sections on `Navbar`, `Hero image`, `About`, `New Arrivals`, and `Contact Form`.
+The Art Deco hero image sets the tone, also in terms of color composition, for the entire application. It was originally illustrated in 1921 by Georg Barbier (1882-1932), one of France's great illustrators of the early 20th century, and is entitled "Fumée, Robe du soir de Beer" (see below under image credit for more information). 
+
+
+#### Navbar
+Navbar is fixed at the top, so that users can easily navigate across the entire site. The Navbar contains: `Brand Name`, `Site Menu`, `Search Box`, `My Account dropdown` and `Cart icon`.
+- The search box function allows users to search the products on online shop by keywords. Searcheable words are in `name` and `description` and `description` of the Product Model. This function uses "OR" condition not "AND" when searching the keywords, meaning, if the search query was "Mono Boecky", the search result shows the product found using the keyword "Boecky" OR "Mono". 
+- Site Menu & My Account dropdown: The site menu collapses into a toggle icon at a width of less than 992px. My Account dropdown, as well as the search field and the cart are included into the toggle menu for smaller screen.
+- Cart icon: If user has an item in the cart, the respective sum in £ will show up next to the cart icon, incrementing/decrementing as more products are added/taken out. If cart is empty, £0,00 is shown.
+
+#### About
+The `About` section briefly introduces into what this gallery shop is about and gives a brief introduction into its features.
+
+#### Contact Form
+Users will find a simple contact form at the bottom of the landing page. Users will fill out fields `name`, `email`, and `message` in order to submit the form. A future feature will allow the email with the inquiry from the form to be sent to the admin of the website (handled by django send_mail() functionality).
+
+#### Footer
+The footer section consists of three sections:
+ 1. Disclaimer and Copyright General information 
+ 2. Contact in the form of social media icons
+ 3. Brand logo linked to the index.html
+
+
+#### Product Pages
+#### Online Shop Page
+'Online Shop' on the site menu leads to the online shop page where all products are displayed. Alternatively, users can also get there via the button under the h1 on the hero image, or via a further under New Arrivals 'See Collection'. Onlineshop is next to the blog the core application of this site. It contains a drop down menu on the left for users to narrow their search by categories: 
+  - Mono Cards
+  - Artistic Posters
+  - Stamps
+  - New Arrivals
+  - All Categories
+
+The number of search results is shown above the Narrow Your Search h4. Customers can see how many results were found in total at a glance, or return to the online shop in case of empty returns.
+
+On the right is a drop-down button to filter all products alphabetically by name or category (A-Z and Z-A in each case), or by prize (low to high and high to low).
+
+The products are displayed in cards with fields on `Product Name`, `Price`, `Author`, `Year`, `Category` and a `View Details` button with font awesome icon. If the user is logged in as a superuser, Edit / Delete option is also shown on each card.
+
+### Product Detail Page
+- Breadcrumb: Breadcrumb navigation is added at the top of the product detail page, which allows customers to keep track of their locations in the online shop.
+- Product Image: On the left side of the product detail page (single_product.html), the product images are shown. When there are several images for the product, for example, some products have color options such as Carnation, the options will be shown under the main image.
+- Product Information: On the right side of the product detail page, there is a `Product Name`, `Price`, `Description`, `Color` option, `Quantity`, `Add to Cart` button. `Color` option is only visible when the product has the options. Also for superuser, Edit / Delete option will be shown.
+- Product Review Section: Customers can see the product scores and review messages by other customers. The users can leave a score from 1 to 5, and the average of the scores of the customer reviews is shown on the product page. To leave a product review, the user is asked to log in to their account. Also, to delete a review, the customer who left the review needs to log in and the delete option will be visible next to the review after logging in. At the moment, regardless of whether they have purchase history or not, the user is able to leave a review. This is one of the features left to implement to limit it so only the user who actually purchased the product will be allowed to review.
+<div align="right"><a style="text-align:right" href="#top">Go to index: :arrow_double_up:</a></div>
+<span id="features-future"></span>
+
+## Future Features
+
+**1. Contact Form on Index.html**
+
+
+
+The email address field can be prefilled if the users are logged into their account.
+A future feature will allow the email with the inquiry from the form to be sent to the admin of the website (handling by django send_mail() functionality).
+
+
+**2. Footer**
+
+Social media icons: In this milestone project, Social Media icons are linked to my personal social media accounts, but in a real settting they should be linked to business pages on social media, such as Facebook, Instragram, Twitter, Pinterest etc, for social media marketing purposes
+
 
 
 
@@ -449,6 +529,8 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 ## Credits
 
 ### Tutorials / Resources
+
+- Documentations of [Bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/) and [Django](https://docs.djangoproject.com/en/3.1/) were key throughout the development process.  
 
 - Code Institute's [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) Project from which I adapted much of the e-commerce logic, database setup, and code
 
