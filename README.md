@@ -338,17 +338,29 @@ New posts can be added by logged in users via 'New Post' in the navbar drop down
 #### Profiles Page
 Link to `My Profile` page shows for authenticated users in the navbar drop-down menu under `My Account`. On the My Profile page, authenticated users can edit `Delivery Information` and see their `Order History`.
 
+### Admin Product Managment
+Authenticated superusers can access the admin page to add, edit and delete products via the respective templates. Relevant toast messages will pop up alerting the user that products are being edited, confirming deletion, or showing success in case a product was added. If a non-superuser tries to access the edit or delete url the 404 error page pops up. If non-logged in users try to access the urls directly, s/he will be redirected to the sign in page.
+
+### Django-allauth features
+
+- Sign Up: The users will be asked to fill out `E-mail` (twice), `User Name` and `Password` (twice) to create an account. When the sign up form is submitted, a verification email will be sent to the user's email address to complete the sign up process.
+- Log In: Users will be asked to input `User Name` or `Email`, and `Password` to login. If the user successfully logged in s/he will be redirected to the landing page.
+- The Log out page can be accessed from from the site menu in the navbar. After the user successfully signed out via the logout button on the sign out page, a success message will appear and s/he will be redirected to the landing page.
+- In case user has forgotten their password, a link on the Sign In page allows them to access the Password Reset page where they will be asked to insert the email address used for their registration. An email with a link to reset the password will be sent upon submitting the form.
+
+
+### Defensive Design
+#### Error views (404 and 500 errors)
+In case of 404 and 500 errors, the respective html templates are engaged, with a 'Back Home' button so that the user has the option to stay on the site. The templates of 404.html and 500.html are added to the root template directory.
+
 
 <span id="features-future"></span>
 
-
-
-
 ## Future Features
 
+There are a number of features which I would have loved to implement but failed due to lack of skills and, especially, time constraints. These additions would help the overall functionality of VAP and lead to higher customer satisfaction and profitability if this is ever going to go live. Some of the features are: 
+
 **1. Contact Form on Index.html**
-
-
 
 The email address field can be prefilled if the users are logged into their account.
 A future feature will allow the email with the inquiry from the form to be sent to the admin of the website (handled by the Django send_mail() functionality).
