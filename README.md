@@ -39,7 +39,7 @@ I find these cards aesthetically appealing – the beauty of the images, the qua
 What I intend to achieve in this project is to bring together two logics commonly kept apart: for one, an educational/informational logic, following examples such as [Monokartenmatthys](https://www.monokartenmatthys.com/) which allows users to display their cards pointing out their historical and artistic value. For another, a business logic to facilitate trade in these cards and possible profit-making, hitherto often undertaken on [Pinterest](https://www.pinterest.ch/michaelv0271/mono-karten-swiss-trade-cards/) or [Ebay](https://www.ebay.de/itm/384356476574?hash=item597d6e669e:g:3aoAAOSwQ3RhKhtp).
 
 
-Inspirational for my site were [Galerie 123](https://www.galerie123.com/en/), [King & McGaw](https://www.kingandmcgaw.com/prints/vintage) and [Retrographik](https://retrographik.com/)
+
 
 <div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
 
@@ -278,6 +278,7 @@ The main frontend development was created using HTML, CSS, JavaScript and their 
 - [Autoprefixer](https://autoprefixer.github.io/) to ensure CSS compatibility across different browsers.
 - Alicia Ramirez' [Closing Tags Checker](https://www.aliciaramirez.com/closing-tags-checker/) to check if all tags are closed properly. 
 - [Coolers.co](https://coolors.co/) to help create the color palette used across the site.
+- [Devoth‘s HEX 2 RGBA Color Calculator](http://hex2rgba.devoth.com/) to generate the rgba from hex values for inclusion in CSS.
 - [Favicon.io](https://favicon.io//) to create the brand logo icon in the browser tab.
 - [Canva](https://www.canva.com/en_gb/) to create the brand logo PNG 
 - [Font Awesome](https://fontawesome.com/) for all (button) icons.
@@ -291,28 +292,6 @@ The main frontend development was created using HTML, CSS, JavaScript and their 
 
 
 
-Zoom mouseover for single products: https://www.jquery-az.com/jquery/demo.php?ex=168.0_1
-
-https://www.jquery-az.com/4-demos-to-create-product-galleries-with-zoom-feature-by-jquery/
-
-https://codepen.io/nikki-peel/pen/RwavQer
-
-
-
-
-
-from the now deleted cart_tool.py template tag ({% load cart_tools %} needs to be added at top of cart.html):
-"""from django import template
-
-
-register = template.Library()
-
-@register.filter(name='calc_subtotal')
-def calc_subtotal(price, quantity):
-    return price * quantity
-
-
-    http://hex2rgba.devoth.com/ to get rgba from hex code
 
 
 <span id="testing"></span>
@@ -356,21 +335,135 @@ This website has been deployed on [Heroku](https://www.heroku.com/) by following
 
 * I used [Miniwebtool](https://miniwebtool.com/django-secret-key-generator/) to generate the Django Secret Key.
 
+8. Comment out the current database setting in settings.py, and add the code below instead. This is a temporarily measure only to migrate the datbase on Heroku.
+```
+  DATABASES = {     
+        'default': dj_database_url.parse("<your Postrgres database URL here>")     
+    }
+```
+9. Migrate the database models to the Postgres database using:
+`python3 manage.py migrate`
+**10. Load the data fixtures into the Postgres database using:
+`python3 manage.py loaddata <fixture_name>`**
+11. Create a superuser for the Postgres database by running:
+`python3 manage.py createsuperuser`
+12. Replace the database setting with the code below, so that the right database is used depending on whether environment is in development or deployed.
+```
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+```
+13. Disable collect static, so that Heroku won't try to collect static file with: `heroku config:set DISABLE_COLLECTSTATIC=1`
+14. Add `'jochenfm-art-prints.herokuapp.com', 'localhost'` to `ALLOWED_HOSTS` in settings.py.
+```
+ALLOWED_HOSTS = ['jochenfm-art-prints.herokuapp.com', 'localhost'']
+```
+15. In Stripe, add the Heroku app URL a new webhook endpoint.
+16. Update the settings.py with the new Stripe environment variables and email settings.
+17. Commit all the changes to Heroku. Media files are not connected to the app yet but the app should be working on Heroku.
+
+### Amazon Web Service S3
+The static files and media files for this deployed site (e.g. image files for all products) are hosted in the [AWS](https://aws.amazon.com/) S3 Bucket. You will need to create a S3 bucket, complete the set up and upload static files and media files. See [Amazon S3 documentation](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) for more information.
+
+
+- Setting for static/media files in settings.py
+1. Install `boto3` and `django-storages` with a command `pip3 install boto3` and `pip3 install django-storages` in your terminal, to connect AWS S3 bucket to Django.
+2. Add 'storages' to `INSTALLED_APPS` in settings.py.
+3. Add the following in settings.py.
+
+```
+if 'USE_AWS' in os.environ:
+    # Cache Control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # bucket config
+    AWS_STORAGE_BUCKET_NAME = 'jochenfm-art-prints'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    
+
+```
+5. Add [custom_storages.py](https://github.com/JochenFM/art_prints_ms4/blob/master/custom_storages.py).
+6. Delete DISABLE_COLLECTSTATIC from Heroku Config Var.
+7. Push all the changes to Github/Heroku and all static files will be uploaded to S3 bucket.
+By the above setting, Heroku will run python3 manage.py collectstatic during the build process and look for static and media files.
+
+### Automatic Deploy on Heroku
+You can enable automatic deploy as follows (so that updates to Github will automatically update Heroku as well):
+1. Under the Deploy tab in the Heroku dashboard, go to `Automatic deploys`
+2. Choose the github repository you want to deploy.
+3. Click `Enable Automatic Deploys`.
+
+
+## Local Deployment
+For local deployment, an IDE is needed (e.g. Gitpod) and you need to install the following:
+- Git, Python3, PIP3
+Also, you need to create an account for each of the following services if not already done so:
+- Stripe, AWS (S3 bucket), Gmail
+
+1. In the IDE you are using, copy and paste the following command into the terminal to clone this repository.
+    `git clone https://github.com/JochenFM/art_prints_ms4.git`
+(other ways to clone a repository can be found here [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository))
+2. Set up environment variable in your selected IDE, or you can create `.env` file in your root directory and add `.env` to `.gitignore` file, and add the followings to the `.env` file.
+```
+import os  
+os.environ["DEVELOPMENT"] = "True"    
+os.environ["SECRET_KEY"] = "<Your Secret Key>"
+os.environ["STRIPE_PUBLIC_KEY"] = "<Your Stripe Public Key>"    
+os.environ["STRIPE_SECRET_KEY"] = "<Your Stripe Secret Key>"    
+os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"    
+```
+3. Install all the required packages with `pip3 install -r requirements.txt`
+4. Migrate the models to create a database using in your IDE with `python3 manage.py makemigrations` and `python3 manage.py migrate`
+**5. Load the data fixtures into the database using the following command:
+`python3 manage.py loaddata <fixture_name>`**
+6. Create a superuser for the Postgres database by running with `python3 manage.py createsuperuser`
+7. Now you can access the app using the command `python3 manage.py runserver`
+
+<div align="right"><a style="text-align:right" href="#top">Go to index: :arrow_double_up:</a></div>
 
 
 ## Credits
 
 ### Tutorials / Resources
 
-- Code Institute's [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) Project
+- Code Institute's [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1) Project from which I adapted much of the e-commerce logic, database setup, and code
 
-- Corey Shafer's [Python Django Tutorial: Full-Featured Web App](https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p) especially parts 2, 3, 10, and 11 which helped me set up the blog and implement pagination.
+- Corey Shafer's [Python Django Tutorial: Full-Featured Web App](https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p), especially parts 2, 3, 10, and 11 which helped me set up the blog and implement pagination.
+
+- Web Development Tutorials' [tutorial](https://www.youtube.com/watch?v=ZhTnOp-FpE0) and Drew Ryan's [tutorial](https://www.youtube.com/watch?v=Zn64_IVLO88) for some inspiration on the Bootstrap 4 Jumbotron Background Image on Landing Page 
 
 - Email contact form on index.html is adjusted from [this example](http://reusableforms.com/d/e1/bootstrap-contact-form-send-email) at Reusable Forms
 
 - Footer with three-column layout is adjusted from [Ordinary Coders](https://www.ordinarycoders.com/blog/article/bootstrap-footers) 
 
-
+- In terms of layout and style, as well as the overall business idea, the following live websites were an inspiration:
+  - [Galerie 123](https://www.galerie123.com/en/)
+  - [King & McGaw](https://www.kingandmcgaw.com/prints/vintage) 
+  - [Retrographik](https://retrographik.com/)
 
 
 ### Acknowledgments
@@ -386,7 +479,7 @@ without whom this site would not be what it is now.
 
 Special thanks also to my fellow students on Slack.
 
-Some MS4s were a great inspiration for this project, especially Asuna Masuada's [Flowery Days](https://flowerydays.herokuapp.com/).
+Some MS4s were a great inspiration for this project, especially Asuna Masuada's [Flowery Days](https://flowerydays.herokuapp.com/) whose detailed section in her READEME file on deployment I adapted here.
 
 Thanks also to my mentor [Adegbenga Adeye](https://github.com/deye9) for his encouragement and for generously sparing an extra hour to try and help me display the products of the 'new arrivals' category on index.html
 
@@ -395,7 +488,7 @@ Thanks also to my mentor [Adegbenga Adeye](https://github.com/deye9) for his enc
 
 Hero image:
 
-* Hero image is from [Unsplash](https://unsplash.com/photos/6NSVToSYwV0) and is free to use under the Unsplash license. Created by under the title "Fumée, Robe du soir de Beer", it first appeared in 1921 in Gazette du bon ton : art, modes & frivolités and was digitalized for a 2009 exhibition by the McGill University Library's [Digital Exhibitions & Collections](https://www.mcgill.ca/library/find/digitization) entitled ["Art Deco and the Decorative Arts in the 1920s and 1930s"](https://digital.library.mcgill.ca/artdeco/). 
+* Hero image is from [Unsplash](https://unsplash.com/photos/6NSVToSYwV0) and is free to use under the Unsplash license. Created under the title "Fumée, Robe du soir de Beer", it first appeared in 1921 in Gazette du bon ton : art, modes & frivolités and was digitalized for a 2009 exhibition by the McGill University Library's [Digital Exhibitions & Collections](https://www.mcgill.ca/library/find/digitization) entitled ["Art Deco and the Decorative Arts in the 1920s and 1930s"](https://digital.library.mcgill.ca/artdeco/). 
 
 * All Mono cards are from this [Pinterest account]([Pinterest](https://www.pinterest.ch/michaelv0271/mono-karten-swiss-trade-cards/) and from [Monokartenmatthys](https://www.monokartenmatthys.com/).
 
@@ -406,25 +499,5 @@ Hero image:
 
 
 
-From CI Video, "Deploying to Heroku", min 5:41
-While I'm here I'll also set debug to be true only if there's a variable called development in the environment.
-And now I'll commit these changes and push them to github.
-
-DEBUG = True must change to  DEBUG = 'DEVELOPMENT' in os.environ
-
-def new_arrivals(request):
-    """ a view to show new arrivals among products  """
-
-    products = Product.objects.all()
-
-    """template = 'home/new_arrivals.html'"""
-    context = {
-        'products': products,
-        'new_arrivals': new_arrivals,
-    }
-    return render(request, template, context)
-
-
-urls.py:     """path('', views.new_arrivals, name='new_arrivals')"""
 
 
