@@ -286,7 +286,7 @@ The number of search results is shown above the Narrow Your Search h4. Customers
 
 On the right is a drop-down button to filter all products alphabetically by name or category (A-Z and Z-A in each case), or by prize (low to high and high to low).
 
-The products are displayed in cards with fields on `Product Name`, `Price`, `Author`, `Year`, `Category` and a `View Details` button with font awesome icon. If the user is logged in as a superuser, Edit / Delete option is also shown on each card.
+The products are displayed in cards with fields on `Product Name`, `Price`, `Author`, `Year`, `Category` and a `View Details` button with font awesome icon. If the user is logged in as a superuser, Edit / Delete options are also shown on each card.
 
 ### Product Detail Page
 - Products are displayed in the center of the page with a larger image section on the left, and the description section on the right. Clicking on the image opens up a new window with a larger depiction of the product. 
@@ -309,7 +309,7 @@ My cart consists of two of Bootstrap's responsive tables each wrapped in a box-e
 
 #### Checkout Success Page
 - A thank you message will be displayed after the checkout process as well as four box elements that hold the order, delivery, and billing information.
-- A `Check Out Our New Arrivals` button is placed at the end of the page, and if the user is logged in, a `Back to Profile` button is shown.
+- A `Check Out Our New Arrivals` button is placed at the end of the page, which leads to the products site filtered by the new arrivals category. If the user is logged in, a `Back to Profile` button is shown in addition.
 
 
 <div align="right"><a style="text-align:right" href="#top">Go to index: :arrow_double_up:</a></div>
@@ -339,12 +339,12 @@ New posts can be added by logged in users via 'New Post' in the navbar drop down
 Link to `My Profile` page shows for authenticated users in the navbar drop-down menu under `My Account`. On the My Profile page, authenticated users can edit `Delivery Information` and see their `Order History`.
 
 ### Admin Product Managment
-Authenticated superusers can access the admin page to add, edit and delete products via the respective templates. Relevant toast messages will pop up alerting the user that products are being edited, confirming deletion, or showing success in case a product was added. If a non-superuser tries to access the edit or delete url the 404 error page pops up. If non-logged in users try to access the urls directly, s/he will be redirected to the sign in page.
+Authenticated superusers can access the admin page to add, edit and delete products via the respective templates. Relevant toast messages will pop up alerting the user that products are being edited, confirming deletion, or showing success in case a product was added. If a non-superuser tries to access the edit or delete url the 404 error page pops up. If non-logged in users try to access the urls directly, s/he will be redirected to the sign in page and will be shown a message "Sorry, only store owners can do that" once log in proves user is not the superuser.
 
 ### Django-allauth features
 
 - Sign Up: The users will be asked to fill out `E-mail` (twice), `User Name` and `Password` (twice) to create an account. When the sign up form is submitted, a verification email will be sent to the user's email address to complete the sign up process.
-- Log In: Users will be asked to input `User Name` or `Email`, and `Password` to login. If the user successfully logged in s/he will be redirected to the landing page.
+- Log In: Users will be asked to input `User Name` or `Email`, and `Password` to login. If the user successfully logged in s/he will be redirected to the landing page and a modal shows "Successfully signed in as _username_."
 - The Log out page can be accessed from from the site menu in the navbar. After the user successfully signed out via the logout button on the sign out page, a success message will appear and s/he will be redirected to the landing page.
 - In case user has forgotten their password, a link on the Sign In page allows them to access the Password Reset page where they will be asked to insert the email address used for their registration. An email with a link to reset the password will be sent upon submitting the form.
 

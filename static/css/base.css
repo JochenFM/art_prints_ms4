@@ -86,7 +86,7 @@ input[name='q']::placeholder {
 .jumbotron {
     background-image: linear-gradient(rgba(97, 139, 178, 0.5), rgba(97, 139, 178, 0.5)), url('/static/img/home/hero_image.jpg');
     height: 140vh;
-    background-position: relative;
+    position: relative;
     background-size: cover;
     border-radius: 0px!important;
 }
@@ -123,7 +123,7 @@ input[name='q']::placeholder {
 .view-shop-button:hover{
   
     background-color: #618BB2;
-    transition: 0.6;
+    transition: 0.6s;
 }
 
 /**all dark buttons **/

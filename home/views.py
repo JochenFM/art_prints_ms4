@@ -1,20 +1,14 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
 from .models import Product, Category
 
 
-def index(request, new_arrivals):
+def index(request):
     """ a view to return the index page and display products of
     new_arrivals category """
-
-    category = get_object_or_404(Category, new_arrivals=new_arrivals)
-    products = category.products.all()
-    context = {
-        'title': category.name,
-        'products': products,
-    }
+    
+    
+    products = Product.objects.all().filter(category__name__in=new_arrivals)
+    print("filter products", products)
     
     return render(request, 'home/index.html', context)
 
-
-
-  
