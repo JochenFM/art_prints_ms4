@@ -316,6 +316,29 @@ My cart consists of two of Bootstrap's responsive tables each wrapped in a box-e
 
 
 
+### Blog Page
+#### Blog Feed Page
+- After clicking `Blog` on the site menu, a Blog Feed page is loaded. On this page, blog posts will be displayed ordered by date (newest first). Each post is on a box-element with date, author (as link), title (as link), and text body. `Pagination Buttons` are also added at the end of the page. Clicking on the blog post title will open a new site for blog post details. 
+
+
+#### Blog Post Detail Page
+
+This is a very basic page displaying posts in full length with the author as a link on top.
+
+#### User Blog Posts
+
+Upon click on the author, displays all posts by that individual author. Posts are counted in the page header behind the respective author's first name. `Pagination Buttons` are also added at the end of the page. 
+
+#### Add/Edit Blog
+- If user is logged in and is the author of blog posts, they can edit and delete their posts from the post detail page via a post_edit page, which is prefilled with the post content to be edited. 
+New posts can be added by logged in users via 'New Post' in the navbar drop down menu under My Account.
+
+
+
+#### Profiles Page
+Link to `My Profile` page shows for authenticated users in the navbar drop-down menu under `My Account`. On the My Profile page, authenticated users can edit `Delivery Information` and see their `Order History`.
+
+
 <span id="features-future"></span>
 
 
@@ -356,13 +379,19 @@ The quantity section is perhaps superfluous in my case, as I usually sell unique
 
 At the moment, this shop does not collect user's billing information within the User Profile model or Order model.(However, the billing data is recorded in Stripe from the billing information added by the customer.) One of the features left to implement is to add the billing details on the Checkout page.
 
+**5. Blog Pages**
+
+Implement categories of blog posts so users can navigate the blog posts easily. Numbers of posted blogs in the categories is also shown in brackets.
+
+Add superuser functionality to allow the site admin to edit and delete blog posts (via {% if request.user.is_superuser %}
+
 <div align="right"><a style="text-align:right" href="#top">Go to index: :arrow_double_up:</a></div>
 
 <span id="technologies"></span>
 
 ## Technologies Used
 
-The main frontend development was created using HTML, CSS, JavaScript and their libraries. The main backend development was powered by Python and Django.
+The main frontend development was created using HTML, CSS, JavaScript and their libraries. The main backend development is powered by Python and Django.
 
 
 ### Languages
