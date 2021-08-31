@@ -289,12 +289,37 @@ On the right is a drop-down button to filter all products alphabetically by name
 The products are displayed in cards with fields on `Product Name`, `Price`, `Author`, `Year`, `Category` and a `View Details` button with font awesome icon. If the user is logged in as a superuser, Edit / Delete option is also shown on each card.
 
 ### Product Detail Page
-- Breadcrumb: Breadcrumb navigation is added at the top of the product detail page, which allows customers to keep track of their locations in the online shop.
-- Product Image: On the left side of the product detail page (single_product.html), the product images are shown. When there are several images for the product, for example, some products have color options such as Carnation, the options will be shown under the main image.
-- Product Information: On the right side of the product detail page, there is a `Product Name`, `Price`, `Description`, `Color` option, `Quantity`, `Add to Cart` button. `Color` option is only visible when the product has the options. Also for superuser, Edit / Delete option will be shown.
-- Product Review Section: Customers can see the product scores and review messages by other customers. The users can leave a score from 1 to 5, and the average of the scores of the customer reviews is shown on the product page. To leave a product review, the user is asked to log in to their account. Also, to delete a review, the customer who left the review needs to log in and the delete option will be visible next to the review after logging in. At the moment, regardless of whether they have purchase history or not, the user is able to leave a review. This is one of the features left to implement to limit it so only the user who actually purchased the product will be allowed to review.
+- Products are displayed in the center of the page with a larger image section on the left, and the description section on the right. Clicking on the image opens up a new window with a larger depiction of the product. 
+- Product Information is displayed as (in order of appearance from top): link to `Category`, `Edit`/`Delete` functionality of logged in as superuser, `Product Name`, `Year`, `Author`, `Price`, `Description`, `Condition`, `Dimension`, and `Quantity`. At the bottom right, two buttons round up this site: `Continue Shopping` and `Add to Cart`. 
+
+
+### Cart Modal
+
+Upon placing a product in the cart, a modal pops up displaying all the relevant information to the user such as `Number of Items in Cart`, `Quantity` of a single product chosen and thumbnail image of it, `Total excl. delivery cost`, a `banner` displaying a calculation of how much needs to spent in order to qualify for free delivery (currently set at £50 and more), and a button `Got to Secure Checkout`.
+
+
+### Cart
+
+My cart consists of two of Bootstrap's responsive tables each wrapped in a box-element. The first shows all costs for the user, divided in cart total, delivery and grand total.The overall number of items is also shown and an option to continue shopping via a button leading back to the onlineshop. The second table shows the user's selection, again, with a thumbnail image of the chosen items, title, price, quantity and subtotal. There is also an option to remove the item(s). Thus, users can check their order summary at first glance even if numerous products were added to the cart. A Secure Checkout button leads to the checkout page.
+
+### Checkout Pages
+#### Checkout Page
+- On the left hand side of the checkout page, customers are asked to fill in their delivery and payment details. If user is authenticated, a tick box allows them choose whether or not they want to have their delivery information saved to their profile. If unauthenticated, an option is given to login to save the information or create an account. Checkout process can be completed without being logged in.
+- On the right hand side, another yet smaller table us shown with the order summary.   
+
+#### Checkout Success Page
+- A thank you message will be displayed after the checkout process as well as four box elements that hold the order, delivery, and billing information.
+- A `Check Out Our New Arrivals` button is placed at the end of the page, and if the user is logged in, a `Back to Profile` button is shown.
+
+
 <div align="right"><a style="text-align:right" href="#top">Go to index: :arrow_double_up:</a></div>
+
+
+
 <span id="features-future"></span>
+
+
+
 
 ## Future Features
 
@@ -303,7 +328,7 @@ The products are displayed in cards with fields on `Product Name`, `Price`, `Aut
 
 
 The email address field can be prefilled if the users are logged into their account.
-A future feature will allow the email with the inquiry from the form to be sent to the admin of the website (handling by django send_mail() functionality).
+A future feature will allow the email with the inquiry from the form to be sent to the admin of the website (handled by the Django send_mail() functionality).
 
 
 **2. Footer**
@@ -311,8 +336,25 @@ A future feature will allow the email with the inquiry from the form to be sent 
 Social media icons: In this milestone project, Social Media icons are linked to my personal social media accounts, but in a real settting they should be linked to business pages on social media, such as Facebook, Instragram, Twitter, Pinterest etc, for social media marketing purposes
 
 
+**3. Product Details**
+
+link behind aertist/author name that allows display of all products available under the respective name via Django's
+get_queryset(), for instance
+
+Zoom mouseover for single products: https://www.jquery-az.com/jquery/demo.php?ex=168.0_1
+
+https://www.jquery-az.com/4-demos-to-create-product-galleries-with-zoom-feature-by-jquery/
+
+https://codepen.io/nikki-peel/pen/RwavQer
+
+Add thumbnails of both front and reverse page below the product card and allow user to choose which one to view. This requires adding images of the product's reverse side to the database and match them with the front page.
+
+The quantity section is perhaps superfluous in my case, as I usually sell unique collectibles of which I may not have more than one for sale. This also means, that in the application's current state, users can add the same item multiple times, without that either the quantity of products on stock would decrease, nor the overall total in their cart inrease.
 
 
+**4. Checkout**
+
+At the moment, this shop does not collect user's billing information within the User Profile model or Order model.(However, the billing data is recorded in Stripe from the billing information added by the customer.) One of the features left to implement is to add the billing details on the Checkout page.
 
 <div align="right"><a style="text-align:right" href="#top">Go to index: :arrow_double_up:</a></div>
 
@@ -385,8 +427,8 @@ Full details of testing can be found [here](TESTING.md).
 
 <span id="credits"></span>
 
-# Deployment
-## Heroku Deployment with AWS
+## Deployment
+### Heroku Deployment with AWS
 This website has been deployed on [Heroku](https://www.heroku.com/) by following these steps:
 1. Install the following packages to your local environment as required to deploy a Django project on Heroku.
 - [gunicorn](https://gunicorn.org/) which is a Python WSGI (web server gataway interface).
@@ -498,7 +540,7 @@ You can enable automatic deploy as follows (so that updates to Github will autom
 3. Click `Enable Automatic Deploys`.
 
 
-## Local Deployment
+### Local Deployment
 For local deployment, an IDE is needed (e.g. Gitpod) and you need to install the following:
 - Git, Python3, PIP3
 Also, you need to create an account for each of the following services if not already done so:
@@ -538,6 +580,8 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 
 - Web Development Tutorials' [tutorial](https://www.youtube.com/watch?v=ZhTnOp-FpE0) and Drew Ryan's [tutorial](https://www.youtube.com/watch?v=Zn64_IVLO88) for some inspiration on the Bootstrap 4 Jumbotron Background Image on Landing Page 
 
+- Dennis Ivy's [Django Ecommerce Website tutorial](https://www.youtube.com/watch?v=_ELCMngbM0E) provided some styling ideas for my cart.
+
 - Email contact form on index.html is adjusted from [this example](http://reusableforms.com/d/e1/bootstrap-contact-form-send-email) at Reusable Forms
 
 - Footer with three-column layout is adjusted from [Ordinary Coders](https://www.ordinarycoders.com/blog/article/bootstrap-footers) 
@@ -572,7 +616,7 @@ Hero image:
 
 * Hero image is from [Unsplash](https://unsplash.com/photos/6NSVToSYwV0) and is free to use under the Unsplash license. Created under the title "Fumée, Robe du soir de Beer", it first appeared in 1921 in Gazette du bon ton : art, modes & frivolités and was digitalized for a 2009 exhibition by the McGill University Library's [Digital Exhibitions & Collections](https://www.mcgill.ca/library/find/digitization) entitled ["Art Deco and the Decorative Arts in the 1920s and 1930s"](https://digital.library.mcgill.ca/artdeco/). 
 
-* All Mono cards are from this [Pinterest account]([Pinterest](https://www.pinterest.ch/michaelv0271/mono-karten-swiss-trade-cards/) and from [Monokartenmatthys](https://www.monokartenmatthys.com/).
+* All Mono cards are from this [Pinterest account](https://www.pinterest.ch/michaelv0271/mono-karten-swiss-trade-cards/) and from [Monokartenmatthys](https://www.monokartenmatthys.com/).
 
 * The to-date only artistic poster in the collection, Robert Hardmeyer's Waschanstalt Zurich AG
 (1904), is from [New York's Museum of Modern Arts](https://www.moma.org/collection/works/5352)
