@@ -23,31 +23,34 @@ The following tests have been carried out without issue:
 
 On screen widths greater than 991px:
 The correct menu options appear depending on the user's session status:
-  - **Not logged in**: Home, Log In, Register 
-  - **Logged in**: Home, Profile, New Video, Video Library, Log Out
-  - **Logged in as "admin"**: Home, Profile, New Video, Video Library, Manage Categories, Log Out
+  - **Not logged in**: Brand Title, Online Shop, Blog, My Account with Log In and Register, Cart 
+  - **Logged in**: Brand Title, Online Shop, Blog, My Account with My Profile, New Post, and Logout, Cart
+  - **Logged in as superuser**: Brand Title, Online Shop, Blog, My Account with with Product Management, My Profile, New Post, and Logout, Cart
 - Tapping/clicking each link takes the user to the relevant page, or logs the user out.
 - Clicking on Navbar brandlogo takes user back to index page.
 
 
-Mobile:
+Smaller than 991px:
  
 - The available menu options are replaced by a hamburger icon.
-- All available menu options appear in a Sidenav when the hamburgwer icon is tapped/clicked. 
-- Video *Wunderkammer* brand logo in Navbar reduced to *Wunderkammer* only on medium sized devices and down to avoid text overflow on next line.
+- All available menu options appear in a drop down nav when the hamburger icon is tapped/clicked, including the search bar. 
+- VAP Brand title in Navbar and hamburger menu icon swap sides.
 
 
 **Footer**
 
-- The footer 'sticks' on the bottom of the screen with only baisc content.
+- The footer has a simple three-column layout and 'sticks' on the bottom of the screen with only basic content, inlcuding the brand logo.
+- Below 991px, it responsively turns to one column.
 - Each social media link opens the relevant external page in a new window.
 
 
 **Home page**
 
 - All links in the navbar direct to the correct pages.
-- Three slider images with two sets of header on each introduce to the main purpose and functionality of the app.
-- "Featured Videos" shows a random selection of four videos. For practical purposes, videos currently uploaded are test videos only.
+- The hero image with a header introduces to the main purpose and functionality of the app and allows users to directly proceed to the onlineshop via the View Products button.
+- The "About" section introduces to the main idea and purpose of this app. 
+- "New Arrivals" shows all products categorized as new arrivals.
+- "Contact" section allows users to get in touch via email in case they need to (not functional yet in the app's current state)
 
 
 **Log In page**
@@ -143,3 +146,9 @@ The same tests as for Add Video were undertaken, with the following additional t
 <span id="testing-auto"></span>
 
 ## Automated testing
+
+
+[W3C - CSS](https://jigsaw.w3.org/css-validator/) returned:
+
+![CSS Validator](readme_materials/css_validation.png)
+
