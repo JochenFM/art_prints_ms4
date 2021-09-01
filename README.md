@@ -2,7 +2,7 @@
 
 # VAP - Vintage Art Prints
 
-Am I responsive
+![Am I responsive](readme_materials/AmIresponsive.png)
 
 **[Live demo](https://jochenfm-art-prints.herokuapp.com/)**
 
@@ -625,7 +625,9 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 
 - Email contact form on index.html is adjusted from [this example](http://reusableforms.com/d/e1/bootstrap-contact-form-send-email) at Reusable Forms
 
-- Footer with three-column layout is adjusted from [Ordinary Coders](https://www.ordinarycoders.com/blog/article/bootstrap-footers) 
+- Footer with three-column layout is adjusted from [Ordinary Coders](https://www.ordinarycoders.com/blog/article/bootstrap-footers)
+
+- Stackoverflow has been important, such as [How do I display my products by certain category](https://stackoverflow.com/questions/65017961/how-do-i-display-my-products-by-certain-category) for display of new_arrivals-products on index.html, but no code was taken from it.  
 
 - In terms of layout and style, as well as the overall business idea, the following live websites were an inspiration:
   - [Galerie 123](https://www.galerie123.com/en/)
