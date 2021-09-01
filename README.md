@@ -52,7 +52,7 @@ What I intend to achieve in this project is to bring together two logics commonl
 
 ### Overview
 
-*VAP* addresses everyone who is interested in paper art and its collection and trade for the purpose of profit-making, information exchange and learning, or just for fun and aesthetics. Users are looking for items to purchase securely and trustworthily, while being able to compare market information such as price and product condition. Some would also like to see content to learn from and educate themselves, while potentially also sharing and discussing some of their knowledge on vintage paper collectibles.    
+*VAP* addresses everyone who is interested in paper art and its collection and trade for the purpose of profit-making, information exchange and learning, or just for fun and the aesthetic experience. Users are looking for items to purchase securely and trustworthily, while being able to compare market information such as price and product condition. Some would also like to see content to learn from and educate themselves, while potentially also sharing and discussing some of their knowledge on vintage paper collectibles.    
 Moreover, the site owner has some specific business goals which include:
 
 * Provide customers with a secure and smooth e-commerce experience
@@ -123,7 +123,7 @@ All design decisions have been made with the following goals in mind:
 
 <br/>
 
-#### Cart, Purchasing and Checkout
+#### Sorting and Searching
 
 | AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
 | ----------- | ----------- | ----------- |
@@ -397,7 +397,7 @@ Insert a header/hero image in blog.html to invite more users to contribute.
 
 Implement categories of blog posts so users can navigate the blog posts easily. Numbers of posted blogs in the respective categories could also shown in brackets.
 
-Add superuser functionality to allow the site admin to edit and delete blog posts (via {% if request.user.is_superuser %}
+Add superuser functionality to allow the site admin to edit and delete blog posts via {% if request.user.is_superuser %} in the template.
 
 My Profile does not collect any user information from the blog app - both app and store are generally hardly interlinked. This could be improved for users who are both shoppers and bloggers. 
 Moreover, products that are the object of blog posts could also be linked to the shop in order to enhance information exchange and help users decide what to buy and why. 

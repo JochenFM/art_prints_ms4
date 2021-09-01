@@ -16,12 +16,29 @@ Back to [README](README.md)
 
 ## Manual testing
 
-The following tests have been carried out without issue:
+The following tests have been carried out without issue. While reporting them, I will also come back to some of the user stories mentioned in [README.md](https://github.com/JochenFM/art_prints_ms4/blob/master/README.md) to see how the requirements have been met:
+
+### Landing Page
+#### User Stories Tested:
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... | 
+| ----------- | ----------- | ----------- | 
+| Shopper | See at a glance what services are offered | Find the service I want to use (US002) |
+### Test conducted:
+- Click all the buttons and links on the page
+- Submit contact Form to see if the admin receives an email
+### Result:
+- All the buttons and links are working as expected. 
+- Contact form at the bottom of the page is not functional. Requires development at a later stage. 
 
 
-**Navigation bar**
-
-On screen widths greater than 991px:
+### Navbar
+#### User Stories Tested:
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- | 
+| Shopper | All the important services are accesible from nav bar| Don't need to scroll to find important information (US003)|
+### Test conducted:
+- All links in the navbar direct to the correct pages.
+- On screen widths greater than 991px:
 The correct menu options appear depending on the user's session status:
   - **Not logged in**: Brand Title, Online Shop, Blog, My Account with Log In and Register, Cart 
   - **Logged in**: Brand Title, Online Shop, Blog, My Account with My Profile, New Post, and Logout, Cart
@@ -37,107 +54,66 @@ Smaller than 991px:
 - VAP Brand title in Navbar and hamburger menu icon swap sides.
 
 
-**Footer**
 
-- The footer has a simple three-column layout and 'sticks' on the bottom of the screen with only basic content, inlcuding the brand logo.
+### Onlineshop
+#### User Stories Tested:
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Shopper | Search a product with keywords | Find the most appropriate products (US015)|
+| Shopper | View individual product pages that have prices, descriptions, sizes, etc | Get detailed information about the product before purchasing (US016)|
+| Shopper | Filter by a specific category | Easily find products in a specific category (US017)|
+| Shopper/Site Owner | Leave/View product reviews with scores | Understand which products are popular with other customers (US018)|
+| Site Owner | Easily add a new product | Make sure the online site has the latest catalogue (US019)|
+### Test conducted:
+- Inserted various keywords in search bar and check if it works as expected.
+- Checked if the online shop page / the individual product page is displayed without breaking the layout for common screensizes.
+- Navigations such as paginations, back to previous page button etc. don't break 
+- Checked that the sorting by the given categories and the filtering by prize, name etc. all work fine
+### Result:
+- Button layout needed various style fixes to follow responsiveness and the secure checkout button in the cart still does re-size awkwardly 
+- Dropdown menus for categories and search by on onlineshop still sit awkwardly and the dropdown menu gets in the way of good visuality. Therefore, most issues on the product cards have been fixed, notwithstanding the minor jumble-up of style of date is "N/A". 
+- Product edit and delete all work fine including the pop up messages warning the site owner of the course of action.
+
+#### Cart, Purchasing and Checkout
+#### User Stories Tested:
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... |
+| ----------- | ----------- | ----------- |
+| Shopper | Easily select a product and know about the condition it is in | Ensure I purchase the correct product and am not surprised at its condition (US024)| 
+| Shopper | Easily add a product to my cart and see what is in my cart | Select the right product and double-check whether this is true (US025)| 
+| Shopper | Easily remove a product from my cart | Delete a wrongly selected product and proceed only with what I intend to buy (US026)| 
+| Shopper | store my shipping details |Check out easier next time I visit that page (US027)|
+
+### Tests conducted:
+- Condition the mono cards are in is indicated but at the moment there is no appropriate legend telling users what it means.
+- Adding and removing to/from cart, also adding the same product multiple times
+- Check if Remove/Edit links work properly.
+### Result:
+- Mixed result in this case as the information for the Condition is failry important
+- At the moment, the same product can be added multiple times which is illogic for an art gallery of collectibles and unique items.
+- Also, removing a product from the cart does not trigger a toast message that is has been successfully removed
+- Remove/Edit links work as expected.
+
+
+### Blog
+#### User Stories Tested:
+| AS A/AN     | I WANT TO BE ABLE TO ... | SO THAT I CAN... | 
+| ----------- | ----------- | ----------- | 
+| Site User | Post a blog about the paper products or related collectibles | Provide shoppers or interested users with interesting information about the paper collectibles (US013)|
+| Shopper/site user | Filter blog posts by specific categories | See at a glance whether information is available about a topic I am interested in (US023)|
+| Site owner | Easily add, update, or delete blog posts  | Make sure that the blog posts are up-to-date and to remove potentially harmful content (US029)|
+#### Tests conducted:
+- Click all the links in this section: links to each post, the links to individual augthors, and the delete/edit buttons for registered post authors. That includes the pagination links and their peculair logic
+- The responsiveness of the box elements, pagination links included 
+### Result:
+- All links work fine, including edit and delete posts.
+- Main issue here apart from lack of visual appeal is that the site owner cannot yet delete/edit posts but only an author for his/her own posts. This would make it impossible to remove false or harmful content and therefor needs to be addressed.   
+- Pagination button's Overlap beyond the box elements of individual blog posts has been resolved by adding justify-content-center but as box elements are not placed in the middle this resultsn in a slightly skewed layou at the moment. 
+
+### Footer
+
+Additionally, it should be reported that after much trying with justify-content and responsiveness, the footer has a simple three-column layout and 'sticks' on the bottom of the screen with only basic content, inlcuding the brand logo.
 - Below 991px, it responsively turns to one column.
 - Each social media link opens the relevant external page in a new window.
-
-
-**Home page**
-
-- All links in the navbar direct to the correct pages.
-- The hero image with a header introduces to the main purpose and functionality of the app and allows users to directly proceed to the onlineshop via the View Products button.
-- The "About" section introduces to the main idea and purpose of this app. 
-- "New Arrivals" shows all products categorized as new arrivals.
-- "Contact" section allows users to get in touch via email in case they need to (not functional yet in the app's current state)
-
-
-**Log In page**
-
-- Entering a username or password not matching the form validation highlights the issue to the user via red color first and, upon clicking/tapping Login button, a tooltip "Please match the requested format"
-- Entering either an incorrect username or password triggers a Flash message "Incorrect Username and/or Password".
-- When the 'Log In' button is tapped/clicked with valid details, the user is redirected to their Profile page and a Flash message including their username indicates they have successfully logged in.
-- The 'Register' link below the login fields takes the user to the Register page.
-
-
-**Register page**
-
-
-- Entering a username or password not matching the form validation highlights the issue to the user via red color first and, upon clicking/tapping Register button, a tooltip "Please match the requested format"
-- Submitting a username (upper or lowercase) which has already been registered reloads the page and displays a Flash message "Username already exists"
-- When the 'Register' button is tapped/clicked with valid details, the user is redirected to their Profile page and a Flash message indicates "Registration successful"
-- On registering, the new user's username and password are added to the Users collection on MongoDB.
-- The 'Log In' link below the Register fields takes the user to the Log In page.
-
-**Video Library page**
-
-Search functionality:
-
-- After entering a term in the search field and either tapping/clicking the search icon or pressing Enter, the correct results are displayed as long as number of results is in excess of pagination PER_PAGE limit.
-- Tapping/clicking the cancel icon reloads the page with no query applied.
-- The section heading updates to reflect the search term used.
-- If no results are found, a Flash message appears "No results found".
-
-Video Containers & Collapsibles:
-
-- All test videos in the database are displayed, each with the title, author, abstract, venue, and date as inserted by the user. 
-- All videos can be watched with sound on/off, either on full, small screen, or picture in picture mode. They can also be downloaded.
-- Videos are displayed with the oldest at the top (sorting the video_id not yet implemented).
-- If the user is logged in and has added a video, the edit interface is displayed within the collapsible title field comprising edit, delete, and 'like' icons. The like functionality is inactive for now, but the edit and delete icons lead the user respectively to the edit video page or to a modal with further options of cancel or delete video.
-- Like icon has hover effect on moused over.
-
-Pagination:
-
-- The number of visible videos is limited to 4 per page.
-
-
-**Add Video page**
-
-- The large 'Upload Video' button at the top of the form is wired to the Cloudinary upload widget which upon tapping/clicking the button pops up for the user to upload a video.
-- The widget is customized to currently allow three different upload methods: via my files, web adress (public URL), or google drive. The first option can be performed either by drag and dropping the video file into the upload widget, or by browsing their files.
-- Currently, the video needs to be uploaded before all other fields are being filled in, otherwise the form will be submitted without video.
-- Upon tapping/clicking 'Done' on the widget, a unique URL for the video on Cloudinary is added to the video link field on the upload form, and the user can continue filling in the remaining fields of Title, Author/Presenter, Video Abstract, Venue, Date, and Video Category.
-- The 'Choose category' input field is populated with the document from the Categories collection on MongoDB. Changes to that list, which currently stands at 14 categories, by the Admin or creator of this site are reflected in the dropdown.
-- Input field validation and character limitations function as expected, indicating issues with input.
-- The 'Add Video' button:
-  - Adds the video to the video collection.
-  - Redirects to the user to the video library page, showing the new video at the end of the video collapsibles.
-  - Displays a Flash message confirming video has been successfully added.
-
-
-**Edit Video page**
-
-The same tests as for Add Video were undertaken, with the following additional tests:
-- The input fields are prepopulated with the video's existing values where available.
-- The 'Save Changes' button:
-  - Changes the videos's values in the vieos MongoDB collection.
-  - Displays a Flash message confirming activity has been successfully added.
-  - Redirects user to video library page.
-
-
-**Manage Categories page**
-
-- The page is only accessible if logged in as "Admin".
-- All categories from the MongoDB categories collection are shown in cards.
-- The edit/delete icons allow the Admin to either proceed to the edit category form, or delete a category via a confirm delete modal.
-
-
-**Add/Edit Category pages**
-
-- The pages are only accessible if logged in as Admin.
-- Categories can be added via the 'Add Category' button on the Manage Categories page which leads the Admin to a single field to insert a new category name. 
-- The delete icon on the Manage Categories page is wired up to a confirm delete modal which also offers the option to cancel.
-- The edit icon leads the Admin to the 'Edit Category' template almost identical to the 'Add Category' on which the category name can be updated.
-
-
-
-**Profile page**
-
-- Unfinished as yet.
-- Username interjected dynamically into profile card.
-- Icons to edit and delete icon in place, but only the latter is functional bringing up a confirmation modal with option to cancel.
-- Username's favourite and uploaded videos show with content to be added at a later stage from MongoDB and Cloudinary.
 
 
 <div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
@@ -189,7 +165,9 @@ In light of the Lighhouse Reports, improvements at a later stage need to be impl
 
 - Performance of the product_detail page was hampered by the fact that "image elements do not have explicit width and height" which definitely needs to be addressed at a later stage by following these [web.dev ideas](https://web.dev/optimize-cls/?utm_source=lighthouse&utm_medium=devtools#images-without-dimensions).
 
+Performance on the Cart page is currently at 83% due to "render-blocking resources" and, again, unappropriately sized images.
 
+Blog pages are simple enough and scored between 90% and 97% in all Lighhhouse criteria. 
 
 
 
