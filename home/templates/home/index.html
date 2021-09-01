@@ -5,7 +5,7 @@
 {% block content %} 
 
 <!--hero image section-->
-<section id="home header-container">
+<section id="header-container">
 <div class ="jumbotron">
     <div class = "intro">
     <h1>Trade, blog, and learn about rare and <br> beautiful early 20th-century paper collectibles</h1>
@@ -70,7 +70,7 @@
                         <p class="mb-0 font-italic">{{product.year}}</p>
                         {% else %}
                         <p class="mb-0 ml-2 w-100">Date:<span class="font-italic">
-                                N/A<span></p>
+                                N/A</span></p>
                         {% endif %}
                         {% if product.category %}
                         <p class="mb-0">
@@ -99,7 +99,7 @@
 </div>
 </div>
 </div>
-</div>
+
 <div class="row">
     <div class="col-12 text-center">
 <a href="{% url 'onlineshop' %}" class="btn btn-dark rounded-1 mt-2 mb-5">
@@ -107,8 +107,7 @@
 </a>
     </div>
 </div>
-</div>
-</div>  
+
 </section>
 
 <section id ="contact">
@@ -124,7 +123,7 @@
                     <div class="box-element col-sm-12 form-group">
                         <label for="message">
                             Message:</label>
-                        <textarea class="form-control" type="textarea" name="message" id="message" maxlength="6000" rows="7"></textarea>
+                        <textarea class="form-control" name="message" id="message" maxlength="6000" rows="7"></textarea>
                     </div>
                 </div>
                 <div class="row">
@@ -139,14 +138,17 @@
                         <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                 </div>
+
+            </form>
                 <div class="row">
                     <div class="col-sm-12 form-group d-flex justify-content-end">
                         <a class="btn btn-dark rounded-1 mr-1" href="{% url 'home' %}">Cancel</a>
                 <button class="btn btn-dark rounded-1" type="submit">Send
-                    <i class="far fa-paper-plane "></i>
+                    <i class="far fa-paper-plane "></i></button>
                     </div>
                 </div>
-    
+        </div>
+    </div>
 </section>
 
 
