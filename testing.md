@@ -152,3 +152,84 @@ The same tests as for Add Video were undertaken, with the following additional t
 
 ![CSS Validator](readme_materials/css_validation.png)
 
+
+In response to the [W3C - HTML](https://validator.w3.org/) errors shown:
+
+- I removed a number of stray div tags and closed missing tags for div, p, span, button and form elements.
+- I deleted wrong or unnecessary labels, roles and types for form and scripts elements.
+
+I left the "Warning: The type attribute is unnecessary for JavaScript resources." as it is.
+
+
+[CSS Lint](http://csslint.net/) - 0 errors, 47 warnings - **PASS**
+
+- I removed unit specification behind 0 values
+- In one instance warning was for "overqualified elements" - the fontawesome shopping cart icon in the navbar, for which I removed the i element accordingly.
+- many warnings refer to "Require compatible vendor prefixes" or "Disallow duplicate properties" both of which were added by autoprefixer and left untouched by me.
+- Others discourage the use of id for selectors or adjoining classes ("Don't use IDs in selectors", "Don't use adjoining classes.") Selecting via IDs, however, 
+has only been used for styles which will not be reused and the specificity was needed.
+
+
+
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
+
+<span id="testing-responsive"></span>
+
+## Responsiveness
+
+
+The site is supported by [Bootstrap](https://getbootstrap.com/) and has been thoroughly tested at all stages of development using [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools).
+Bootstrap may limit design choices and customization at times, but this was an acceptable compromise given the advantages provided, such as a fluid responsive grid system which was used throughout this site, including the container class and a number of Components, such as buttons, Contents, such as tables, and Utilities (Display, Position etc.) 
+
+
+
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
+
+### Browsers
+
+Tested on:
+
+- Chrome
+- Edge
+- Firefox
+- Safari (iOS)
+
+
+### Screen sizes
+
+Tested with Chrome DevTools using profiles for:
+
+
+- Galaxy S5
+- Pixel 2
+- iPhone 5 SE
+- iPhone 6/7/8
+- iPhone X
+- iPad Pro
+
+I also used the responsive profiles of:
+
+- Mobile M (375px)
+- Mobile L (425px)
+- Tablet (768px)
+- Laptop (1024px)
+- Laptop L (1440px)
+
+Real world testing on:
+
+- iPad Air 
+- iPhone 11
+- MacBook Air
+- ASUS VivoBook 14/15
+- Huawei P Smartphone  
+
+
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
+
+
+
+## Issues and bugs
+
+<span id="testing-resolved"></span>
+
+### Resolved

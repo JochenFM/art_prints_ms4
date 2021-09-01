@@ -106,7 +106,7 @@ input[name='q']::placeholder {
     height: 140vh;
     position: relative;
     background-size: cover;
-    border-radius: 0px!important;
+    border-radius: 0!important;
 }
 
 .jumbotron h1 {
@@ -305,7 +305,7 @@ input[name='q']::placeholder {
   height: 40px;
   padding: 10px 12px;
   border: 1px solid transparent;
-  border-radius: 0px;
+  border-radius: 0;
   background-color: white;
   -webkit-box-shadow: 0 1px 3px 0 #e6ebf1;
           box-shadow: 0 1px 3px 0 #e6ebf1;
@@ -491,7 +491,7 @@ input[name='q']::placeholder {
     padding: 0.15rem;
 }
 
-.nav-link i.fa-lg {
+.nav-link .fa-lg {
     font-size: 1rem;
 }
 
