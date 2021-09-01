@@ -6,7 +6,7 @@ def index(request):
     """ a view to return the index page and display products of
     new_arrivals category """
     
-    products = Product.objects.all().filter(category__name="new_arrivals")
+    products = Product.objects.filter(category__name="new_arrivals")
     
     context = {
         'products': products,
