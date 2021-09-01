@@ -343,9 +343,9 @@ Authenticated superusers can access the admin page to add, edit and delete produ
 
 ### Django-allauth features
 
-- Sign Up: The users will be asked to fill out `E-mail` (twice), `User Name` and `Password` (twice) to create an account. When the sign up form is submitted, a verification email will be sent to the user's email address to complete the sign up process.
+- Sign Up: The users will be asked to fill out `E-mail` (twice), `User Name` and `Password` (twice) to create an account. When the sign up form is submitted, a verification email will be sent to the user's email address to complete the sign up process by clicking the link sent in the email. 
 - Log In: Users will be asked to input `User Name` or `Email`, and `Password` to login. If the user successfully logged in s/he will be redirected to the landing page and a modal shows "Successfully signed in as _username_."
-- The Log out page can be accessed from from the site menu in the navbar. After the user successfully signed out via the logout button on the sign out page, a success message will appear and s/he will be redirected to the landing page.
+- The Log out page can be accessed from the site menu in the navbar. After the user successfully signed out via the logout button on the sign out page, a success message will appear and s/he will be redirected to the landing page.
 - In case user has forgotten their password, a link on the Sign In page allows them to access the Password Reset page where they will be asked to insert the email address used for their registration. An email with a link to reset the password will be sent upon submitting the form.
 
 
@@ -358,44 +358,58 @@ In case of 404 and 500 errors, the respective html templates are engaged, with a
 
 ## Future Features
 
-There are a number of features which I would have loved to implement but failed due to lack of skills and, especially, time constraints. These additions would help the overall functionality of VAP and lead to higher customer satisfaction and profitability if this is ever going to go live. Some of the features are: 
+There are a number of features which I would have loved to implement but failed to due to lack of skills and, especially, time constraints. These additions would help the overall functionality of VAP and lead to higher customer satisfaction and profitability if this is ever going to go live. Some of the features are: 
 
 **1. Contact Form on Index.html**
 
-The email address field can be prefilled if the users are logged into their account.
-A future feature will allow the email with the inquiry from the form to be sent to the admin of the website (handled by the Django send_mail() functionality).
+The email address field could be prefilled if the user is logged into their account. Moreover, a future feature will allow the email with the inquiry from the form to be sent to the admin of the website (handled by the Django send_mail() functionality).
+
+All products of the new_arrival category onindex.html will need a NEW sticker or similar in the top corner to set them apart from the rest of the product line.
+
+**2. Customer Testimonials**
+
+A testimonial section in form of a carousel on index.html whereby past customers leave rating/quote of their shopping experience would be good to build trust between shop and potential users/customers. 
 
 
-**2. Footer**
+**3. Footer**
 
-Social media icons: In this milestone project, Social Media icons are linked to my personal social media accounts, but in a real settting they should be linked to business pages on social media, such as Facebook, Instragram, Twitter, Pinterest etc, for social media marketing purposes
+Social Media icons are currently linked to my personal social media accounts, but in a real settting they should be linked to business pages on social media, such as Facebook, Instragram, Twitter, Pinterest etc, for social media marketing purposes. And login functionalities could then be synchronized between this App and social media (see below)
 
 
-**3. Product Details**
+**4. Product Details**
 
-link behind aertist/author name that allows display of all products available under the respective name via Django's
-get_queryset(), for instance
+A link behind the artist/author name that would allow display of all products available under the respective name via Django's get_queryset(), for instance. 
 
-Zoom mouseover for single products: https://www.jquery-az.com/jquery/demo.php?ex=168.0_1
+I also would have loved to implement one of these [Jquery-az](https://www.jquery-az.com/4-demos-to-create-product-galleries-with-zoom-feature-by-jquery/) zoom functionalities upon mouseover the single product images as the style and condition of paper collectibles is an important criteria for customers during purchase. 
 
-https://www.jquery-az.com/4-demos-to-create-product-galleries-with-zoom-feature-by-jquery/
-
-https://codepen.io/nikki-peel/pen/RwavQer
-
-Add thumbnails of both front and reverse page below the product card and allow user to choose which one to view. This requires adding images of the product's reverse side to the database and match them with the front page.
+A future version will need thumbnail images of both front and reverse side of the cards, placed below each individual product card allowing users to choose which one to view. This requires adding images of the product's reverse side to the database and match them with the front page image.
 
 The quantity section is perhaps superfluous in my case, as I usually sell unique collectibles of which I may not have more than one for sale. This also means, that in the application's current state, users can add the same item multiple times, without that either the quantity of products on stock would decrease, nor the overall total in their cart inrease.
 
 
-**4. Checkout**
+**5. Checkout**
 
-At the moment, this shop does not collect user's billing information within the User Profile model or Order model.(However, the billing data is recorded in Stripe from the billing information added by the customer.) One of the features left to implement is to add the billing details on the Checkout page.
+At the moment, the application does not collect user's billing information within the User Profile model or Order model.(However, the billing data is recorded in Stripe from the billing information added by the customer.) One of the features left to implement is to add the billing details on the Checkout page.
 
-**5. Blog Pages**
+**6. Blog Pages**
 
-Implement categories of blog posts so users can navigate the blog posts easily. Numbers of posted blogs in the categories is also shown in brackets.
+Insert a header/hero image in blog.html to invite more users to contribute.
+
+Implement categories of blog posts so users can navigate the blog posts easily. Numbers of posted blogs in the respective categories could also shown in brackets.
 
 Add superuser functionality to allow the site admin to edit and delete blog posts (via {% if request.user.is_superuser %}
+
+My Profile does not collect any user information from the blog app - both app and store are generally hardly interlinked. This could be improved for users who are both shoppers and bloggers. 
+Moreover, products that are the object of blog posts could also be linked to the shop in order to enhance information exchange and help users decide what to buy and why. 
+
+**7. Social Account Login**
+This function allows users to sign up / log into their VAP account using an existing third party account such as Google or Facebook. For users, this would make it easier to memorize the password and speeds up the registration process. The site owner would benefit from increasing user sign ups, reduced bounce rate and by gaining access to the user's social account details which helps with marketing.
+
+
+**8. Larger Database**
+The database and categories to date is rather limited and I would love to add further items and categories at a later stage. Allowing, for instance, the search by artistic epoch, geographical region, and theme such as inserted manually in the site's current state on index.html which shows a selection of new_arrival- products all with hen/rooster depictions. 
+
+
 
 <div align="right"><a style="text-align:right" href="#top">Go to index: :arrow_double_up:</a></div>
 
