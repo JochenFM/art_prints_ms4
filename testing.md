@@ -170,6 +170,28 @@ I left the "Warning: The type attribute is unnecessary for JavaScript resources.
 has only been used for styles which will not be reused and the specificity was needed.
 
 
+- LightHouse on Google DevTool
+Lighthouse tests were conducted on the Landing Page, Online Shop Page/Single Product Page, Blog Page, Cart Page.
+
+Results for Performance, Accessibility, Best Practices, and SEO were all in the region between 68% and 100%.
+
+In light of the Lighhouse Reports, improvements at a later stage need to be implemented on:
+
+- Performance on landing page which currently is at 81% due to:
+  - Image in PNG format which could be replaced with that of WebP and AVIF which often "provide better compression than PNG or JPEG, which means faster downloads and less data consumption."
+  - Render-blocking resources such as critical JS/CSS which could go inline in the future.
+
+- Performance on online-shop for pretty much the same reasons as in the previous point with the addition that Lighthouse suggested to properly size the images "to save cellular data and improve load time."
+
+- Accessibility on the onlineshop page is currently at 85% due to
+  - social media links in the footer having an `[aria-hidden="true"]` element which "prevent those interactive elements from being available to users of assistive technologies like screen readers." As I did not see the element, issue was left unchanged for now.
+  - The blue Edit element on the cards apparently does not have "sufficient contrast ratio" between background and foreground colors.
+
+- Performance of the product_detail page was hampered by the fact that "image elements do not have explicit width and height" which definitely needs to be addressed at a later stage by following these [web.dev ideas](https://web.dev/optimize-cls/?utm_source=lighthouse&utm_medium=devtools#images-without-dimensions).
+
+
+
+
 
 <div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
 
@@ -233,3 +255,5 @@ Real world testing on:
 <span id="testing-resolved"></span>
 
 ### Resolved
+
+
