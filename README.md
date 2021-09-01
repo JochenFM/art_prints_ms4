@@ -640,6 +640,7 @@ A number of Code Institute's tutors were of great help. Many thanks to:
 - Sheryl Goldberg
 - Igor Basuga
 - John Traas
+- Michael Park
 - Kevin Loughry
 
 without whom this site would not be what it is now.

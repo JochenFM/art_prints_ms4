@@ -44,7 +44,7 @@
       </main>
     {% if is_paginated %}
     <nav aria-label="page navigation">
-      <div class="pagination ml-5 mb-4">
+      <div class="pagination justify-content-center">
       {% if page_obj.has_previous %}
         <a class ="btn btn-outline-dark mb-4" href = "?page=1">First</a>
         <a class ="btn btn-outline-dark mb-4" href = "?page={{ page_obj.previous_page_number }}">Previous</a>

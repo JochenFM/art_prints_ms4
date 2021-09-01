@@ -7,10 +7,10 @@ def index(request):
     new_arrivals category """
     
     products = Product.objects.all().filter(category__name="new_arrivals")
-    print("products", products)
-
+    
     context = {
         'products': products,
+       
     }
     return render(request, 'home/index.html', context)
 
