@@ -198,7 +198,7 @@ This palette reflects the Art Deco and Art Nouveau ambiances germane to the peri
 ### Typography
 
 To reflect VAT's brand identity and the art styles predominant in the era this shop focuses on, I chose Google font's [Old Standard TT](https://fonts.google.com/specimen/Old+Standard+TT#about). As mentioned in the font description, "Old Standard reproduces a specific type of Modern (classicist) style of serif typefaces, very commonly used in various editions of the late 19th and early 20th century..." which fits well the historical era of the monocards on display.
-The description also mentions that the font represents a "revival of the most common lettertype of the early 20th century" which, again, is this shop sets out to achieve as well in the field of paper art and prints.
+The description also mentions that the font represents a "revival of the most common lettertype of the early 20th century" which, again, is what this shop sets out to achieve as well in the field of paper art and prints.
 
 
 ### Brand Logo
@@ -236,46 +236,82 @@ Django's non-relational database structure makes sense for this type of site as 
 
 
 As can be seen, I originally planned with eight collections - users, product, BlogPost, user_profile, order, BlogImage, product_image and checkout - to order the relations between users and products and blog. My actual implementation deviates from this model in that the site due to time constraints operates with without the BlogImage collection. 
-Moreover, the schema above erroneously did not contain the collection of Categories (mono cards, artistic posters, new arrivals) which are included in the Database to enable classification and filtering of products.  
-What is mentioned BlogPost in the schema above, is now titled Post and contains the following fields
-- title
-- content
-- date_posted
-- author
+The schema also contains a number of logical and syntactical mistakes which I became only aware as I went along: 
 
-Category and product have not been implemented at this stage.
+- the collection of Categories (mono cards, artistic posters, new arrivals) are erroneously not contained but are included in the Database to enable classification and filtering of products.  
+- What is mentioned as BlogPost in the schema above, is now titled Post and contains the following fields
+  - title
+  - content
+  - date_posted
+  - author
+
+'Category' and 'Product' have not been implemented at this stage.
 
 
-#### Videos collection
+- The Product collection did not contain:
+  - year, price, dimension
+
+- The Order collection omitted the order_number, which is now included, and first_name & last_name above are now replaced by full_name.
+
+#### Product collection
 
 |**Key**|**Type**|**Notes**|
 |:-----|:-----|:-----|
-|_id|ObjectId||
-|category_name|string|Can be updated by Admin|
-|video_title|string|Video title as inserted by the user.|
-|video_author |string|Presenter(s) as entered by the user|
+|_pk|PrimaryKey||
+|name|Charfield|Can be updated by Admin|
+|category|Charfield|Category as given by the admin.|
+|author |Charfield|Artist/painter as entered by the admin|
 |video_description|string|Brief abstract of video content used to flesh out cards on library and home pages.|
 |date|string||
-|video_duration|string|eventually not implemented as duration is shown on iframe of video |
-|video_URL|string|This is the link stored in MongoDB to the video uploaded to Cloudinary. Inserted via callback function during upload process |
-|original_website|string| eventually not implemented as I am yet to figure out Copyright and hosting issues |
-|created_by|string| Added as user is logged in with their username. As users currently cannot change username, simpler to store as a string|
+|Description |TextField|describes relevant information of the given collectible |
+|condition|Charfield|THis was changed to a decimal field in the process |
+|Dimension |DecimalField| added here as not originally included in the schema to give shoppers idea of the sizes|
+|Price |DecimalField| added here as not originally included in the schema |
+|year|URLfield| added here as not originally included in the schema|
+|image_URL|DecimalField| |
+|product_image|ImageField| |
 
-#### Categories collection
 
-|**Key**|**Type**|**Notes**|
-|:-----|:-----|:-----|
-|_id|ObjectId||
-|category_name|string|The admin's chosen title of the category. Can only be changed by Admin|
 
 #### Users collection
 
 |**Key**|**Type**|**Notes**|
 |:-----|:-----|:-----|
-|_id|ObjectId||
-|username|string|Chosen by user on account creation. Cannot be changed.|
-|password|string|Chosen by user on account creation and hashed using Werkzeug Security.|
-|image|string|Profile pic chosen by user on account creation (not implemented yet)
+|_id|int||
+|first_name|Charfield|Chosen by user on account creation. Cannot be changed.|
+|last_name|Charfield|Chosen by user on account creation. Cannot be changed.|
+|username|Charfield|Chosen by user on account creation. Cannot be changed.|  
+|password|Charfield|Chosen by user on account creation and hashed using Allauth Security.|
+|Email|EmailField|hosen by user on account creation. Cannot be changed.
+
+#### Blog collection
+
+|**Key**|**Type**|**Notes**|
+|:-----|:-----|:-----|
+|pk|PrimaryKey||
+|title |Charfield|Chosen by author-user Can be changed via edit post|
+|author|Foreignkey|Chosen by user on account creation. Cannot be changed.|
+|content|Textfield|has not character limit at the moment|  
+|date_posted|DateTimeField|Added automatically via Django time settings|
+
+
+#### Order collection
+
+**Key**|**Type**|**Notes**|
+|:-----|:-----|:-----|
+|_pk|PrimaryKey||
+|user_profile|Charfield|Can be updated by user|
+|first_name|Charfield|Chosen by user on account creation. Is now full_name|
+|last_name|Charfield|Chosen by user on account creation. Is now full_name|
+|Email|EmailField|hosen by user on account creation. Cannot be changed.|
+|City|CharField|Chosen by user on order creation. Is now town_or_city|
+|address_line1|CharField|Chosen by user on order creation. Is now street_address1|
+|address_line2|CharField|Chosen by user on order creation. Is now street_address2|
+|postcode|DecimalField|Chosen by user on order creation. Is now a Charfield as UK postcodes contain letters|
+|order_date|DateTimeField|Is now date|
+|delivery_cost|DecimalField||
+|order_total|DecimalField||
+|grand_total|DecimalField||
 
 
 
@@ -523,7 +559,7 @@ The main frontend development was created using HTML, CSS, JavaScript and their 
 ## Testing
 
 
-Full details of testing can be found [here](TESTING.md).
+Full details of testing can be found [here](https://github.com/JochenFM/art_prints_ms4/blob/master/testing.md).
 
 
 

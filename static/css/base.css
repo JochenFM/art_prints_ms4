@@ -433,7 +433,7 @@ input[name='q']::placeholder {
 /* order history template*/
 
 .order-history {
-    max-height: 416px; /*=height of profile forma & button, above => scrollbar*/
+    max-height: 416px; /*=height of profile form & button, above => scrollbar*/
     overflow-y: auto;
 }
 
