@@ -261,14 +261,12 @@ The schema also contains a number of logical and syntactical mistakes which I be
 |name|Charfield|Can be updated by Admin|
 |category|Charfield|Category as given by the admin.|
 |author |Charfield|Artist/painter as entered by the admin|
-|video_description|string|Brief abstract of video content used to flesh out cards on library and home pages.|
-|date|string||
 |Description |TextField|describes relevant information of the given collectible |
 |condition|Charfield|THis was changed to a decimal field in the process |
-|Dimension |DecimalField| added here as not originally included in the schema to give shoppers idea of the sizes|
-|Price |DecimalField| added here as not originally included in the schema |
-|year|URLfield| added here as not originally included in the schema|
-|image_URL|DecimalField| |
+|dimension |DecimalField| added here as not originally included in the schema to give shoppers idea of the sizes|
+|price |DecimalField| added here as not originally included in the schema |
+|year|DecimalField| added here as not originally included in the schema|
+|image_URL|URLField| |
 |product_image|ImageField| |
 
 
@@ -312,9 +310,6 @@ The schema also contains a number of logical and syntactical mistakes which I be
 |delivery_cost|DecimalField||
 |order_total|DecimalField||
 |grand_total|DecimalField||
-
-
-
 
 
 In the future, I hope to be able to increase the number of categories as the database grows in order to capture the variety of products and their classification (see Future Features below).

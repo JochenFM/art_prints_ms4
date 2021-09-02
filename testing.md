@@ -234,4 +234,37 @@ Real world testing on:
 
 ### Resolved
 
+**One of the key issues on the landing page was to inject a selection of products of the new_arrivals category into the template. The issue failed as long as I had not realized that on a one-page webiste, rendering has to be done to the same site, i.e. index.html. Furthermore, grabbing the right projects from the databasew failed until Sheryl and Michael tutored me and suggested I grab them by the Django lookup method filter them.**
 
+As the error message "Cannot resolve keyword 'category_name' into field.", I used a field look up like category__name to query the Product model as the product and category models are related with a foreign key. I've been reading in django docs about these field lookups and using __in is done when there is a list. So given the category model defines itself using self.name, category__name="new_arrivals" did work.
+
+The function now looks as follows and works with the forloop in the template: {% for product in products %}
+
+
+def index(request):
+    """ a view to return the index page and display products of
+    new_arrivals category """
+    
+    products = Product.objects.filter(category__name="new_arrivals")
+    
+    context = {
+        'products': products,
+       
+    }
+    return render(request, 'home/index.html', context)
+
+
+The If-statement  {% if product.category.name == 'new_arrivals' %}I had originally inserted, is not needed as I am already filtering the products in the view.
+
+<div align="right"><a style="text-align:right" href="#top">Go to index :arrow_double_up:</a></div>
+
+<span id="testing-unresolved"></span>
+
+
+### Unresolved
+
+**In terms of styling, the text-over-image in the overlayed hero image in its current state is still only a second-best solution even although markedly improved from how it was before.**  
+
+I have gone through a number of options, such as [overlays](
+https://stackoverflow.com/questions/30113116/overlaying-an-image-with-text-in-materialize-css), text-over-image [hacks](
+https://www.slideteam.net/blog/11-hacks-to-make-text-over-images-more-readable-craft-a-stunning-slide), and related [css-tricks](https://css-tricks.com/design-considerations-text-images/), but so far they have proven stylistically unappealing.   
