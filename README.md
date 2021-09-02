@@ -224,17 +224,64 @@ Logo design is the cornerstone of a brand identity and presents a company's name
 **SQLight** database was used for the development which is installed with Django. 
 
 - Deployment phase
-**PostgreSQL** was used on deployment stage, which is provided as add-on by Heroku application.
+**Postgres** was used on deployment stage, which is provided as add-on by Heroku application.
 
 - User model is provided as a default by [Django's authentication system](https://docs.djangoproject.com/en/3.1/ref/contrib/auth/).
 
 ### Data Modeling
 
-In order to help me create the ERD (Entity Relationship Diagram), I referred to Launch School [article](https://launchschool.com/books/sql/read/table_relationships) on table relationships. The following schema was created with [dbdiagram.io](https://dbdiagram.io/home):
+Django's non-relational database structure makes sense for this type of site as there are only a few relationships between the various collections. In order to help me create the ERD (Entity Relationship Diagram), I referred to this Launch School [article](https://launchschool.com/books/sql/read/table_relationships) on table relationships. The following schema was created with [dbdiagram.io](https://dbdiagram.io/home):
 
 ![Data Scheme](readme_materials/data_schema.png)
 
 
+As can be seen, I originally planned with eight collections - users, product, BlogPost, user_profile, order, BlogImage, product_image and checkout - to order the relations between users and products and blog. My actual implementation deviates from this model in that the site due to time constraints operates with without the BlogImage collection. 
+Moreover, the schema above erroneously did not contain the collection of Categories (mono cards, artistic posters, new arrivals) which are included in the Database to enable classification and filtering of products.  
+What is mentioned BlogPost in the schema above, is now titled Post and contains the following fields
+- title
+- content
+- date_posted
+- author
+
+Category and product have not been implemented at this stage.
+
+
+#### Videos collection
+
+|**Key**|**Type**|**Notes**|
+|:-----|:-----|:-----|
+|_id|ObjectId||
+|category_name|string|Can be updated by Admin|
+|video_title|string|Video title as inserted by the user.|
+|video_author |string|Presenter(s) as entered by the user|
+|video_description|string|Brief abstract of video content used to flesh out cards on library and home pages.|
+|date|string||
+|video_duration|string|eventually not implemented as duration is shown on iframe of video |
+|video_URL|string|This is the link stored in MongoDB to the video uploaded to Cloudinary. Inserted via callback function during upload process |
+|original_website|string| eventually not implemented as I am yet to figure out Copyright and hosting issues |
+|created_by|string| Added as user is logged in with their username. As users currently cannot change username, simpler to store as a string|
+
+#### Categories collection
+
+|**Key**|**Type**|**Notes**|
+|:-----|:-----|:-----|
+|_id|ObjectId||
+|category_name|string|The admin's chosen title of the category. Can only be changed by Admin|
+
+#### Users collection
+
+|**Key**|**Type**|**Notes**|
+|:-----|:-----|:-----|
+|_id|ObjectId||
+|username|string|Chosen by user on account creation. Cannot be changed.|
+|password|string|Chosen by user on account creation and hashed using Werkzeug Security.|
+|image|string|Profile pic chosen by user on account creation (not implemented yet)
+
+
+
+
+
+In the future, I hope to be able to increase the number of categories as the database grows in order to capture the variety of products and their classification (see Future Features below).
 
 
 <div align="right"><a style="text-align:right" href="#top">Go to index: :arrow_double_up:</a></div>
@@ -520,8 +567,9 @@ This website has been deployed on [Heroku](https://www.heroku.com/) by following
 ```
 9. Migrate the database models to the Postgres database using:
 `python3 manage.py migrate`
-**10. Load the data fixtures into the Postgres database using:
-`python3 manage.py loaddata <fixture_name>`**
+10. If pre-written data at hand, load the data fixtures into the Postgres database using:
+`python3 manage.py loaddata <fixture_name>`
+Otherwise manually add your database entries into the database via the admin panel.
 11. Create a superuser for the Postgres database by running:
 `python3 manage.py createsuperuser`
 12. Replace the database setting with the code below, so that the right database is used depending on whether environment is in development or deployed.
@@ -615,8 +663,9 @@ os.environ["STRIPE_WH_SECRET"] = "<Your Stripe WH Secret Key>"
 ```
 3. Install all the required packages with `pip3 install -r requirements.txt`
 4. Migrate the models to create a database using in your IDE with `python3 manage.py makemigrations` and `python3 manage.py migrate`
-**5. Load the data fixtures into the database using the following command:
-`python3 manage.py loaddata <fixture_name>`**
+5. If pre-written data available, load data fixtures into the database using the following command:
+`python3 manage.py loaddata <fixture_name>`
+I added manually added my database entries into the database via the Django admin panel.
 6. Create a superuser for the Postgres database by running with `python3 manage.py createsuperuser`
 7. Now you can access the app using the command `python3 manage.py runserver`
 
